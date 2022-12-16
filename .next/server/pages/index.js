@@ -1,0 +1,86 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/index";
+exports.ids = ["pages/index"];
+exports.modules = {
+
+/***/ "./gql/apollo-config.js":
+/*!******************************!*\
+  !*** ./gql/apollo-config.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"client\": () => (/* binding */ client)\n/* harmony export */ });\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @apollo/client */ \"@apollo/client\");\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_0__);\n\nconst client = new _apollo_client__WEBPACK_IMPORTED_MODULE_0__.ApolloClient({\n    uri: \"https://midnightcookie.ca/graphql\",\n    cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_0__.InMemoryCache()\n});\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ncWwvYXBvbGxvLWNvbmZpZy5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBNkQ7QUFFdEQsTUFBTUUsU0FBUyxJQUFJRix3REFBWUEsQ0FBQztJQUNyQ0csS0FBS0MsbUNBQXlDO0lBQzlDRyxPQUFPLElBQUlOLHlEQUFhQTtBQUMxQixHQUFHIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWlkbmlnaHQtY29va2llLy4vZ3FsL2Fwb2xsby1jb25maWcuanM/YTUwNiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBcG9sbG9DbGllbnQsIEluTWVtb3J5Q2FjaGUgfSBmcm9tICdAYXBvbGxvL2NsaWVudCc7XG5cbmV4cG9ydCBjb25zdCBjbGllbnQgPSBuZXcgQXBvbGxvQ2xpZW50KHtcbiAgdXJpOiBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19XT1JEUFJFU1NfR1FMX1VSSSxcbiAgY2FjaGU6IG5ldyBJbk1lbW9yeUNhY2hlKCksXG59KTtcbiJdLCJuYW1lcyI6WyJBcG9sbG9DbGllbnQiLCJJbk1lbW9yeUNhY2hlIiwiY2xpZW50IiwidXJpIiwicHJvY2VzcyIsImVudiIsIk5FWFRfUFVCTElDX1dPUkRQUkVTU19HUUxfVVJJIiwiY2FjaGUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./gql/apollo-config.js\n");
+
+/***/ }),
+
+/***/ "./gql/queries.js":
+/*!************************!*\
+  !*** ./gql/queries.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"GET_COOKIES\": () => (/* binding */ GET_COOKIES),\n/* harmony export */   \"GET_MENU_ITEMS\": () => (/* binding */ GET_MENU_ITEMS),\n/* harmony export */   \"GET_POSTS\": () => (/* binding */ GET_POSTS)\n/* harmony export */ });\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @apollo/client */ \"@apollo/client\");\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_0__);\n\nconst GET_POSTS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`\n  query GetAllPosts {\n    posts {\n      nodes {\n        title\n        content\n        uri\n        date\n      }\n    }\n  }\n`;\nconst GET_MENU_ITEMS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`\n  query GetMenuItems {\n    menu(id: \"Menu w/out Ordering\", idType: NAME) {\n      menuItems {\n        nodes {\n          uri\n          label\n        }\n      }\n    }\n  }\n`;\nconst GET_COOKIES = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`\n  query getCookies {\n    cookies {\n      nodes {\n        title\n        content\n        featuredImage {\n          node {\n            uri\n            mediaItemUrl\n          }\n        }\n      }\n    }\n  }\n`; // const posts = await client.query({\n //   query: GET_POSTS,\n // });\n // const cookies = await client.query({\n //   query: GET_COOKIES,\n // });\n // const menuItems = await client.query({\n //   query: GET_MENU_ITEMS,\n // });\n // console.log(\n //   'posts, cookies, menuItems',\n //   posts.data.posts,\n //   cookies.data.cookies,\n //   menuItems.data.menu\n // );\n // return {\n //   props: {\n //     posts: posts.data.posts,\n //   },\n // };\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ncWwvcXVlcmllcy5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFxQztBQUU5QixNQUFNQyxZQUFZRCwrQ0FBRyxDQUFDOzs7Ozs7Ozs7OztBQVc3QixDQUFDLENBQUM7QUFFSyxNQUFNRSxpQkFBaUJGLCtDQUFHLENBQUM7Ozs7Ozs7Ozs7O0FBV2xDLENBQUMsQ0FBQztBQUVLLE1BQU1HLGNBQWNILCtDQUFHLENBQUM7Ozs7Ozs7Ozs7Ozs7OztBQWUvQixDQUFDLENBQUMsQ0FFRixxQ0FBcUM7Q0FDckMsc0JBQXNCO0NBQ3RCLE1BQU07Q0FDTix1Q0FBdUM7Q0FDdkMsd0JBQXdCO0NBQ3hCLE1BQU07Q0FDTix5Q0FBeUM7Q0FDekMsMkJBQTJCO0NBQzNCLE1BQU07Q0FDTixlQUFlO0NBQ2YsaUNBQWlDO0NBQ2pDLHNCQUFzQjtDQUN0QiwwQkFBMEI7Q0FDMUIsd0JBQXdCO0NBQ3hCLEtBQUs7Q0FDTCxXQUFXO0NBQ1gsYUFBYTtDQUNiLCtCQUErQjtDQUMvQixPQUFPO0NBQ1AsS0FBSyIsInNvdXJjZXMiOlsid2VicGFjazovL21pZG5pZ2h0LWNvb2tpZS8uL2dxbC9xdWVyaWVzLmpzP2VmYTUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZ3FsIH0gZnJvbSAnQGFwb2xsby9jbGllbnQnO1xuXG5leHBvcnQgY29uc3QgR0VUX1BPU1RTID0gZ3FsYFxuICBxdWVyeSBHZXRBbGxQb3N0cyB7XG4gICAgcG9zdHMge1xuICAgICAgbm9kZXMge1xuICAgICAgICB0aXRsZVxuICAgICAgICBjb250ZW50XG4gICAgICAgIHVyaVxuICAgICAgICBkYXRlXG4gICAgICB9XG4gICAgfVxuICB9XG5gO1xuXG5leHBvcnQgY29uc3QgR0VUX01FTlVfSVRFTVMgPSBncWxgXG4gIHF1ZXJ5IEdldE1lbnVJdGVtcyB7XG4gICAgbWVudShpZDogXCJNZW51IHcvb3V0IE9yZGVyaW5nXCIsIGlkVHlwZTogTkFNRSkge1xuICAgICAgbWVudUl0ZW1zIHtcbiAgICAgICAgbm9kZXMge1xuICAgICAgICAgIHVyaVxuICAgICAgICAgIGxhYmVsXG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbmA7XG5cbmV4cG9ydCBjb25zdCBHRVRfQ09PS0lFUyA9IGdxbGBcbiAgcXVlcnkgZ2V0Q29va2llcyB7XG4gICAgY29va2llcyB7XG4gICAgICBub2RlcyB7XG4gICAgICAgIHRpdGxlXG4gICAgICAgIGNvbnRlbnRcbiAgICAgICAgZmVhdHVyZWRJbWFnZSB7XG4gICAgICAgICAgbm9kZSB7XG4gICAgICAgICAgICB1cmlcbiAgICAgICAgICAgIG1lZGlhSXRlbVVybFxuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxuYDtcblxuLy8gY29uc3QgcG9zdHMgPSBhd2FpdCBjbGllbnQucXVlcnkoe1xuLy8gICBxdWVyeTogR0VUX1BPU1RTLFxuLy8gfSk7XG4vLyBjb25zdCBjb29raWVzID0gYXdhaXQgY2xpZW50LnF1ZXJ5KHtcbi8vICAgcXVlcnk6IEdFVF9DT09LSUVTLFxuLy8gfSk7XG4vLyBjb25zdCBtZW51SXRlbXMgPSBhd2FpdCBjbGllbnQucXVlcnkoe1xuLy8gICBxdWVyeTogR0VUX01FTlVfSVRFTVMsXG4vLyB9KTtcbi8vIGNvbnNvbGUubG9nKFxuLy8gICAncG9zdHMsIGNvb2tpZXMsIG1lbnVJdGVtcycsXG4vLyAgIHBvc3RzLmRhdGEucG9zdHMsXG4vLyAgIGNvb2tpZXMuZGF0YS5jb29raWVzLFxuLy8gICBtZW51SXRlbXMuZGF0YS5tZW51XG4vLyApO1xuLy8gcmV0dXJuIHtcbi8vICAgcHJvcHM6IHtcbi8vICAgICBwb3N0czogcG9zdHMuZGF0YS5wb3N0cyxcbi8vICAgfSxcbi8vIH07XG4iXSwibmFtZXMiOlsiZ3FsIiwiR0VUX1BPU1RTIiwiR0VUX01FTlVfSVRFTVMiLCJHRVRfQ09PS0lFUyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./gql/queries.js\n");
+
+/***/ }),
+
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _gql_apollo_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @gql/apollo-config */ \"./gql/apollo-config.js\");\n/* harmony import */ var _gql_queries__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @gql/queries */ \"./gql/queries.js\");\n\n\n\n\nfunction Home() {\n    const posts = _gql_apollo_config__WEBPACK_IMPORTED_MODULE_2__.client.query({\n        query: _gql_queries__WEBPACK_IMPORTED_MODULE_3__.GET_POSTS\n    }).then((posts)=>{\n        console.log(\"posts, cookies, menuItems\", posts.data.posts);\n    });\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"title\", {\n                        children: \"Create Next App\"\n                    }, void 0, false, {\n                        fileName: \"/Users/orrymevorach/Desktop/midnight-cookie/pages/index.js\",\n                        lineNumber: 17,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"title\", {\n                        children: \"Midnight Cookie\"\n                    }, void 0, false, {\n                        fileName: \"/Users/orrymevorach/Desktop/midnight-cookie/pages/index.js\",\n                        lineNumber: 18,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"meta\", {\n                        name: \"description\",\n                        content: \"Midnight Cookie is Toronto's ONLY Late Night Cookie Delivery. MADE TO ORDER cookies #midnightcookie. NEW STORE FRONT COMING SOON!!\"\n                    }, void 0, false, {\n                        fileName: \"/Users/orrymevorach/Desktop/midnight-cookie/pages/index.js\",\n                        lineNumber: 19,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"meta\", {\n                        name: \"viewport\",\n                        content: \"width=device-width, initial-scale=1\"\n                    }, void 0, false, {\n                        fileName: \"/Users/orrymevorach/Desktop/midnight-cookie/pages/index.js\",\n                        lineNumber: 23,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"link\", {\n                        rel: \"icon\",\n                        href: \"https://www.midnightcookie.ca/wp-content/uploads/2021/10/midnight-cookie-favi-100x100.png\",\n                        sizes: \"32x32\"\n                    }, void 0, false, {\n                        fileName: \"/Users/orrymevorach/Desktop/midnight-cookie/pages/index.js\",\n                        lineNumber: 24,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"link\", {\n                        rel: \"icon\",\n                        href: \"https://www.midnightcookie.ca/wp-content/uploads/2021/10/midnight-cookie-favi-300x300.png\",\n                        sizes: \"192x192\"\n                    }, void 0, false, {\n                        fileName: \"/Users/orrymevorach/Desktop/midnight-cookie/pages/index.js\",\n                        lineNumber: 29,\n                        columnNumber: 9\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"link\", {\n                        rel: \"apple-touch-icon\",\n                        href: \"https://www.midnightcookie.ca/wp-content/uploads/2021/10/midnight-cookie-favi-300x300.png\"\n                    }, void 0, false, {\n                        fileName: \"/Users/orrymevorach/Desktop/midnight-cookie/pages/index.js\",\n                        lineNumber: 34,\n                        columnNumber: 9\n                    }, this)\n                ]\n            }, void 0, true, {\n                fileName: \"/Users/orrymevorach/Desktop/midnight-cookie/pages/index.js\",\n                lineNumber: 16,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"main\", {}, void 0, false, {\n                fileName: \"/Users/orrymevorach/Desktop/midnight-cookie/pages/index.js\",\n                lineNumber: 39,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9pbmRleC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUE7QUFBNkI7QUFDZTtBQUNIO0FBRTFCLFNBQVNHLE9BQU87SUFDN0IsTUFBTUMsUUFBUUgsNERBQ04sQ0FBQztRQUNMSSxPQUFPSCxtREFBU0E7SUFDbEIsR0FDQ0ksSUFBSSxDQUFDRixDQUFBQSxRQUFTO1FBQ2JHLFFBQVFDLEdBQUcsQ0FBQyw2QkFBNkJKLE1BQU1LLElBQUksQ0FBQ0wsS0FBSztJQUMzRDtJQUVGLHFCQUNFOzswQkFDRSw4REFBQ0osa0RBQUlBOztrQ0FDSCw4REFBQ1U7a0NBQU07Ozs7OztrQ0FDUCw4REFBQ0E7a0NBQU07Ozs7OztrQ0FDUCw4REFBQ0M7d0JBQ0NDLE1BQUs7d0JBQ0xDLFNBQVE7Ozs7OztrQ0FFViw4REFBQ0Y7d0JBQUtDLE1BQUs7d0JBQVdDLFNBQVE7Ozs7OztrQ0FDOUIsOERBQUNDO3dCQUNDQyxLQUFJO3dCQUNKQyxNQUFLO3dCQUNMQyxPQUFNOzs7Ozs7a0NBRVIsOERBQUNIO3dCQUNDQyxLQUFJO3dCQUNKQyxNQUFLO3dCQUNMQyxPQUFNOzs7Ozs7a0NBRVIsOERBQUNIO3dCQUNDQyxLQUFJO3dCQUNKQyxNQUFLOzs7Ozs7Ozs7Ozs7MEJBR1QsOERBQUNFOzs7Ozs7O0FBR1AsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL21pZG5pZ2h0LWNvb2tpZS8uL3BhZ2VzL2luZGV4LmpzP2JlZTciXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEhlYWQgZnJvbSAnbmV4dC9oZWFkJztcbmltcG9ydCB7IGNsaWVudCB9IGZyb20gJ0BncWwvYXBvbGxvLWNvbmZpZyc7XG5pbXBvcnQgeyBHRVRfUE9TVFMgfSBmcm9tICdAZ3FsL3F1ZXJpZXMnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBIb21lKCkge1xuICBjb25zdCBwb3N0cyA9IGNsaWVudFxuICAgIC5xdWVyeSh7XG4gICAgICBxdWVyeTogR0VUX1BPU1RTLFxuICAgIH0pXG4gICAgLnRoZW4ocG9zdHMgPT4ge1xuICAgICAgY29uc29sZS5sb2coJ3Bvc3RzLCBjb29raWVzLCBtZW51SXRlbXMnLCBwb3N0cy5kYXRhLnBvc3RzKTtcbiAgICB9KTtcblxuICByZXR1cm4gKFxuICAgIDw+XG4gICAgICA8SGVhZD5cbiAgICAgICAgPHRpdGxlPkNyZWF0ZSBOZXh0IEFwcDwvdGl0bGU+XG4gICAgICAgIDx0aXRsZT5NaWRuaWdodCBDb29raWU8L3RpdGxlPlxuICAgICAgICA8bWV0YVxuICAgICAgICAgIG5hbWU9XCJkZXNjcmlwdGlvblwiXG4gICAgICAgICAgY29udGVudD1cIk1pZG5pZ2h0IENvb2tpZSBpcyBUb3JvbnRvJ3MgT05MWSBMYXRlIE5pZ2h0IENvb2tpZSBEZWxpdmVyeS4gTUFERSBUTyBPUkRFUiBjb29raWVzICNtaWRuaWdodGNvb2tpZS4gTkVXIFNUT1JFIEZST05UIENPTUlORyBTT09OISFcIlxuICAgICAgICAvPlxuICAgICAgICA8bWV0YSBuYW1lPVwidmlld3BvcnRcIiBjb250ZW50PVwid2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTFcIiAvPlxuICAgICAgICA8bGlua1xuICAgICAgICAgIHJlbD1cImljb25cIlxuICAgICAgICAgIGhyZWY9XCJodHRwczovL3d3dy5taWRuaWdodGNvb2tpZS5jYS93cC1jb250ZW50L3VwbG9hZHMvMjAyMS8xMC9taWRuaWdodC1jb29raWUtZmF2aS0xMDB4MTAwLnBuZ1wiXG4gICAgICAgICAgc2l6ZXM9XCIzMngzMlwiXG4gICAgICAgID48L2xpbms+XG4gICAgICAgIDxsaW5rXG4gICAgICAgICAgcmVsPVwiaWNvblwiXG4gICAgICAgICAgaHJlZj1cImh0dHBzOi8vd3d3Lm1pZG5pZ2h0Y29va2llLmNhL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIxLzEwL21pZG5pZ2h0LWNvb2tpZS1mYXZpLTMwMHgzMDAucG5nXCJcbiAgICAgICAgICBzaXplcz1cIjE5MngxOTJcIlxuICAgICAgICA+PC9saW5rPlxuICAgICAgICA8bGlua1xuICAgICAgICAgIHJlbD1cImFwcGxlLXRvdWNoLWljb25cIlxuICAgICAgICAgIGhyZWY9XCJodHRwczovL3d3dy5taWRuaWdodGNvb2tpZS5jYS93cC1jb250ZW50L3VwbG9hZHMvMjAyMS8xMC9taWRuaWdodC1jb29raWUtZmF2aS0zMDB4MzAwLnBuZ1wiXG4gICAgICAgID48L2xpbms+XG4gICAgICA8L0hlYWQ+XG4gICAgICA8bWFpbj48L21haW4+XG4gICAgPC8+XG4gICk7XG59XG4iXSwibmFtZXMiOlsiSGVhZCIsImNsaWVudCIsIkdFVF9QT1NUUyIsIkhvbWUiLCJwb3N0cyIsInF1ZXJ5IiwidGhlbiIsImNvbnNvbGUiLCJsb2ciLCJkYXRhIiwidGl0bGUiLCJtZXRhIiwibmFtZSIsImNvbnRlbnQiLCJsaW5rIiwicmVsIiwiaHJlZiIsInNpemVzIiwibWFpbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/index.js\n");
+
+/***/ }),
+
+/***/ "@apollo/client":
+/*!*********************************!*\
+  !*** external "@apollo/client" ***!
+  \*********************************/
+/***/ ((module) => {
+
+module.exports = require("@apollo/client");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/***/ ((module) => {
+
+module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ ((module) => {
+
+module.exports = require("react/jsx-dev-runtime");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = (__webpack_exec__("./pages/index.js"));
+module.exports = __webpack_exports__;
+
+})();

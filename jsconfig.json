@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@gql/*": ["gql/*"]
+      "@gql/*": ["gql/*"],
+      "@components/*": ["components/*"],
+      "@variables": ["styles/variables.module.scss"]
     }
   }
 }

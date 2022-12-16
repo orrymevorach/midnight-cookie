@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { client } from '@gql/apollo-config';
 import { GET_POSTS } from '@gql/queries';
+import HomeBanner from '@components/home-banner';
 
 export default function Home() {
   const posts = client
@@ -36,7 +37,9 @@ export default function Home() {
           href="https://www.midnightcookie.ca/wp-content/uploads/2021/10/midnight-cookie-favi-300x300.png"
         ></link>
       </Head>
-      <main></main>
+      <main>
+        <HomeBanner />
+      </main>
     </>
   );
 }

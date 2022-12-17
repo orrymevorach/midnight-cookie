@@ -1,0 +1,25 @@
+@import '@variables';
+
+.cookieTile {
+  width: 100%;
+  padding: 0 30px;
+  p {
+    font-family: $fontPrimaryMedium;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  img {
+    transition: 0.2s;
+    &:hover {
+      transition: 0.2s;
+      transform: scale(1.15);
+    }
+  }
+  overflow: hidden;
+}
+
+p.title {
+  font-family: $fontPrimaryBold;
+  font-size: 18px;
+  margin: 15px 0;
+}

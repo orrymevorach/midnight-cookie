@@ -34,7 +34,6 @@ export const GET_COOKIES = gql`
         content
         featuredImage {
           node {
-            uri
             mediaItemUrl
           }
         }

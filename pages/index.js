@@ -1,17 +1,10 @@
 import Head from 'next/head';
-import { client } from '@gql/apollo-config';
-import { GET_POSTS } from '@gql/queries';
 import HomeBanner from '@components/home-banner';
+import CookieGallery from '@components/cookie-gallery';
+import { client } from '@gql/apollo-config';
+import { GET_COOKIES } from '@gql/queries';
 
-export default function Home() {
-  const posts = client
-    .query({
-      query: GET_POSTS,
-    })
-    .then(posts => {
-      console.log('posts, cookies, menuItems', posts.data.posts);
-    });
-
+export default function Home({ cookieData }) {
   return (
     <>
       <Head>
@@ -39,7 +32,19 @@ export default function Home() {
       </Head>
       <main>
         <HomeBanner />
+        <CookieGallery cookieData={cookieData} />
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const response = await client.query({
+    query: GET_COOKIES,
+  });
+  return {
+    props: {
+      cookieData: response.data.cookies.nodes,
+    },
+  };
 }

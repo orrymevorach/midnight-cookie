@@ -1,0 +1,13 @@
+@import '@variables';
+
+.footer {
+  background-color: #282828;
+  font-family: $fontPrimary;
+  color: #808080;
+  text-align: center;
+  padding: 25px 0;
+  span {
+    color: $pink;
+    font-family: $fontPrimaryBold;
+  }
+}

@@ -4,6 +4,7 @@ import CookieGallery from '@components/cookie-gallery';
 import { client } from '@gql/apollo-config';
 import { GET_COOKIES } from '@gql/queries';
 import NewsBanner from '@components/news-banner';
+import Footer from '@components/footer';
 
 export default function Home({ cookieData }) {
   return (
@@ -35,6 +36,7 @@ export default function Home({ cookieData }) {
         <HomeBanner />
         <CookieGallery cookieData={cookieData} />
         <NewsBanner />
+        <Footer />
       </main>
     </>
   );

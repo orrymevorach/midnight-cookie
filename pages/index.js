@@ -3,6 +3,7 @@ import HomeBanner from '@components/home-banner';
 import CookieGallery from '@components/cookie-gallery';
 import { client } from '@gql/apollo-config';
 import { GET_COOKIES } from '@gql/queries';
+import NewsBanner from '@components/news-banner';
 
 export default function Home({ cookieData }) {
   return (
@@ -33,6 +34,7 @@ export default function Home({ cookieData }) {
       <main>
         <HomeBanner />
         <CookieGallery cookieData={cookieData} />
+        <NewsBanner />
       </main>
     </>
   );

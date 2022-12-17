@@ -1,10 +1,11 @@
 import CookieTile from './cookie-tile';
 import styles from './cookie-gallery.module.scss';
+import Heading from '@components/heading/heading';
 
 export default function CookieGallery({ cookieData }) {
   return (
     <div>
-      <h3 className={styles.galleryTitle}>Available Flavours</h3>
+      <Heading text="Available Flavours" />
       <div className={styles.cookieGallery}>
         {cookieData.map(cookie => (
           <CookieTile key={cookie.title} cookieData={cookie} />

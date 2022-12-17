@@ -2,11 +2,12 @@ import Head from 'next/head';
 import HomeBanner from '@components/home-banner';
 import CookieGallery from '@components/cookie-gallery';
 import { client } from '@gql/apollo-config';
-import { GET_COOKIES } from '@gql/queries';
+import { GET_COOKIES, GET_MENU_ITEMS } from '@gql/queries';
 import NewsBanner from '@components/news-banner';
 import Footer from '@components/footer';
+import Nav from '@components/nav';
 
-export default function Home({ cookieData }) {
+export default function Home({ cookieData, navData }) {
   return (
     <>
       <Head>
@@ -33,6 +34,7 @@ export default function Home({ cookieData }) {
         ></link>
       </Head>
       <main>
+        <Nav navData={navData} />
         <HomeBanner />
         <CookieGallery cookieData={cookieData} />
         <NewsBanner />
@@ -46,9 +48,13 @@ export async function getStaticProps() {
   const response = await client.query({
     query: GET_COOKIES,
   });
+  const navResponse = await client.query({
+    query: GET_MENU_ITEMS,
+  });
   return {
     props: {
       cookieData: response.data.cookies.nodes,
+      navData: navResponse.data.menu.menuItems.nodes,
     },
   };
 }

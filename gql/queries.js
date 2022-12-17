@@ -41,24 +41,3 @@ export const GET_COOKIES = gql`
     }
   }
 `;
-
-// const posts = await client.query({
-//   query: GET_POSTS,
-// });
-// const cookies = await client.query({
-//   query: GET_COOKIES,
-// });
-// const menuItems = await client.query({
-//   query: GET_MENU_ITEMS,
-// });
-// console.log(
-//   'posts, cookies, menuItems',
-//   posts.data.posts,
-//   cookies.data.cookies,
-//   menuItems.data.menu
-// );
-// return {
-//   props: {
-//     posts: posts.data.posts,
-//   },
-// };

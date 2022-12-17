@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function NewsBanner() {
   return (
-    <div>
+    <div data-aos="fade-up">
       <Heading text="As Seen On" />
       <div className={styles.row}>
         <Image

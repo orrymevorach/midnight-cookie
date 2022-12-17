@@ -3,7 +3,7 @@ import styles from './home-banner.module.scss';
 export default function HomeBanner() {
   return (
     <div className={styles.banner}>
-      <div className={styles.textContainer}>
+      <div className={styles.textContainer} data-aos="fade-up">
         <h2 className={styles.heading}>Our new storefront is coming soon</h2>
         <p>Check back here for updates...</p>
         <p>

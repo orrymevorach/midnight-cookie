@@ -6,6 +6,7 @@ import { GET_COOKIES, GET_MENU_ITEMS } from '@gql/queries';
 import NewsBanner from '@components/news-banner';
 import Footer from '@components/footer';
 import Nav from '@components/nav';
+import Reviews from '@components/reviews';
 
 export default function Home({ cookieData, navData }) {
   return (
@@ -38,6 +39,7 @@ export default function Home({ cookieData, navData }) {
         <HomeBanner />
         <CookieGallery cookieData={cookieData} />
         <NewsBanner />
+        <Reviews />
         <Footer />
       </main>
     </>

@@ -1,0 +1,64 @@
+@import '@variables';
+
+.reviews {
+  background-color: black;
+  padding: 20px 0 80px;
+  background-image: url('https://www.midnightcookie.ca/wp-content/uploads/2021/10/MIDNIGHT.jpg');
+}
+
+.reviewsContainer {
+  display: flex;
+  padding: 0 100px;
+  font-family: $fontPrimary;
+  font-size: 15px;
+  width: 100%;
+  align-items: center;
+}
+.row {
+  display: flex;
+  margin-bottom: 20px;
+}
+.name {
+  font-family: $fontPrimaryBold;
+  margin-right: 50px;
+}
+
+.review {
+  border-radius: 8px;
+  background-color: $white;
+  width: 33.3%;
+  padding: 40px;
+  margin: 0 20px;
+  height: 250px;
+  img {
+    width: 60px;
+    height: 60px;
+    border: 1px solid $green;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+}
+
+.reviewText {
+  color: $grey;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.quoteIcon {
+  background-color: #00a149;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 4px 5px 5px 5px;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+.starIcon {
+  width: 15px;
+  height: 15px;
+}

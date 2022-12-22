@@ -4,7 +4,8 @@
     "paths": {
       "@gql/*": ["gql/*"],
       "@components/*": ["components/*"],
-      "@variables": ["styles/variables.module.scss"]
+      "@variables": ["styles/variables.module.scss"],
+      "@utils": ["utils.js"]
     }
   }
 }

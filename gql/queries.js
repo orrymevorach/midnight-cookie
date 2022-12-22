@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const GET_POSTS = gql`
+export const GET_NEWS_ARTICLES = gql`
   query GetAllPosts {
     posts {
       nodes {
@@ -8,6 +8,11 @@ export const GET_POSTS = gql`
         content
         uri
         date
+        featuredImage {
+          node {
+            mediaItemUrl
+          }
+        }
       }
     }
   }

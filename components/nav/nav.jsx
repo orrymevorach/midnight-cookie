@@ -22,7 +22,9 @@ export default function Nav({ navData }) {
           </Link>
         </li>
         {navData.map(({ label, uri }) => {
-          const isActive = uri === pathname;
+          const removeSlashes = ({ uri }) => uri.replace(/\//g, '');
+          const isActive =
+            removeSlashes({ uri }) === removeSlashes({ uri: pathname });
           return (
             <li
               key={label}

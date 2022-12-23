@@ -59,9 +59,12 @@
     & .textContainer {
       h2 {
         font-size: 48px;
+        line-height: 53px;
       }
       p {
         font-size: 30px;
+        line-height: 1;
+        margin-bottom: 10px;
       }
     }
   }

@@ -1,12 +1,8 @@
 .mobileMenu {
-  display: flex;
-  margin: 20px 0;
+  margin: 20px auto;
   list-style: none;
-  align-items: center;
-  align-content: center;
   .image {
     margin: 0 auto;
-    transform: translateX(-25px);
-    align-self: center;
+    width: 100px;
   }
 }

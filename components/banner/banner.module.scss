@@ -54,27 +54,14 @@
 
 @media (max-width: $tablet) {
   .banner {
-    height: 400px;
+    height: auto;
+    padding: 100px 20px 150px;
     & .textContainer {
       h2 {
-        font-size: 32px;
+        font-size: 48px;
       }
       p {
-        font-size: 25px;
-      }
-    }
-  }
-}
-
-@media (max-width: $mobile) {
-  .banner {
-    height: 300px;
-    & .textContainer {
-      h2 {
         font-size: 30px;
-      }
-      p {
-        font-size: 20px;
       }
     }
   }

@@ -1,12 +1,6 @@
 .fadeUp {
-  animation-name: fadeUp;
-  animation-fill-mode: both;
-  animation-delay: 0ms;
-  animation-iteration-count: 1;
-  -webkit-animation-name: fadeUp;
-  -webkit-animation-fill-mode: both;
-  -webkit-animation-delay: 0ms;
-  -webkit-animation-iteration-count: 1;
+  animation: fadeUp 500ms;
+  -webkit-animation: fadeUp 500ms;
 }
 
 .slideRight {

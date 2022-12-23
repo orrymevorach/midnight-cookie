@@ -3,8 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@variables": ["styles/variables.module.scss"],
-      "@utils": ["utils.js"],
-      "@animations": ["styles/animations.module.scss"]
+      "@utils": ["utils.js"]
     }
   }
 }

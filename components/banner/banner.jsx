@@ -1,6 +1,6 @@
 import styles from './banner.module.scss';
 import clsx from 'clsx';
-import animations from '@animations';
+import animations from 'mevo-components/animations/animations.module.scss';
 
 export default function Banner({
   children,

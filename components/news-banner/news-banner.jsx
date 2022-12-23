@@ -2,7 +2,7 @@ import styles from './news-banner.module.scss';
 import Heading from 'components/heading';
 import Image from 'next/image';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import animations from '@animations';
+import animations from 'mevo-components/animations/animations.module.scss';
 
 export default function NewsBanner() {
   return (

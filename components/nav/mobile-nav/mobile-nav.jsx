@@ -1,6 +1,6 @@
 import styles from './mobile-nav.module.scss';
 import NavLinks from '../nav-links';
-import animations from '@animations';
+import animations from 'mevo-components/animations/animations.module.scss';
 import clsx from 'clsx';
 
 export default function MobileNav({ navData, pathname, setIsOpen }) {

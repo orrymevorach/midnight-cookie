@@ -1,40 +1,34 @@
 import { useState, useEffect } from 'react';
-import styles from './nav.module.scss';
-import Link from 'next/link';
-import Image from 'next/image';
-import clsx from 'clsx';
+import useWindowSize from 'hooks/useWindowSize';
+import DesktopNav from './desktop-nav';
+import MobileNav from './mobile-nav';
+import MobileMenu from './mobile-menu';
 
 export default function Nav({ navData }) {
+  const [isOpen, setIsOpen] = useState(false);
   const [pathname, setPathname] = useState('');
+  const { isMobile } = useWindowSize();
+
   useEffect(() => {
     setPathname(window.location.pathname);
   }, []);
+
   return (
-    <nav className={styles.nav}>
-      <ul>
-        <li>
-          <Link href="/">
-            <Image
-              src="https://www.midnightcookie.ca/wp-content/uploads/2021/10/Midnight-Cookie-Logo-sde1.png"
-              width={100}
-              height={100}
+    <>
+      {!isMobile ? (
+        <DesktopNav navData={navData} pathname={pathname} />
+      ) : (
+        <>
+          <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+          {isOpen && (
+            <MobileNav
+              navData={navData}
+              pathname={pathname}
+              setIsOpen={setIsOpen}
             />
-          </Link>
-        </li>
-        {navData.map(({ label, uri }) => {
-          const removeSlashes = ({ uri }) => uri.replace(/\//g, '');
-          const isActive =
-            removeSlashes({ uri }) === removeSlashes({ uri: pathname });
-          return (
-            <li
-              key={label}
-              className={clsx(styles.menuItem, isActive ? styles.isActive : '')}
-            >
-              <Link href={uri}>{label}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+          )}
+        </>
+      )}
+    </>
   );
 }

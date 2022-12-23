@@ -1,0 +1,23 @@
+@import '@variables';
+
+.mobileNav {
+  background: $black;
+  color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10;
+  padding-top: 20px;
+  width: 300px;
+}
+
+.overlay {
+  background-color: rgba($black, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}

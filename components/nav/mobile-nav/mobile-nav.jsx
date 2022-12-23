@@ -13,7 +13,7 @@ export default function MobileNav({ navData, pathname, setIsOpen, isOpen }) {
   }, [isOpen]);
   return (
     <>
-      <nav className={styles.mobileNav} data-aos="fade-right">
+      <nav className={styles.mobileNav}>
         <ul>
           <NavLinks navData={navData} pathname={pathname} isMobile />
         </ul>

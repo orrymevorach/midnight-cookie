@@ -51,3 +51,31 @@
     font-size: 28px;
   }
 }
+
+@media (max-width: $tablet) {
+  .banner {
+    height: 400px;
+    & .textContainer {
+      h2 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .banner {
+    height: 300px;
+    & .textContainer {
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}

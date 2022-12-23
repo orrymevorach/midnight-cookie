@@ -25,6 +25,7 @@ export default function Nav({ navData }) {
               navData={navData}
               pathname={pathname}
               setIsOpen={setIsOpen}
+              isOpen={isOpen}
             />
           )}
         </>

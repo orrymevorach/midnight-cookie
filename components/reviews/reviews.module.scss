@@ -13,6 +13,7 @@
   font-size: 15px;
   width: 100%;
   align-items: center;
+  justify-content: center;
 }
 .row {
   display: flex;
@@ -61,4 +62,29 @@
 .starIcon {
   width: 15px;
   height: 15px;
+}
+
+@media (max-width: $desktop) {
+  .reviewsContainer {
+    padding: 0 0px;
+  }
+  .review {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .reviewsContainer {
+    padding: 0 20px;
+  }
+  .review {
+    width: 50%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .review {
+    width: 500px;
+  }
 }

@@ -1,3 +1,5 @@
+@import '@variables';
+
 .row {
   display: flex;
   justify-content: center;
@@ -6,5 +8,11 @@
     margin: 20px 50px;
     width: 300px;
     height: 100%;
+  }
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    img {
+      margin: 50px 0;
+    }
   }
 }

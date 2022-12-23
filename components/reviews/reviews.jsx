@@ -2,6 +2,7 @@ import styles from './reviews.module.scss';
 import Heading from '@components/heading/heading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faStar } from '@fortawesome/free-solid-svg-icons';
+import useWindowSize from 'hooks/useWindowSize';
 
 const reviewData = [
   {
@@ -30,11 +31,18 @@ export default function Reviews() {
       className={styles.starIcon}
     />
   );
+  const { isTablet, isMobile } = useWindowSize();
+  const removeReviews = reviewData => {
+    if (isTablet) return reviewData.slice(1);
+    if (isMobile) return reviewData.slice(2);
+    return reviewData;
+  };
+
   return (
     <div className={styles.reviews}>
       <Heading text="What Our Customers Say" />
       <div className={styles.reviewsContainer}>
-        {reviewData.map(({ name, src, review }) => {
+        {removeReviews(reviewData).map(({ name, src, review }) => {
           return (
             <div className={styles.review} key={name}>
               <div className={styles.row}>
@@ -45,7 +53,7 @@ export default function Reviews() {
                   </div>
                 </div>
                 <p className={styles.name}>{name}</p>
-                <div className={styles.starIconContainer}>
+                <div>
                   <StarIcon />
                   <StarIcon />
                   <StarIcon />

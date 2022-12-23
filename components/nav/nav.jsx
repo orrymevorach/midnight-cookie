@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import useWindowSize from 'hooks/useWindowSize';
+import { useWindowSize, useStopScroll } from 'hooks';
 import DesktopNav from './desktop-nav';
 import MobileNav from './mobile-nav';
 import MobileMenu from './mobile-menu';
@@ -12,6 +12,8 @@ export default function Nav({ navData }) {
   useEffect(() => {
     setPathname(window.location.pathname);
   }, []);
+
+  useStopScroll({ isOpen });
 
   return (
     <>

@@ -1,5 +1,5 @@
 import styles from './mobile-menu.module.scss';
-import HamburgerMenu from '@components/hamburger-menu';
+import HamburgerMenu from 'components/hamburger-menu';
 import Link from 'next/link';
 import Image from 'next/image';
 

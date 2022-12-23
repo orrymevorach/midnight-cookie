@@ -10,9 +10,10 @@
   align-items: center;
   &.isSmall {
     height: 230px;
-  }
-  & .textContainer h2 {
-    font-size: 60px;
+    padding: 0;
+    .textContainer h2 {
+      font-size: 60px;
+    }
   }
 }
 

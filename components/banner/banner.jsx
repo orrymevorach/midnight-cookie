@@ -1,5 +1,6 @@
 import styles from './banner.module.scss';
 import clsx from 'clsx';
+import animations from '@animations';
 
 export default function Banner({
   children,
@@ -9,7 +10,7 @@ export default function Banner({
 }) {
   return (
     <div className={clsx(styles.banner, isSmall ? styles.isSmall : '')}>
-      <div className={styles.textContainer} data-aos={hasFade ? 'fade-up' : ''}>
+      <div className={clsx(styles.textContainer, hasFade && animations.fadeUp)}>
         <h2>{heading}</h2>
         {children}
       </div>

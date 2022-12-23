@@ -1,10 +1,12 @@
 import styles from './news-banner.module.scss';
-import Heading from '@components/heading';
+import Heading from 'components/heading';
 import Image from 'next/image';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import animations from '@animations';
 
 export default function NewsBanner() {
   return (
-    <div data-aos="fade-up">
+    <AnimationOnScroll animateIn={animations.fadeUp}>
       <Heading text="As Seen On" />
       <div className={styles.row}>
         <Image
@@ -35,6 +37,6 @@ export default function NewsBanner() {
           height={200}
         />
       </div>
-    </div>
+    </AnimationOnScroll>
   );
 }

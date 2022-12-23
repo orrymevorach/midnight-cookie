@@ -2,10 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@gql/*": ["gql/*"],
-      "@components/*": ["components/*"],
       "@variables": ["styles/variables.module.scss"],
-      "@utils": ["utils.js"]
+      "@utils": ["utils.js"],
+      "@animations": ["styles/animations.module.scss"]
     }
   }
 }

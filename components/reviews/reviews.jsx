@@ -1,8 +1,8 @@
 import styles from './reviews.module.scss';
-import Heading from '@components/heading/heading';
+import Heading from 'components/heading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faStar } from '@fortawesome/free-solid-svg-icons';
-import useWindowSize from 'hooks/useWindowSize';
+import { useWindowSize } from 'hooks';
 
 const reviewData = [
   {

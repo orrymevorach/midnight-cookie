@@ -1,12 +1,12 @@
-import Banner from '@components/banner';
-import CookieGallery from '@components/cookie-gallery';
-import { client } from '@gql/apollo-config';
-import { GET_COOKIES, GET_MENU_ITEMS } from '@gql/queries';
-import NewsBanner from '@components/news-banner';
-import Footer from '@components/footer';
-import Nav from '@components/nav';
-import Reviews from '@components/reviews';
-import MetaTags from '@components/meta-tags';
+import { client } from 'gql/apollo-config';
+import { GET_COOKIES, GET_MENU_ITEMS } from 'gql/queries';
+import Banner from 'components/banner';
+import CookieGallery from 'components/cookie-gallery';
+import NewsBanner from 'components/news-banner';
+import Footer from 'components/footer';
+import Nav from 'components/nav';
+import Reviews from 'components/reviews';
+import MetaTags from 'components/meta-tags';
 
 export default function Home({ cookieData, navData }) {
   return (
@@ -24,8 +24,8 @@ export default function Home({ cookieData, navData }) {
         <CookieGallery cookieData={cookieData} />
         <NewsBanner />
         <Reviews />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

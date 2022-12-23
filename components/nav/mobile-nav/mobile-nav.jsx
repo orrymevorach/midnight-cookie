@@ -1,19 +1,12 @@
-import { useEffect } from 'react';
 import styles from './mobile-nav.module.scss';
 import NavLinks from '../nav-links';
+import animations from '@animations';
+import clsx from 'clsx';
 
-export default function MobileNav({ navData, pathname, setIsOpen, isOpen }) {
-  // useEffect(() => {
-  //   const body = document.getElementsByTagName('body')[0];
-  //   if (isOpen) {
-  //     body.style.overflow = 'hidden';
-  //   } else {
-  //     body.style.overflow = 'visible';
-  //   }
-  // }, [isOpen]);
+export default function MobileNav({ navData, pathname, setIsOpen }) {
   return (
     <>
-      <nav className={styles.mobileNav}>
+      <nav className={clsx(styles.mobileNav, animations.slideRight)}>
         <ul>
           <NavLinks navData={navData} pathname={pathname} isMobile />
         </ul>

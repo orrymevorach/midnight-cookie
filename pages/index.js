@@ -12,8 +12,8 @@ export default function Home({ cookieData, navData }) {
   return (
     <>
       <MetaTags />
+      <Nav navData={navData} />
       <main>
-        <Nav navData={navData} />
         <Banner heading="Our new storefront is coming soon" hasFade>
           <p>Check back here for updates...</p>
           <p>

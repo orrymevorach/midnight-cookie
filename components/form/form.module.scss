@@ -1,0 +1,83 @@
+@import '@variables';
+
+.form {
+  padding: 50px;
+  width: 50%;
+  font-family: $fontPrimaryBold;
+  color: $black;
+}
+.form,
+.successText,
+.loaderContainer {
+  height: 620px;
+}
+
+.title {
+  font-size: 36px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    font-family: $fontPrimary;
+  }
+}
+
+.responsiveInput {
+  width: 50%;
+}
+
+.submitButton {
+  background-color: $pink;
+  color: $white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.successText {
+  font-family: $fontPrimaryBold;
+  color: $black;
+  font-size: 36px;
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+.successText,
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 100px;
+  width: 50%;
+}
+
+@media screen and (max-width: $tablet) {
+  .form {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .responsiveInput {
+    width: 100%;
+  }
+  .successText,
+  .loaderContainer {
+    width: 100%;
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .form {
+    padding: 0;
+  }
+}

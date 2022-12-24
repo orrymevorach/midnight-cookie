@@ -8,3 +8,8 @@ img {
   width: 100%;
   display: block;
 }
+
+button {
+  border: none;
+  cursor: pointer;
+}

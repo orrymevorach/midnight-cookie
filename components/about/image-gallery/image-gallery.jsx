@@ -11,6 +11,7 @@ export default function ImageGallery() {
         height="375"
         src="https://www.midnightcookie.ca/wp-content/uploads/2021/10/mid-1.jpg"
         className={animations.fadeUp}
+        alt=""
       />
       <div className={styles.rightColumn}>
         <Image
@@ -18,12 +19,14 @@ export default function ImageGallery() {
           height="210"
           src="https://www.midnightcookie.ca/wp-content/uploads/2021/10/mid2.jpg"
           className={animations.fadeUp}
+          alt=""
         />
         <AnimationOnScroll animateIn={animations.fadeUp}>
           <Image
             width="340"
             height="335"
             src="https://www.midnightcookie.ca/wp-content/uploads/2022/10/MidnightCookie_Hero.jpg"
+            alt=""
           />
         </AnimationOnScroll>
       </div>

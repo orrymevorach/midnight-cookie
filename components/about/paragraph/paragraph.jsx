@@ -1,5 +1,6 @@
 import styles from './paragraph.module.scss';
 import clsx from 'clsx';
+import global from '@global';
 
 export default function Paragraph() {
   return (
@@ -24,7 +25,9 @@ export default function Paragraph() {
       <p className={styles.text}>
         We hope you love these cookies as much as we do.
       </p>
-      <p className={styles.text}>– From one late night snacker to another</p>
+      <p className={clsx(styles.text, global.italic)}>
+        – From one late night snacker to another
+      </p>
     </div>
   );
 }

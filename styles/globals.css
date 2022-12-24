@@ -13,3 +13,20 @@ button {
   border: none;
   cursor: pointer;
 }
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../asset/gilroy/Gilroy-Regular.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy Bold';
+  src: url('../asset/gilroy/Gilroy-Bold.woff');
+}
+
+@font-face {
+  font-family: 'Gilroy Medium';
+  src: url('../asset/gilroy/Gilroy-Medium.woff');
+}

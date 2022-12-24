@@ -13,16 +13,19 @@ export default function NewsBanner() {
           src="https://www.midnightcookie.ca/wp-content/uploads/2021/12/blogto.png"
           width={200}
           height={200}
+          alt="BlogTO Logo"
         />
         <Image
           src="https://www.midnightcookie.ca/wp-content/uploads/2022/12/tastetoronto.jpeg"
           width={200}
           height={200}
+          alt="Taste Toronto Logo"
         />
         <Image
           src="https://www.midnightcookie.ca/wp-content/uploads/2022/12/star.png"
           width={200}
           height={200}
+          alt="Toronto Star Logo"
         />
       </div>
       <div className={styles.row}>
@@ -30,11 +33,13 @@ export default function NewsBanner() {
           src="https://www.midnightcookie.ca/wp-content/uploads/2021/08/daily-hive.jpeg"
           width={200}
           height={200}
+          alt="Daily Hive Logo"
         />
         <Image
           src="https://www.midnightcookie.ca/wp-content/uploads/2022/12/streets.png"
           width={200}
           height={200}
+          alt="Streets Logo"
         />
       </div>
     </AnimationOnScroll>

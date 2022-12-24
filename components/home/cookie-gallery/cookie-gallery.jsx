@@ -1,6 +1,6 @@
 import CookieTile from './cookie-tile';
 import styles from './cookie-gallery.module.scss';
-import Heading from 'components/heading';
+import Heading from 'components/shared/heading';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import animations from 'mevo-components/animations/animations.module.scss';
 

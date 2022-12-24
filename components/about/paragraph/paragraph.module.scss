@@ -1,0 +1,25 @@
+@import '@variables';
+
+.textContainer {
+  width: 50%;
+  color: $black;
+  padding-right: 100px;
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    color: $black;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.title {
+  font-size: 39px;
+  font-family: $fontPrimaryBold;
+}
+
+.text {
+  font-size: 15px;
+  font-family: $fontPrimary;
+  margin: 20px 0;
+  line-height: 2;
+}

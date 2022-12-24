@@ -1,12 +1,12 @@
 import { client } from 'gql/apollo-config';
 import { GET_COOKIES, GET_MENU_ITEMS } from 'gql/queries';
-import Banner from 'components/banner';
-import CookieGallery from 'components/cookie-gallery';
-import NewsBanner from 'components/news-banner';
-import Footer from 'components/footer';
-import Nav from 'components/nav';
-import Reviews from 'components/reviews';
-import MetaTags from 'components/meta-tags';
+import Banner from 'components/shared/banner';
+import CookieGallery from 'components/home/cookie-gallery';
+import NewsBanner from 'components/home/news-banner';
+import Footer from 'components/shared/footer';
+import Nav from 'components/shared/nav';
+import Reviews from 'components/home/reviews';
+import MetaTags from 'components/shared/meta-tags';
 
 export default function Home({ cookieData, navData }) {
   return (

@@ -3,7 +3,7 @@ import styles from './form.module.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import Loader from 'components/loader';
+import Loader from 'components/shared/loader';
 
 export default function Form() {
   const [state, handleSubmit] = useForm('mqkozgoo');

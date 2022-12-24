@@ -57,7 +57,8 @@
   .banner {
     height: auto;
     padding: 100px 20px 150px;
-    & .textContainer {
+    & .textContainer,
+    &.isSmall .textContainer {
       h2 {
         font-size: 48px;
         line-height: 53px;

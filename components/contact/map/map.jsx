@@ -6,7 +6,7 @@ export default function Map() {
     <iframe
       src="https://www.google.com/maps/d/embed?mid=12iXLELjezWQL7HvRzm0cglB7psi0Iuqm&ehbc=2E312F"
       width={isDesktop ? '50%' : '100%'}
-      height="620"
+      height="600"
     ></iframe>
   );
 }

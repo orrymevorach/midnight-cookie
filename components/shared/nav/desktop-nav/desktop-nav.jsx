@@ -10,7 +10,7 @@ export default function DesktopNav({ navData, pathname }) {
         <li>
           <Link href="/">
             <Image
-              src="https://www.midnightcookie.ca/wp-content/uploads/2021/10/Midnight-Cookie-Logo-sde1.png"
+              src="/wp-content/uploads/2021/10/Midnight-Cookie-Logo-sde1.png"
               width={100}
               height={100}
               alt=""

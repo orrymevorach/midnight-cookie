@@ -1,5 +1,5 @@
-import { client } from 'gql/apollo-config';
-import { GET_COOKIES, GET_MENU_ITEMS } from 'gql/queries';
+// import { client } from 'gql/apollo-config';
+// import { GET_COOKIES, GET_MENU_ITEMS } from 'gql/queries';
 import Banner from 'components/shared/banner';
 import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
@@ -7,8 +7,9 @@ import Footer from 'components/shared/footer';
 import Nav from 'components/shared/nav';
 import Reviews from 'components/home/reviews';
 import MetaTags from 'components/shared/meta-tags';
+import { navData, cookieData } from 'mocks';
 
-export default function Home({ cookieData, navData }) {
+export default function Home({ navData, cookieData }) {
   return (
     <>
       <MetaTags />
@@ -31,16 +32,18 @@ export default function Home({ cookieData, navData }) {
 }
 
 export async function getStaticProps() {
-  const response = await client.query({
-    query: GET_COOKIES,
-  });
-  const navResponse = await client.query({
-    query: GET_MENU_ITEMS,
-  });
+  //   const response = await client.query({
+  //     query: GET_COOKIES,
+  //   });
+  //   const navResponse = await client.query({
+  //     query: GET_MENU_ITEMS,
+  //   });
   return {
     props: {
-      cookieData: response.data.cookies.nodes,
-      navData: navResponse.data.menu.menuItems.nodes,
+      //       cookieData: response.data.cookies.nodes,
+      //       navData: navResponse.data.menu.menuItems.nodes,
+      navData,
+      cookieData,
     },
   };
 }

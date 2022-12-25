@@ -10,19 +10,19 @@ export default function NewsBanner() {
       <Heading text="As Seen On" />
       <div className={styles.row}>
         <Image
-          src="https://www.midnightcookie.ca/wp-content/uploads/2021/12/blogto.png"
+          src="/wp-content/uploads/2021/12/blogto.png"
           width={200}
           height={200}
           alt="BlogTO Logo"
         />
         <Image
-          src="https://www.midnightcookie.ca/wp-content/uploads/2022/12/tastetoronto.jpeg"
+          src="/wp-content/uploads/2022/12/tastetoronto.jpeg"
           width={200}
           height={200}
           alt="Taste Toronto Logo"
         />
         <Image
-          src="https://www.midnightcookie.ca/wp-content/uploads/2022/12/star.png"
+          src="/wp-content/uploads/2022/12/star.png"
           width={200}
           height={200}
           alt="Toronto Star Logo"
@@ -30,13 +30,13 @@ export default function NewsBanner() {
       </div>
       <div className={styles.row}>
         <Image
-          src="https://www.midnightcookie.ca/wp-content/uploads/2021/08/daily-hive.jpeg"
+          src="/wp-content/uploads/2021/08/daily-hive.jpeg"
           width={200}
           height={200}
           alt="Daily Hive Logo"
         />
         <Image
-          src="https://www.midnightcookie.ca/wp-content/uploads/2022/12/streets.png"
+          src="/wp-content/uploads/2022/12/streets.png"
           width={200}
           height={200}
           alt="Streets Logo"

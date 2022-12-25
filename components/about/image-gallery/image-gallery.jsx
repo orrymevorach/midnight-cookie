@@ -9,7 +9,7 @@ export default function ImageGallery() {
       <Image
         width="240"
         height="375"
-        src="https://www.midnightcookie.ca/wp-content/uploads/2021/10/mid-1.jpg"
+        src="/wp-content/uploads/2021/10/mid-1.jpg"
         className={animations.fadeUp}
         alt=""
       />
@@ -17,7 +17,7 @@ export default function ImageGallery() {
         <Image
           width="340"
           height="210"
-          src="https://www.midnightcookie.ca/wp-content/uploads/2021/10/mid2.jpg"
+          src="/wp-content/uploads/2021/10/mid2.jpg"
           className={animations.fadeUp}
           alt=""
         />
@@ -25,7 +25,7 @@ export default function ImageGallery() {
           <Image
             width="340"
             height="335"
-            src="https://www.midnightcookie.ca/wp-content/uploads/2022/10/MidnightCookie_Hero.jpg"
+            src="/wp-content/uploads/2022/10/MidnightCookie_Hero.jpg"
             alt=""
           />
         </AnimationOnScroll>

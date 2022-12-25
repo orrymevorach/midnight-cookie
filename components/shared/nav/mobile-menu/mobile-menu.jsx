@@ -9,12 +9,9 @@ export default function MobileMenu({ isOpen, setIsOpen }) {
       <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />{' '}
       <li className={styles.image}>
         <Link href="/">
-          <Image
-            src="https://www.midnightcookie.ca/wp-content/uploads/2021/10/Midnight-Cookie-Logo-sde1.png"
-            width={100}
-            height={100}
+          <img
+            src="/wp-content/uploads/2021/10/Midnight-Cookie-Logo-sde1.png"
             alt=""
-            priority
           />
         </Link>
       </li>

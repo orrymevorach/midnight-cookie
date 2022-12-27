@@ -5,10 +5,10 @@ import Link from 'next/link';
 export default function NavLinks({ navData, pathname, isMobile = false }) {
   return (
     <>
-      {navData.map(({ label, uri }) => {
-        const removeSlashes = ({ uri }) => uri.replace(/\//g, '');
+      {navData.map(({ label, url }) => {
+        const removeSlashes = ({ url }) => url.replace(/\//g, '');
         const isActive =
-          removeSlashes({ uri }) === removeSlashes({ uri: pathname });
+          removeSlashes({ url }) === removeSlashes({ url: pathname });
         return (
           <li
             key={label}
@@ -18,7 +18,7 @@ export default function NavLinks({ navData, pathname, isMobile = false }) {
               isMobile ? styles.isMobile : ''
             )}
           >
-            <Link href={uri}>{label}</Link>
+            <Link href={url}>{label}</Link>
           </li>
         );
       })}

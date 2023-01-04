@@ -46,3 +46,14 @@ export const GET_COOKIES = gql`
     }
   }
 `;
+
+export const GET_MAINTENANCE_MODE_FEATURE_FLAG = gql`
+  query GetMaintenanceModeFeatureFlag {
+    featureFlagCollection(where: { title: "Maintenance Mode" }) {
+      items {
+        title
+        value
+      }
+    }
+  }
+`;

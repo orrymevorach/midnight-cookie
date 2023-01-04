@@ -7,6 +7,7 @@ import Footer from 'components/shared/footer';
 import Nav from 'components/shared/nav';
 import Reviews from 'components/home/reviews';
 import MetaTags from 'components/shared/meta-tags';
+import { GET_MAINTENANCE_MODE_FEATURE_FLAG } from 'gql/queries';
 
 export default function Home({ navData = [], cookieData = [] }) {
   return (
@@ -37,10 +38,16 @@ export async function getStaticProps() {
   const navResponse = await client.query({
     query: GET_MENU_ITEMS,
   });
+  const featureFlagResponse = await client.query({
+    query: GET_MAINTENANCE_MODE_FEATURE_FLAG,
+  });
+
   return {
     props: {
       cookieData: response.data.cookieCollection.items,
       navData: navResponse.data.menu.menuItemsCollection.items,
+      isMaintenanceMode:
+        featureFlagResponse.data.featureFlagCollection.items[0].value,
     },
   };
 }

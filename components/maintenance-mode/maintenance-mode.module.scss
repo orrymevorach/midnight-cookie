@@ -1,0 +1,26 @@
+@import '@variables';
+
+.maintenanceContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: $fontPrimaryBold;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  @media screen and (max-width: $mobile) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.heading {
+  margin: 20px 0;
+}

@@ -11,8 +11,8 @@ export default function Form() {
     return (
       <div className={styles.successText}>
         <Link href="/">
-          <Image
-            src="https://www.midnightcookie.ca/wp-content/uploads/2021/10/Midnight-Cookie-Logo-sde1.png"
+          <img
+            src="/wp-content/uploads/2021/10/Midnight-Cookie-Logo-sde1.png"
             width={100}
             height={100}
             alt=""

@@ -2,17 +2,17 @@ import { gql } from '@apollo/client';
 
 export const GET_NEWS_ARTICLES = gql`
   query GetAllPosts {
-    posts {
-      nodes {
+    newsPostCollection {
+      items {
         title
-        content
-        uri
         date
-        featuredImage {
-          node {
-            mediaItemUrl
-          }
+        content {
+          json
         }
+        image {
+          url
+        }
+        url
       }
     }
   }
@@ -20,11 +20,11 @@ export const GET_NEWS_ARTICLES = gql`
 
 export const GET_MENU_ITEMS = gql`
   query GetMenuItems {
-    menu(id: "Menu w/out Ordering", idType: NAME) {
-      menuItems {
-        nodes {
-          uri
+    menu(id: "7CaGAfKOaxtSAYUN2p9L91") {
+      menuItemsCollection {
+        items {
           label
+          url
         }
       }
     }
@@ -33,13 +33,15 @@ export const GET_MENU_ITEMS = gql`
 
 export const GET_COOKIES = gql`
   query getCookies {
-    cookies {
-      nodes {
-        title
-        content
-        featuredImage {
-          node {
-            mediaItemUrl
+    cookieGalleryCollection(where: { title: "Home Page Gallery" }) {
+      items {
+        cookiesCollection(limit: 30) {
+          items {
+            description
+            title
+            image {
+              url
+            }
           }
         }
       }

@@ -1,10 +1,13 @@
 import { client } from 'gql/apollo-config';
-import { GET_COOKIES, GET_MENU_ITEMS } from 'gql/queries-contentful';
+import {
+  GET_COOKIES,
+  GET_MENU_ITEMS,
+  GET_MAINTENANCE_MODE_FEATURE_FLAG,
+} from 'gql/queries';
 import Banner from 'components/shared/banner';
 import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
 import Reviews from 'components/home/reviews';
-import { GET_MAINTENANCE_MODE_FEATURE_FLAG } from 'gql/queries';
 import Layout from 'components/layout';
 
 export const getPageLoadData = async () => {
@@ -50,7 +53,10 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      cookieData: cookieDataResponse.data.cookieCollection.items,
+      cookieData:
+        cookieDataResponse.data.cookieGalleryCollection.items[0]
+          .cookiesCollection.items,
+
       ...pageLoadData,
     },
   };

@@ -41,6 +41,7 @@ export const getPageLoadData = async ({ slug }) => {
 
 export default function Home(pageProps) {
   const { cookieData = [] } = pageProps;
+  console.log('hey midnight cookie');
   return (
     <Layout {...pageProps}>
       <main>

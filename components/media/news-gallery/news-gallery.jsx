@@ -1,5 +1,5 @@
 import styles from './news-gallery.module.scss';
-import { htmlRegex, formatDate } from '@utils';
+import { htmlRegex, formatDate } from 'utils/utils';
 
 export default function NewsGallery({ newsArticles = [] }) {
   return (

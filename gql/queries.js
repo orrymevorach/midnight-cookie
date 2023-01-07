@@ -21,9 +21,9 @@ export const GET_NEWS_ARTICLES = gql`
 export const GET_MENU_ITEMS = gql`
   query GetMenuItems {
     menu(id: "7CaGAfKOaxtSAYUN2p9L91") {
-      menuItemsCollection {
+      pageCollection(preview: false) {
         items {
-          label
+          title
           url
         }
       }
@@ -55,6 +55,16 @@ export const GET_MAINTENANCE_MODE_FEATURE_FLAG = gql`
       items {
         title
         value
+      }
+    }
+  }
+`;
+
+export const GET_IS_PAGE_PUBLISHED = gql`
+  query GetIsPagePublished($slug: String!) {
+    pageCollection(where: { url: $slug }) {
+      items {
+        title
       }
     }
   }

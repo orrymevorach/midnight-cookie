@@ -4,6 +4,7 @@ import Banner from 'components/shared/banner';
 import NewsGallery from 'components/media/news-gallery/news-gallery';
 import { getPageLoadData } from 'pages';
 import Layout from 'components/layout/layout';
+import { slugMap } from 'utils/constants';
 
 export default function Media(pageProps) {
   const { newsArticles } = pageProps;
@@ -18,10 +19,11 @@ export default function Media(pageProps) {
 }
 
 export async function getStaticProps() {
-  const pageLoadData = await getPageLoadData();
+  const pageLoadData = await getPageLoadData({ slug: slugMap.MEDIA });
   const newsArticlesResponse = await client.query({
     query: GET_NEWS_ARTICLES,
   });
+
   return {
     props: {
       newsArticles: newsArticlesResponse.data.newsPostCollection.items,

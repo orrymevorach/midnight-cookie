@@ -3,7 +3,6 @@
     "baseUrl": ".",
     "paths": {
       "@variables": ["styles/variables.module.scss"],
-      "@utils": ["utils.js"],
       "@global": ["styles/globals.module.scss"]
     }
   }

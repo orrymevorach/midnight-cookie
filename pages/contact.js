@@ -4,6 +4,7 @@ import Map from 'components/contact/map';
 import styles from './page-container.module.scss';
 import { getPageLoadData } from 'pages';
 import Layout from 'components/layout';
+import { slugMap } from 'utils/constants';
 
 export default function Contact(pageProps) {
   return (
@@ -19,8 +20,8 @@ export default function Contact(pageProps) {
   );
 }
 
-export async function getServerSideProps() {
-  const pageLoadData = await getPageLoadData();
+export async function getStaticProps() {
+  const pageLoadData = await getPageLoadData({ slug: slugMap.CONTACT });
   return {
     props: {
       ...pageLoadData,

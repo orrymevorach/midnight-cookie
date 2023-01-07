@@ -1,5 +1,5 @@
 import styles from './cookie-tile.module.scss';
-import { htmlRegex } from '@utils';
+import { htmlRegex } from 'utils/utils';
 
 export default function CookieTile({
   cookieData: {

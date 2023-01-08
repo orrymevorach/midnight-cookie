@@ -15,17 +15,14 @@ import { slugMap } from 'utils/constants';
 export const getPageLoadData = async ({ slug }) => {
   const navResponse = await client.query({
     query: GET_MENU_ITEMS,
-    fetchPolicy: 'no-cache',
   });
 
   const featureFlagResponse = await client.query({
     query: GET_MAINTENANCE_MODE_FEATURE_FLAG,
-    fetchPolicy: 'no-cache',
   });
 
   const isPagePublished = await client.query({
     query: GET_IS_PAGE_PUBLISHED,
-    fetchPolicy: 'no-cache',
     variables: { slug },
   });
 
@@ -41,7 +38,6 @@ export const getPageLoadData = async ({ slug }) => {
 
 export default function Home(pageProps) {
   const { cookieData = [] } = pageProps;
-  console.log('hey midnight cookie');
   return (
     <Layout {...pageProps}>
       <main>

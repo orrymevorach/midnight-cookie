@@ -30,7 +30,7 @@ export const GET_MENU_ITEMS = `
 `;
 
 export const GET_COOKIES = `
-  query getCookies($slug: String) {
+  query GetCookies ($slug: String) {
     cookieGalleryCollection(where: { slug: $slug }) {
       items {
         cookiesCollection(limit: 30) {

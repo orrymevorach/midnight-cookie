@@ -13,7 +13,7 @@ export default function CookiePage({ cookieData }) {
 export async function getStaticProps({ preview = false, params }) {
   const cookieResponse = await fetchGraphQL({
     query: GET_COOKIE,
-    variables: { slug: params ? params.slug : '' },
+    variables: { slug: params.slug === undefined ? params.slug : '' },
     isPreview: preview,
   });
   const cookieData = cookieResponse?.data?.cookieCollection?.items[0];

@@ -9,7 +9,7 @@ export default function CookiePage(pageProps) {
 export async function getStaticProps({ preview = false, params }) {
   const cookieDataResponse = await fetchGraphQL({
     query: GET_COOKIES,
-    variables: { slug: params ? params.slug : '' },
+    variables: { slug: params.slug === undefined ? params.slug : '' },
     isPreview: preview,
   });
 

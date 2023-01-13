@@ -7,6 +7,7 @@ export default function CookiePage(pageProps) {
 }
 
 export async function getStaticProps({ preview = false, params }) {
+  // this fixes the deployment, since there are no params on build time
   if (params.slug === 'undefined')
     return {
       props: { cookieData: [] },

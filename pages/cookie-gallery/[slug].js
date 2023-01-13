@@ -34,6 +34,6 @@ export async function getStaticPaths() {
 
   return {
     paths: cookieData.map(({ slug }) => `/cookie-gallery/${slug}`),
-    fallback: false,
+    fallback: true,
   };
 }

@@ -33,6 +33,6 @@ export async function getStaticPaths() {
     paths: cookieResponse.data.cookieCollection.items.map(
       ({ slug }) => `/cookie/${slug}`
     ),
-    fallback: false,
+    fallback: true,
   };
 }

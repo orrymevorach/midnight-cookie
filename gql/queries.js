@@ -1,6 +1,6 @@
 export const GET_NEWS_ARTICLES = `
-  query GetAllPosts {
-    newsPostCollection {
+  query GetAllPosts($slug: String) {
+    newsPostCollection(where: {slug: $slug}) {
       items {
         title
         date

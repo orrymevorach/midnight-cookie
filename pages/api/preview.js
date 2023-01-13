@@ -1,5 +1,13 @@
 export default async function preview(req, res) {
-  const { slug, content_model } = req.query;
+  const { secret, slug, content_model, environment } = req.query;
+
+  if (environment !== 'development') {
+    if (secret !== process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN) {
+      return res.status(401).json({ message: 'Invalid token' });
+    }
+
+    if (!slug) return res.status(401).json({ message: 'No slug' });
+  }
 
   // Enable Preview Mode by setting the cookies
   res.setPreviewData({});

@@ -1,40 +1,12 @@
-import { client } from 'gql/apollo-config';
-import {
-  GET_COOKIES,
-  GET_MENU_ITEMS,
-  GET_MAINTENANCE_MODE_FEATURE_FLAG,
-  GET_IS_PAGE_PUBLISHED,
-} from 'gql/queries';
+import { GET_COOKIES } from 'gql/queries';
 import Banner from 'components/shared/banner';
 import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
 import Reviews from 'components/home/reviews';
 import Layout from 'components/layout';
 import { slugMap } from 'utils/constants';
-
-export const getPageLoadData = async ({ slug }) => {
-  const navResponse = await client.query({
-    query: GET_MENU_ITEMS,
-  });
-
-  const featureFlagResponse = await client.query({
-    query: GET_MAINTENANCE_MODE_FEATURE_FLAG,
-  });
-
-  const isPagePublished = await client.query({
-    query: GET_IS_PAGE_PUBLISHED,
-    variables: { slug },
-  });
-
-  return {
-    navData: navResponse?.data?.menu?.pageCollection?.items || [],
-    isMaintenanceMode:
-      featureFlagResponse?.data?.featureFlagCollection?.items[0]?.value ||
-      false,
-    isPagePublished:
-      !!isPagePublished?.data?.pageCollection?.items?.length || false,
-  };
-};
+import { fetchGraphQL, filterNullFields } from 'lib/api';
+import { getPageLoadData } from 'lib/api';
 
 export default function Home(pageProps) {
   const { cookieData = [] } = pageProps;
@@ -56,16 +28,24 @@ export default function Home(pageProps) {
   );
 }
 
-export async function getStaticProps() {
-  const pageLoadData = await getPageLoadData({ slug: slugMap.HOME });
-  const cookieDataResponse = await client.query({
+export async function getStaticProps({ preview = false }) {
+  const pageLoadData = await getPageLoadData({
+    slug: slugMap.HOME,
+    isPreview: preview,
+  });
+  const cookieDataResponse = await fetchGraphQL({
     query: GET_COOKIES,
+    variables: {
+      slug: 'home-page-gallery',
+    },
   });
   return {
     props: {
       cookieData:
-        cookieDataResponse.data.cookieGalleryCollection.items[0]
-          .cookiesCollection.items,
+        filterNullFields(
+          cookieDataResponse.data.cookieGalleryCollection.items[0]
+            .cookiesCollection.items
+        ) || [],
 
       ...pageLoadData,
     },

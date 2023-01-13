@@ -1,4 +1,4 @@
-import { getPageLoadData } from 'pages';
+import { getPageLoadData } from 'lib/api';
 import Layout from 'components/layout/layout';
 import { slugMap } from 'utils/constants';
 
@@ -17,8 +17,11 @@ export default function OrderNow(pageProps) {
   );
 }
 
-export async function getStaticProps() {
-  const pageLoadData = await getPageLoadData({ slug: slugMap.ORDER_NOW });
+export async function getStaticProps({ preview = false }) {
+  const pageLoadData = await getPageLoadData({
+    slug: slugMap.ORDER_NOW,
+    isPreview: preview,
+  });
   return {
     props: {
       ...pageLoadData,

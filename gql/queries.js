@@ -1,6 +1,4 @@
-import { gql } from '@apollo/client';
-
-export const GET_NEWS_ARTICLES = gql`
+export const GET_NEWS_ARTICLES = `
   query GetAllPosts {
     newsPostCollection {
       items {
@@ -18,10 +16,10 @@ export const GET_NEWS_ARTICLES = gql`
   }
 `;
 
-export const GET_MENU_ITEMS = gql`
+export const GET_MENU_ITEMS = `
   query GetMenuItems {
     menu(id: "7CaGAfKOaxtSAYUN2p9L91") {
-      pageCollection(preview: false) {
+      pageCollection {
         items {
           title
           url
@@ -31,9 +29,9 @@ export const GET_MENU_ITEMS = gql`
   }
 `;
 
-export const GET_COOKIES = gql`
-  query getCookies {
-    cookieGalleryCollection(where: { title: "Home Page Gallery" }) {
+export const GET_COOKIES = `
+  query getCookies($slug: String) {
+    cookieGalleryCollection(where: { slug: $slug }) {
       items {
         cookiesCollection(limit: 30) {
           items {
@@ -49,7 +47,21 @@ export const GET_COOKIES = gql`
   }
 `;
 
-export const GET_MAINTENANCE_MODE_FEATURE_FLAG = gql`
+export const GET_COOKIE = `
+query GetCookie ($slug: String) {
+  cookieCollection(where: { slug: $slug }) {
+    items {
+      description
+      title
+      image {
+        url
+      }
+    }
+  }
+}
+`;
+
+export const GET_MAINTENANCE_MODE_FEATURE_FLAG = `
   query GetMaintenanceModeFeatureFlag {
     featureFlagCollection(where: { title: "Maintenance Mode" }) {
       items {
@@ -60,7 +72,7 @@ export const GET_MAINTENANCE_MODE_FEATURE_FLAG = gql`
   }
 `;
 
-export const GET_IS_PAGE_PUBLISHED = gql`
+export const GET_IS_PAGE_PUBLISHED = `
   query GetIsPagePublished($slug: String!) {
     pageCollection(where: { url: $slug }) {
       items {

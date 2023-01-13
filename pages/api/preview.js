@@ -15,5 +15,5 @@ export default async function preview(req, res) {
   // Redirect to the path while remove query strings as not to expose secrets
   const url = `/${content_model}/${slug}`;
   res.writeHead(307, { Location: url });
-  // res.end();
+  res.end();
 }

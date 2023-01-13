@@ -11,10 +11,13 @@ export default function CookiePage({ cookieData }) {
 }
 
 export async function getStaticProps({ preview = false, params }) {
+  if (!params.slug)
+    return {
+      cookieData: [],
+    };
   const cookieResponse = await fetchGraphQL({
     query: GET_COOKIE,
-    variables: { slug: params.slug === undefined ? params.slug : '' },
-    isPreview: preview,
+    variables: { slug: params.slug },
   });
   const cookieData = cookieResponse?.data?.cookieCollection?.items[0];
   return {

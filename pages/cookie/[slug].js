@@ -11,6 +11,7 @@ export default function CookiePage({ cookieData }) {
 }
 
 export async function getStaticProps({ preview = false, params }) {
+  console.log('params', params);
   if (!params.slug)
     return {
       cookieData: [],

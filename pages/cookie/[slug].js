@@ -14,6 +14,8 @@ export async function getStaticProps({ preview = false, params }) {
   const cookieResponse = await fetchGraphQL({
     query: GET_COOKIE,
     variables: { slug: params.slug },
+  }).catch(err => {
+    return;
   });
   const cookieData = cookieResponse?.data?.cookieCollection?.items[0];
   return {

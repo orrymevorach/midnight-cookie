@@ -10,6 +10,8 @@ export async function getStaticProps({ preview = false, params }) {
   const cookieDataResponse = await fetchGraphQL({
     query: GET_COOKIES,
     variables: { slug: params.slug },
+  }).catch(err => {
+    return;
   });
 
   const cookieData =

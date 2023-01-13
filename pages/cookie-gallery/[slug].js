@@ -12,14 +12,19 @@ export async function getStaticProps({ preview = false, params }) {
     variables: { slug: params.slug },
   });
 
+  const cookieData =
+    cookieDataResponse?.data?.cookieGalleryCollection?.items &&
+    cookieDataResponse?.data?.cookieGalleryCollection?.items.length
+      ? filterNullFields(
+          cookieDataResponse.data.cookieGalleryCollection.items[0]
+            .cookiesCollection.items
+        )
+      : [];
+
   return {
     props: {
       isPreview: !!preview,
-      cookieData:
-        filterNullFields(
-          cookieDataResponse.data.cookieGalleryCollection.items[0]
-            .cookiesCollection.items
-        ) || [],
+      cookieData,
     },
   };
 }

@@ -15,7 +15,7 @@ export async function getStaticProps({ preview = false, params }) {
     query: GET_COOKIE,
     variables: { slug: params.slug },
   });
-  const cookieData = cookieResponse.data.cookieCollection.items[0];
+  const cookieData = cookieResponse?.data?.cookieCollection?.items[0];
   return {
     props: {
       isPreview: !!preview,

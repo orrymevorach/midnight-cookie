@@ -1,13 +1,13 @@
 import Head from 'next/head';
 
 export default function MetaTags() {
+  const title = 'Midnight Cookie';
+  const description =
+    "Midnight Cookie is Toronto's ONLY Late Night Cookie Delivery. MADE TO ORDER cookies #midnightcookie. NEW STORE FRONT COMING SOON!!";
   return (
     <Head>
-      <title>Midnight Cookie</title>
-      <meta
-        name="description"
-        content="Midnight Cookie is Toronto's ONLY Late Night Cookie Delivery. MADE TO ORDER cookies #midnightcookie. NEW STORE FRONT COMING SOON!!"
-      />
+      <title>{title}</title>
+      <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link
         rel="icon"
@@ -23,6 +23,14 @@ export default function MetaTags() {
         rel="apple-touch-icon"
         href="/wp-content/uploads/2021/10/midnight-cookie-favi-300x300.png"
       ></link>
+
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+      <meta
+        property="og:image"
+        content="/wp-content/uploads/2021/10/midnight-cookie-favi-300x300.png"
+      />
     </Head>
   );
 }

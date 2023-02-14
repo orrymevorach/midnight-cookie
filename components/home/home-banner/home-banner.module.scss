@@ -1,0 +1,84 @@
+@import '@variables';
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.textContainer {
+  margin-left: 100px;
+}
+
+.heading {
+  color: $white;
+  font-family: $fontPrimaryBold;
+  text-transform: uppercase;
+  font-size: 30px;
+  .pink {
+    color: $pink;
+  }
+}
+
+.blue {
+  color: $green;
+  font-family: $fontPrimaryBold;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.hours {
+  color: $white;
+  font-family: $fontPrimaryMedium;
+  font-size: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.textContainer,
+.imageContainer {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  top: 0;
+}
+
+.imageContainer {
+  height: 100%;
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.cookieImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.crumbsImage {
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  .textContainer {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .container {
+    flex-direction: column;
+  }
+  .textContainer {
+    width: 100%;
+    margin: 0 0 80px 0;
+  }
+  .imageContainer {
+    width: 100%;
+  }
+}

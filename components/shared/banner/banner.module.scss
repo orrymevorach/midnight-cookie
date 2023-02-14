@@ -4,7 +4,6 @@
   width: 100%;
   height: 600px;
   position: relative;
-  padding: 80px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +18,6 @@
 
 .backgroundImage {
   background-color: $white;
-  background-image: url(/wp-content/uploads/2022/06/thumbnail_BAF085FB-4D3D-4454-8B42-968E3DB54025.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,6 +41,7 @@
   text-align: center;
   color: $black;
   font-family: $fontPrimaryBold;
+  padding: 80px 30px;
   h2 {
     text-transform: uppercase;
     font-size: 76px;

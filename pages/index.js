@@ -7,19 +7,14 @@ import Layout from 'components/layout';
 import { slugMap } from 'utils/constants';
 import { fetchGraphQL, filterNullFields } from 'lib/api';
 import { getPageLoadData } from 'lib/api';
+import HomeBanner from 'components/home/home-banner';
 
 export default function Home(pageProps) {
   const { cookieData = [] } = pageProps;
   return (
     <Layout {...pageProps}>
       <main>
-        <Banner heading="Our new storefront is coming soon" hasFade>
-          <p>Check back here for updates...</p>
-          <p>
-            Orders will be paused until reopening. Please message us for any
-            special requests.
-          </p>
-        </Banner>
+        <HomeBanner />
         <CookieGallery cookieData={cookieData} />
         <NewsBanner />
         <Reviews />

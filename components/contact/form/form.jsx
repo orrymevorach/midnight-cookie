@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import Loader from 'components/shared/loader';
+import Button from 'components/shared/button/button';
 
 export default function Form() {
   const [state, handleSubmit] = useForm('mqkozgoo');
@@ -53,13 +54,9 @@ export default function Form() {
           required
         ></textarea>
       </div>
-      <button
-        type="submit"
-        disabled={state.submitting}
-        className={styles.submitButton}
-      >
+      <Button type="submit" isDisabled={state.submitting}>
         Submit
-      </button>
+      </Button>
     </form>
   );
 }

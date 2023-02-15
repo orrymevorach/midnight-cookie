@@ -1,6 +1,6 @@
 import Banner from 'components/shared/banner';
 import Form from 'components/contact/form';
-import Map from 'components/contact/map';
+// import Map from 'components/contact/map';
 import styles from './page-container.module.scss';
 import { getPageLoadData } from 'lib/api';
 import Layout from 'components/layout';
@@ -12,7 +12,7 @@ export default function Contact(pageProps) {
       <main>
         <Banner isSmall heading="Contact" />
         <div className={styles.pageContainer}>
-          <Map />
+          {/* <Map /> */}
           <Form />
         </div>
       </main>

@@ -88,13 +88,13 @@
     width: 100%;
     margin: 0 0 40px 0;
   }
+  .heading {
+    font-size: 24px;
+  }
   .imageContainer {
+    height: 100%;
     width: 100%;
     right: auto;
-    img {
-      height: auto;
-      width: 90%;
-    }
   }
   .cookieImage {
     left: 50%;
@@ -106,8 +106,9 @@
   }
 }
 
-@media screen and (max-width: $tablet) {
-  .heading {
-    font-size: 24px;
+@media screen and (max-width: $mobile) {
+  .imageContainer img {
+    height: auto;
+    width: 90%;
   }
 }

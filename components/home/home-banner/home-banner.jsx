@@ -21,8 +21,9 @@ export default function HomeBanner() {
           </div>
           <p className={styles.blue}>Delivered Fresh and Warm!</p>
           <p className={styles.hours}>
-            Tues - Thurs 8 PM - 2 AM
-            <br /> Fri - Sun 8 PM - 3 AM
+            Reopening soon!
+            {/* <br /> Tues - Thurs 8 PM - 2 AM
+            <br /> Fri - Sun 8 PM - 3 AM */}
           </p>
           <Button classNames={styles.button} href="order-now">
             Order Now

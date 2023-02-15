@@ -3,6 +3,7 @@
 .container {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .textContainer {
@@ -57,16 +58,24 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 75%;
 }
 
 .crumbsImage {
   position: relative;
   z-index: 2;
+  width: 100%;
+  left: -120px;
+  top: -30px;
 }
 
 @media screen and (max-width: 1200px) {
   .textContainer {
     margin-left: 50px;
+  }
+  .imageContainer {
+    position: relative;
+    right: -100px;
   }
 }
 
@@ -80,6 +89,15 @@
   }
   .imageContainer {
     width: 100%;
+    right: auto;
+  }
+  .cookieImage {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .crumbsImage {
+    left: 0;
+    top: 0;
   }
 }
 

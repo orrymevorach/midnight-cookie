@@ -4,6 +4,50 @@ import Button from 'components/shared/button';
 import styles from './home-banner.module.scss';
 import animations from 'mevo-components/animations/animations.module.scss';
 
+const hoursOfOperation = [
+  {
+    day: 'Monday',
+    hours: 'Closed',
+  },
+  {
+    day: 'Tuesday',
+    hours: '3:00 PM - 2:00 AM',
+  },
+  {
+    day: 'Wednesday',
+    hours: '3:00 PM - 2:00 AM',
+  },
+  {
+    day: 'Thursday',
+    hours: '3:00 PM - 2:00 AM',
+  },
+  {
+    day: 'Friday',
+    hours: '3:00 PM - 3:00 AM',
+  },
+  {
+    day: 'Saturday',
+    hours: '2:00 PM - 3:00 AM',
+  },
+  {
+    day: 'Sunday',
+    hours: '3:00 PM - 12:00 AM',
+  },
+];
+
+const HoursOfOperation = ({ hoursOfOperation }) => {
+  return (
+    <div className={styles.hoursOfOperation}>
+      {hoursOfOperation.map(({ day, hours }) => (
+        <div className={styles.line}>
+          <p className={styles.day}>{day}</p>
+          <p className={styles.hours}>{hours}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export default function HomeBanner() {
   return (
     <Banner
@@ -20,11 +64,7 @@ export default function HomeBanner() {
             </h1>
           </div>
           <p className={styles.blue}>Delivered Fresh and Warm!</p>
-          <p className={styles.hours}>
-            Reopening soon!
-            {/* <br /> Tues - Thurs 8 PM - 2 AM
-            <br /> Fri - Sun 8 PM - 3 AM */}
-          </p>
+          <HoursOfOperation hoursOfOperation={hoursOfOperation} />
           <Button classNames={styles.button} href="order-now">
             Order Now
           </Button>

@@ -27,10 +27,17 @@
   margin: 20px 0;
 }
 
-.hours {
+.hoursOfOperation {
   color: $white;
   font-family: $fontPrimaryMedium;
   font-size: 20px;
+  .line {
+    display: flex;
+  }
+  .hour,
+  .day {
+    width: 150px;
+  }
 }
 
 .button {

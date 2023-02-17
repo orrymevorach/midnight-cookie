@@ -1,8 +1,13 @@
+@import '@variables';
+
 .nav ul {
   display: flex;
   align-items: center;
   list-style-type: none;
   padding: 40px 0 40px 60px;
+  position: relative;
+  z-index: 2;
+  background-color: $white;
   img {
     display: block;
     padding-right: 30px;

@@ -3,7 +3,7 @@ import Form from 'components/contact/form';
 // import Map from 'components/contact/map';
 import styles from './page-container.module.scss';
 import { getPageLoadData } from 'lib/api';
-import Layout from 'components/layout';
+import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
 
 export default function Contact(pageProps) {

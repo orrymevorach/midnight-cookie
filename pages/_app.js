@@ -1,4 +1,4 @@
-import MaintenanceMode from 'components/maintenance-mode';
+import MaintenanceMode from 'components/shared/maintenance-mode';
 import '../styles/globals.css';
 import PageNotFound from './404';
 

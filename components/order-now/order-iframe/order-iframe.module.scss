@@ -1,0 +1,13 @@
+@import '@variables';
+
+.orderIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: fixed;
+  top: 170px;
+  z-index: 1;
+  @media screen and (max-width: $tablet) {
+    top: 135px;
+  }
+}

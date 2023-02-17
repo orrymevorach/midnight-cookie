@@ -2,7 +2,7 @@ import { GET_NEWS_ARTICLES } from 'gql/queries';
 import Banner from 'components/shared/banner';
 import NewsGallery from 'components/media/news-gallery/news-gallery';
 import { fetchGraphQL, filterNullFields, getPageLoadData } from 'lib/api';
-import Layout from 'components/layout/layout';
+import Layout from 'components/shared/layout/layout';
 import { slugMap } from 'utils/constants';
 
 export default function Media(pageProps) {

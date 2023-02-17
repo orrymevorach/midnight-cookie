@@ -3,7 +3,7 @@ import Banner from 'components/shared/banner';
 import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
 import Reviews from 'components/home/reviews';
-import Layout from 'components/layout';
+import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
 import { fetchGraphQL, filterNullFields } from 'lib/api';
 import { getPageLoadData } from 'lib/api';

@@ -1,17 +1,13 @@
 import { getPageLoadData } from 'lib/api';
-import Layout from 'components/layout/layout';
+import Layout from 'components/shared/layout/layout';
 import { slugMap } from 'utils/constants';
+import OrderIframe from 'components/order-now/order-iframe';
 
 export default function OrderNow(pageProps) {
   return (
     <Layout {...pageProps}>
       <main>
-        <iframe
-          src="https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog"
-          width="100%"
-          height="100%"
-          style={{ border: 'none' }}
-        ></iframe>
+        <OrderIframe />
       </main>
     </Layout>
   );

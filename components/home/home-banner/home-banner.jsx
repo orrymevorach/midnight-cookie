@@ -10,15 +10,7 @@ const hoursOfOperation = [
     hours: 'Closed',
   },
   {
-    day: 'Tuesday',
-    hours: '3:00 PM - 2:00 AM',
-  },
-  {
-    day: 'Wednesday',
-    hours: '3:00 PM - 2:00 AM',
-  },
-  {
-    day: 'Thursday',
+    day: 'Tuesday - Thursday',
     hours: '3:00 PM - 2:00 AM',
   },
   {

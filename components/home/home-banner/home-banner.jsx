@@ -31,7 +31,7 @@ const HoursOfOperation = ({ hoursOfOperation }) => {
   return (
     <div className={styles.hoursOfOperation}>
       {hoursOfOperation.map(({ day, hours }) => (
-        <div className={styles.line}>
+        <div key={day} className={styles.line}>
           <p className={styles.day}>{day}</p>
           <p className={styles.hours}>{hours}</p>
         </div>

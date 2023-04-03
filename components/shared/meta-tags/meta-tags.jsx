@@ -4,10 +4,12 @@ export default function MetaTags() {
   const title = 'Midnight Cookie';
   const description =
     "Midnight Cookie is Toronto's ONLY Late Night Cookie Delivery. MADE TO ORDER cookies #midnightcookie. NEW STORE FRONT COMING SOON!!";
+  const url = 'https://midnightcookie.ca/';
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="url" content={url} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link
         rel="icon"
@@ -26,7 +28,7 @@ export default function MetaTags() {
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+      <meta property="og:url" content={url} />
       <meta
         property="og:image"
         content="/wp-content/uploads/2021/10/midnight-cookie-favi-300x300.png"

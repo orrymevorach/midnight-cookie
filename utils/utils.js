@@ -20,3 +20,5 @@ export const formatDate = ({ date }) => {
   const day = new Date(date).getDate();
   return `${month} ${day}, ${year}`;
 };
+
+export const removeTime = stamp => stamp.split('T')[0];

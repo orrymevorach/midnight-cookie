@@ -1,19 +1,17 @@
 import Banner from 'components/shared/banner';
-import Form from 'components/contact/form';
-// import Map from 'components/contact/map';
 import styles from './page-container.module.scss';
 import { getPageLoadData } from 'lib/api';
 import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
+import Contact from 'components/contact';
 
-export default function Contact(pageProps) {
+export default function ContactPage(pageProps) {
   return (
     <Layout {...pageProps}>
       <main>
         <Banner isSmall heading="Contact" />
         <div className={styles.pageContainer}>
-          {/* <Map /> */}
-          <Form />
+          <Contact />
         </div>
       </main>
     </Layout>

@@ -1,7 +1,21 @@
+@import '@variables';
+
 .container {
   display: flex;
 }
 
 .column {
   width: 50%;
+}
+
+@media screen and (max-width: $mobile) {
+  .container {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+  }
+  .right {
+    margin-top: 40px;
+  }
 }

@@ -57,7 +57,11 @@ export default function HomeBanner() {
           </div>
           <p className={styles.blue}>Delivered Fresh and Warm!</p>
           <HoursOfOperation hoursOfOperation={hoursOfOperation} />
-          <Button classNames={styles.button} href="order-now">
+          <Button
+            classNames={styles.button}
+            href="https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog"
+            target="_blank"
+          >
             Order Now
           </Button>
         </div>

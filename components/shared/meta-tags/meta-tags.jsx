@@ -3,7 +3,7 @@ import Head from 'next/head';
 export default function MetaTags() {
   const title = 'Midnight Cookie';
   const description =
-    "Midnight Cookie is Toronto's ONLY Late Night Cookie Delivery. MADE TO ORDER cookies #midnightcookie. NEW STORE FRONT COMING SOON!!";
+    "Midnight Cookie is Toronto's ONLY Late Night Cookie Delivery. MADE TO ORDER cookies #midnightcookie.!";
   const url = 'https://midnightcookie.ca/';
   return (
     <Head>

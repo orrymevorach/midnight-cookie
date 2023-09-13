@@ -6,5 +6,10 @@ export default function App({ Component, pageProps }) {
   const { isMaintenanceMode, isPagePublished, isPreview } = pageProps;
   if (!isPagePublished && !isPreview) return <PageNotFound />;
   if (isMaintenanceMode) return <MaintenanceMode />;
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+      <script src="https://snapwidget.com/js/snapwidget.js"></script>
+    </>
+  );
 }

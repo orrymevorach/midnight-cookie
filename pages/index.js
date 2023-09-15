@@ -15,6 +15,7 @@ export default function Home(pageProps) {
     <Layout {...pageProps}>
       <main>
         <HomeBanner />
+        <CookieGallery cookieData={cookieData} />
         <iframe
           src="https://snapwidget.com/embed/1041991"
           class="snapwidget-widget"
@@ -28,7 +29,6 @@ export default function Home(pageProps) {
             height: '800px',
           }}
         ></iframe>
-        <CookieGallery cookieData={cookieData} />
         <NewsBanner />
         <Reviews />
       </main>

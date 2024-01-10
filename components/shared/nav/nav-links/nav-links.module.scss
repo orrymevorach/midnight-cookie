@@ -2,10 +2,11 @@
 
 .menuItem {
   a {
-    color: $black;
+    color: white;
     text-decoration: none;
     padding: 0 16px;
     font-family: $fontPrimaryBold;
+    text-transform: uppercase;
   }
   &.isMobile {
     color: $white;

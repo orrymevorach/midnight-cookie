@@ -41,7 +41,6 @@ const HoursOfOperation = ({ hoursOfOperation }) => {
 };
 
 export default function HomeBanner() {
-  console.log('hi midnight cookie')
   return (
     <Banner
       backgroundImage="/wp-content/uploads/2021/10/MIDNIGHT.jpg"

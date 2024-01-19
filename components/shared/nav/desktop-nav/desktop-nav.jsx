@@ -25,6 +25,8 @@ const sortNavLinksToLeftAndRight = ({ navData }) => {
 export default function DesktopNav({ navData, pathname }) {
   const { left, right } = sortNavLinksToLeftAndRight({ navData });
   const [isSticky, setIsSticky] = useState(false);
+
+  // When user scrolls past height of window, reveal the nav bar and make it stick to top of page
   useEffect(() => {
     window.addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;

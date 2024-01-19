@@ -30,3 +30,13 @@ button {
   font-family: 'Gilroy Medium';
   src: url('../asset/gilroy/Gilroy-Medium.woff');
 }
+
+@font-face {
+  font-family: 'Integral CF Heavy';
+  src: url('../asset/Integralcf/Integralcf-heavy.otf');
+}
+
+@font-face {
+  font-family: 'Plaak 6';
+  src: url('../asset/Plaak 6/Plaak 6 Trial Heavy.woff.ttf');
+}

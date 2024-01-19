@@ -6,6 +6,7 @@ import { slugMap } from 'utils/constants';
 import { getCookieGallery } from 'lib/api';
 import { getPageLoadData } from 'lib/api';
 import HomeBanner from 'components/home/home-banner';
+import Button from 'components/shared/button/button';
 
 export default function Home(pageProps) {
   const { galleries } = pageProps;
@@ -16,6 +17,9 @@ export default function Home(pageProps) {
         {galleries.map(({ title, items }) => (
           <CookieGallery title={title} items={items} />
         ))}
+        <Button style={{ display: 'block', margin: '50px auto' }}>
+          Order Now
+        </Button>
 
         {/* <iframe
           src="https://snapwidget.com/embed/1041991"
@@ -31,7 +35,6 @@ export default function Home(pageProps) {
           }}
         ></iframe> */}
         <NewsBanner />
-        <Reviews />
       </main>
     </Layout>
   );

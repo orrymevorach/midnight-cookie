@@ -9,12 +9,14 @@ export default function Button({
   href = '',
   classNames = '',
   target = null,
+  style = {},
 }) {
   return href ? (
     <Link
       href={href}
       className={clsx(styles.button, classNames)}
       target={target}
+      style={style}
     >
       {children}
     </Link>
@@ -23,6 +25,7 @@ export default function Button({
       type={type}
       disabled={isDisabled}
       className={clsx(styles.button, classNames)}
+      style={style}
     >
       {children}
     </button>

@@ -1,0 +1,28 @@
+@import '@variables';
+
+.container {
+  color: black;
+  font-family: $fontPrimaryMedium;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.hoursOfOperation {
+  margin: 60px auto 0;
+}
+
+.row {
+  display: flex;
+}
+
+.heading {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.day {
+  width: 350px;
+}

@@ -5,6 +5,7 @@
   background-color: black;
   padding: 40px 20px 80px 20px;
   z-index: 1000;
+  display: none;
   ul {
     display: flex;
     align-items: center;
@@ -34,6 +35,7 @@
   position: sticky;
   transform: translateY(-100px);
   animation: slideDown 0.3s linear forwards;
+  display: block;
 }
 
 @keyframes slideDown {

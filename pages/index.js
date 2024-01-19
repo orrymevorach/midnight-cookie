@@ -7,6 +7,7 @@ import { getCookieGallery } from 'lib/api';
 import { getPageLoadData } from 'lib/api';
 import HomeBanner from 'components/home/home-banner';
 import Button from 'components/shared/button/button';
+import HoursOfOperation from 'components/home/hours-of-operation/hours-of-operation';
 
 export default function Home(pageProps) {
   const { galleries } = pageProps;
@@ -35,6 +36,7 @@ export default function Home(pageProps) {
           }}
         ></iframe> */}
         <NewsBanner />
+        <HoursOfOperation />
       </main>
     </Layout>
   );

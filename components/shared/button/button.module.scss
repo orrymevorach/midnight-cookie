@@ -2,11 +2,17 @@
 
 .button {
   font-family: $fontPrimaryBold;
-  background-color: $pink;
+  background-color: black;
   color: $white;
   font-size: 20px;
-  padding: 20px 50px;
-  border-radius: 5px;
+  padding: 10px 35px 14px;
+  border-radius: 50px;
+  transition: 0.3s;
+  &:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+  }
 }
 
 a.button {

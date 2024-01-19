@@ -1,121 +1,32 @@
 @import '@variables';
 
 .container {
-  display: flex;
-  align-items: center;
-  height: 100%;
+  margin-bottom: 300px;
+  background-image: url('/rebuild/cookies-in-box.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
 }
 
 .textContainer {
-  margin-left: 100px;
+  position: absolute;
+  bottom: -180px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .heading {
-  color: $white;
   font-family: $fontPrimaryBold;
   text-transform: uppercase;
-  font-size: 30px;
-  .pink {
-    color: $pink;
-  }
-}
-
-.blue {
-  color: $green;
-  font-family: $fontPrimaryBold;
-  font-size: 24px;
-  margin: 20px 0;
-}
-
-.hoursOfOperation {
-  color: $white;
-  font-family: $fontPrimaryMedium;
-  font-size: 20px;
-  .line {
-    display: flex;
-  }
-
-  .day {
-    width: 220px;
-  }
+  font-size: 60px;
+  text-align: center;
+  z-index: 1;
 }
 
 .button {
-  display: inline-block;
-  margin-top: 40px;
-}
-
-.textContainer,
-.imageContainer {
-  width: 50%;
-  position: relative;
-  z-index: 1;
-  top: 0;
-}
-
-.imageContainer {
-  height: 100%;
-  img {
-    height: 100%;
-    object-fit: contain;
-  }
-}
-
-.cookieImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 75%;
-}
-
-.crumbsImage {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  left: -120px;
-  top: -30px;
-}
-
-@media screen and (max-width: 1200px) {
-  .textContainer {
-    margin-left: 50px;
-  }
-  .imageContainer {
-    position: relative;
-    right: -100px;
-  }
-}
-
-@media screen and (max-width: $tablet) {
-  .container {
-    flex-direction: column;
-    padding-bottom: 30px;
-  }
-  .textContainer {
-    width: 100%;
-    margin: 0 0 40px 0;
-  }
-  .heading {
-    font-size: 24px;
-  }
-  .imageContainer {
-    height: 100%;
-    width: 100%;
-    right: auto;
-  }
-  .cookieImage {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .crumbsImage {
-    left: 0;
-    top: 0;
-  }
-}
-
-@media screen and (max-width: $mobile) {
-  .imageContainer img {
-    height: auto;
-    width: 90%;
-  }
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
 }

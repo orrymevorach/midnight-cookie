@@ -42,42 +42,15 @@ const HoursOfOperation = ({ hoursOfOperation }) => {
 
 export default function HomeBanner() {
   return (
-    <Banner
-      backgroundImage="/wp-content/uploads/2021/10/MIDNIGHT.jpg"
-      hasOverlay={false}
-    >
-      <div className={styles.container}>
-        <div className={clsx(styles.textContainer, animations.fadeUp)}>
-          <div className={styles.heading}>
-            <h1>
-              Toronto's Only <br />
-              Late Night <br />
-              <span className={styles.pink}>Cookie Delivery</span>
-            </h1>
-          </div>
-          <p className={styles.blue}>Delivered Fresh and Warm!</p>
-          <HoursOfOperation hoursOfOperation={hoursOfOperation} />
-          <Button
-            classNames={styles.button}
-            href="https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog"
-            target="_blank"
-          >
-            Order Now
-          </Button>
-        </div>
-        <div className={clsx(styles.imageContainer, animations.fadeUp)}>
-          <img
-            src="/images/cookies/cookie-crumbs.png"
-            alt=""
-            className={styles.crumbsImage}
-          />
-          <img
-            src="/images/cookies/midnight-cookie-main-sprink-pink.png"
-            alt=""
-            className={styles.cookieImage}
-          />
-        </div>
+    <div className={styles.container}>
+      <div className={styles.textContainer}>
+        <h2 className={styles.heading}>
+          Cookies <br />
+          baked fresh
+          <br /> for you
+        </h2>
+        <Button classNames={styles.button}>Order Now</Button>
       </div>
-    </Banner>
+    </div>
   );
 }

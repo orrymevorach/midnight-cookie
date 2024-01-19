@@ -1,21 +1,22 @@
-import { GET_COOKIES } from 'gql/queries';
-import Banner from 'components/shared/banner';
 import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
 import Reviews from 'components/home/reviews';
 import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
-import { fetchGraphQL, filterNullFields } from 'lib/api';
+import { getCookieGallery } from 'lib/api';
 import { getPageLoadData } from 'lib/api';
 import HomeBanner from 'components/home/home-banner';
 
 export default function Home(pageProps) {
-  const { cookieData = [] } = pageProps;
+  const { galleries } = pageProps;
   return (
     <Layout {...pageProps}>
       <main>
         <HomeBanner />
-        <CookieGallery cookieData={cookieData} />
+        {galleries.map(({ title, items }) => (
+          <CookieGallery title={title} items={items} />
+        ))}
+
         {/* <iframe
           src="https://snapwidget.com/embed/1041991"
           class="snapwidget-widget"
@@ -41,20 +42,20 @@ export async function getStaticProps({ preview = false }) {
     slug: slugMap.HOME,
     isPreview: preview,
   });
-  const cookieDataResponse = await fetchGraphQL({
-    query: GET_COOKIES,
-    variables: {
-      slug: 'home-page-gallery',
-    },
+
+  const flavoursOfTheWeekGallery = await getCookieGallery({
+    title: 'Flavours of the Week',
   });
+
+  const consistentFlavoursGallery = await getCookieGallery({
+    title: 'Repeating Flavours',
+  });
+
+  const galleries = [consistentFlavoursGallery, flavoursOfTheWeekGallery];
+
   return {
     props: {
-      cookieData:
-        filterNullFields(
-          cookieDataResponse.data.cookieGalleryCollection.items[0]
-            .cookiesCollection.items
-        ) || [],
-
+      galleries,
       ...pageLoadData,
     },
   };

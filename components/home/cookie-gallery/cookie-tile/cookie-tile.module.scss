@@ -2,33 +2,31 @@
 
 .cookieTile {
   width: 100%;
-  padding: 0 30px;
-  p {
-    font-family: $fontPrimaryMedium;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-  img {
-    transition: 0.2s;
-    &:hover {
-      transition: 0.2s;
-      transform: scale(1.15);
-    }
-  }
-  overflow: hidden;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
 }
 
 p.title {
   font-family: $fontPrimaryBold;
-  font-size: 18px;
-  margin: 15px 0;
+  font-size: 22px;
+  text-align: center;
+  padding: 0 20px;
 }
 
-@media screen and (max-width: $mobile) {
-  .cookieTile {
-    padding: 0 15px;
-  }
-  p.title {
-    margin-top: 30px;
-  }
+.textContainer {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  justify-content: center;
 }
+
+// @media screen and (max-width: $mobile) {
+//   .cookieTile {
+//     padding: 0 15px;
+//   }
+//   p.title {
+//     margin-top: 30px;
+//   }
+// }

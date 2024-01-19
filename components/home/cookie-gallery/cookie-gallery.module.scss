@@ -3,17 +3,27 @@
 .cookieGallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  padding: 50px 100px;
-  @media (max-width: $desktop) {
-    padding: 50px 25px;
-  }
-  @media (max-width: $tablet) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  @media (max-width: $mobile) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
+  margin-bottom: 20px;
+  // padding: 50px 100px;
+  // @media (max-width: $desktop) {
+  //   padding: 50px 25px;
+  // }
+  // @media (max-width: $tablet) {
+  //   grid-template-columns: 1fr 1fr 1fr;
+  // }
+  // @media (max-width: $mobile) {
+  //   grid-template-columns: 1fr 1fr;
+  // }
+  // @media (max-width: 600px) {
+  //   grid-template-columns: 1fr;
+  // }
+}
+
+.heading {
+  text-align: center;
+  background-color: black;
+  font-family: $fontPrimary;
+  font-size: 50px;
+  color: white;
+  padding: 50px 0 65px;
 }

@@ -1,0 +1,44 @@
+@import '@variables';
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 200px 0;
+}
+
+.formContainer {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-size: 32px;
+  font-family: $fontPrimary;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 420px;
+  padding: 8px 10px;
+  font-family: $fontSecondary;
+  height: 45px;
+  border: 1px solid black;
+  &::placeholder {
+    font-family: $fontPrimary;
+    color: black;
+  }
+}
+
+.button {
+  background-color: black;
+  color: white;
+  height: 45px;
+  padding-bottom: 5px;
+  width: 150px;
+  border: none;
+  font-family: $fontPrimary;
+  font-size: 20px;
+}

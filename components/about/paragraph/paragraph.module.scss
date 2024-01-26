@@ -14,12 +14,12 @@
 
 .title {
   font-size: 39px;
-  font-family: $fontPrimaryBold;
+  @include fontPrimaryBold;
 }
 
 .text {
   font-size: 15px;
-  font-family: $fontPrimary;
+  @include fontPrimary;
   margin: 20px 0;
   line-height: 2;
 }

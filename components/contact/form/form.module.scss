@@ -3,7 +3,7 @@
 .form {
   padding: 50px;
   width: 100%;
-  font-family: $fontPrimaryBold;
+  @include fontPrimaryBold;
   color: $black;
 }
 
@@ -24,7 +24,7 @@
   textarea {
     padding: 10px;
     font-size: 16px;
-    font-family: $fontPrimary;
+    @include fontPrimary;
   }
 }
 
@@ -33,7 +33,7 @@
 }
 
 .successText {
-  font-family: $fontPrimaryBold;
+  @include fontPrimaryBold;
   color: $black;
   font-size: 36px;
 

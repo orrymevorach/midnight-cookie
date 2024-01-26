@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 200px 0;
+  margin: 150px 0;
 }
 
 .formContainer {
@@ -16,7 +16,7 @@
 
 .label {
   font-size: 32px;
-  font-family: $fontPrimary;
+  @include fontPrimary;
   margin-bottom: 20px;
 }
 
@@ -27,7 +27,7 @@
   height: 45px;
   border: 1px solid black;
   &::placeholder {
-    font-family: $fontPrimary;
+    @include fontPrimary;
     color: black;
   }
 }
@@ -39,6 +39,6 @@
   padding-bottom: 5px;
   width: 150px;
   border: none;
-  font-family: $fontPrimary;
+  @include fontPrimary;
   font-size: 20px;
 }

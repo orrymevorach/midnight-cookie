@@ -6,12 +6,13 @@
   width: 800px;
   margin: 0 auto;
   display: block;
-  padding: 50px 80px 0;
+  padding: 50px 80px;
+  position: relative;
 }
 
 .heading {
   text-align: center;
-  font-family: $fontPrimary;
+  @include fontPrimary;
   font-size: 50px;
   margin-bottom: 50px;
 }
@@ -24,4 +25,33 @@
 
 .image {
   height: auto;
+}
+
+.blog {
+  width: 180px;
+}
+
+.taste {
+  width: 300px;
+}
+
+.star {
+  width: 400px;
+  margin: 30px auto 0;
+}
+
+.cookiePiece {
+  position: absolute;
+  height: auto;
+}
+
+.cookieLeft {
+  left: -60px;
+  width: 150px;
+  top: -110px;
+}
+.cookieRight {
+  width: 200px;
+  top: -60px;
+  right: -70px;
 }

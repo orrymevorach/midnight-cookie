@@ -1,9 +1,11 @@
 @import '@variables';
 
+$height: 120px;
+
 .nav {
   top: 0;
+  height: $height + 10px;
   background-color: black;
-  padding: 40px 20px 80px 20px;
   z-index: 1000;
   display: none;
   ul {
@@ -14,6 +16,9 @@
     position: relative;
     z-index: 2;
     position: relative;
+    padding: 20px 0;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }
 
@@ -25,21 +30,23 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  width: $height;
+  top: 5px;
   img {
-    display: block;
-    padding-right: 30px;
+    width: 100%;
+    height: auto;
   }
 }
 
 .sticky {
   position: sticky;
-  transform: translateY(-100px);
-  animation: slideDown 0.3s linear forwards;
+  opacity: 0;
+  animation: fadeIn 0.3s linear forwards;
   display: block;
 }
 
-@keyframes slideDown {
+@keyframes fadeIn {
   100% {
-    transform: translateY(0);
+    opacity: 1;
   }
 }

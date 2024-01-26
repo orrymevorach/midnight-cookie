@@ -1,12 +1,47 @@
+import Image from 'next/image';
 import styles from './footer.module.scss';
+import logoBlack from '/public/rebuild/footer.png';
+import logo from '/public/rebuild/footer-color.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
+import clsx from 'clsx';
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <p className={styles.address}> 3 Manor Rd E, Toronto, ON M4S 1P8</p>
-      <p>
-        Copyright &copy; 2022 <span>Midnight Cookie</span>. All Rights Reserved
+      <div className={styles.topRow}>
+        <div className={styles.iconContainer}>
+          <Link href="/" className={styles.icon}>
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className={clsx(styles.icon, styles.insta)}
+            />
+          </Link>
+          <Link href="/" className={styles.icon}>
+            <FontAwesomeIcon
+              icon={faFacebookF}
+              className={clsx(styles.icon, styles.fbook)}
+            />
+          </Link>
+        </div>
+        <div className={styles.links}>
+          <Link href="/">About</Link>
+          <Link href="/">Contact</Link>
+          <Link href="/">FAQS</Link>
+        </div>
+      </div>
+      <p className={styles.copyrightText}>
+        Copyright &#9400; 2022 Midnight Cookie. All Rights Reserved
       </p>
+      <div className={styles.images}>
+        <Image src={logoBlack} className={styles.image} />
+        <Image src={logo} className={styles.image} />
+        <Image src={logoBlack} className={styles.image} />
+        <Image src={logoBlack} className={styles.image} />
+        <Image src={logoBlack} className={styles.image} />
+        <Image src={logoBlack} className={styles.image} />
+      </div>
     </footer>
   );
 }

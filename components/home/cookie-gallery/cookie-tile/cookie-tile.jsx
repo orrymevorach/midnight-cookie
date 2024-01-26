@@ -14,7 +14,12 @@ export default function CookieTile({
         style={{ backgroundImage: `url(${url})` }}
       ></div>
       <div className={styles.textContainer}>
-        <p className={styles.title}>{title}</p>
+        {title.split(' ').map((word, index) => (
+          <p key={`${word}-${index}`} className={styles.title}>
+            <span>{word}</span>
+            <br />
+          </p>
+        ))}
       </div>
     </div>
   );

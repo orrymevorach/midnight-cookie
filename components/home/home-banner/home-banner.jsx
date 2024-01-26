@@ -1,17 +1,34 @@
 import Button from 'components/shared/button';
 import styles from './home-banner.module.scss';
+import { useEffect, useState } from 'react';
 
 export default function HomeBanner() {
+  const [showHeading, setShowHeading] = useState(false);
+
+  // When user scrolls past height of window, reveal the nav bar and make it stick to top of page
+  useEffect(() => {
+    window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > 200) {
+        setShowHeading(true);
+      } else {
+        setShowHeading(false);
+      }
+    });
+  }, []);
   return (
     <div className={styles.container}>
-      <div className={styles.textContainer}>
-        <h2 className={styles.heading}>
-          Cookies <br />
-          baked fresh
-          <br /> for you
-        </h2>
-        <Button classNames={styles.button}>Order Now</Button>
-      </div>
+      {showHeading && (
+        <div className={styles.textContainer}>
+          <h2 className={styles.heading}>
+            Cookies <br />
+            baked fresh
+            <br /> for you
+          </h2>
+          <Button classNames={styles.button}>Order Now</Button>
+        </div>
+      )}
     </div>
   );
 }

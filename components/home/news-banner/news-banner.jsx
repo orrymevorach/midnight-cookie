@@ -1,41 +1,45 @@
 import styles from './news-banner.module.scss';
-import Heading from 'components/shared/heading';
 import Image from 'next/image';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import animations from 'mevo-components/animations/animations.module.scss';
-import Link from 'next/link';
+import clsx from 'clsx';
+import cookiePieceRight from 'public/rebuild/cookie-piece.png';
+import cookiePieceLeft from 'public/rebuild/cookie-piece-2.png';
+import blogTO from '/public/rebuild/blogto-black.png';
+import tasteToronto from '/public/rebuild/taste-toronto.png';
+import torontoStar from 'public/rebuild/star-black.png';
 
 export default function NewsBanner() {
   return (
     <div className={styles.container}>
+      <Image
+        src={cookiePieceLeft}
+        className={clsx(styles.cookiePiece, styles.cookieLeft)}
+      />
+      <Image
+        src={cookiePieceRight}
+        className={clsx(styles.cookiePiece, styles.cookieRight)}
+      />
       <p className={styles.heading}>As seen in</p>
       <div className={styles.row}>
         <a href="https://www.blogto.com/bakery/midnight-cookie-toronto/">
           <Image
-            src="/wp-content/uploads/2021/12/blogto.png"
-            width={200}
-            height={200}
+            src={blogTO}
             alt="BlogTO Logo"
-            className={styles.image}
+            className={clsx(styles.image, styles.blog)}
           />
         </a>
         <a href="https://www.tastetoronto.com/news/midnight-cookie-is-set-to-open-first-storefront-in-midtown">
           <Image
-            src="/rebuild/taste-toronto.png"
-            width={200}
-            height={200}
+            src={tasteToronto}
             alt="Taste Toronto Logo"
-            className={styles.image}
+            className={clsx(styles.image, styles.taste)}
           />
         </a>
       </div>
       <a href="#">
         <Image
-          src="/wp-content/uploads/2022/12/star.png"
-          width={200}
-          height={200}
+          src={torontoStar}
           alt="Toronto Star Logo"
-          className={styles.image}
+          className={clsx(styles.image, styles.star)}
         />
       </a>
     </div>

@@ -9,24 +9,12 @@
 }
 
 p.title {
-  font-family: $fontPrimaryBold;
+  @include fontPrimaryBold;
   font-size: 22px;
   text-align: center;
   padding: 0 20px;
 }
 
 .textContainer {
-  display: flex;
-  align-items: center;
-  height: 90px;
-  justify-content: center;
+  margin-top: 20px;
 }
-
-// @media screen and (max-width: $mobile) {
-//   .cookieTile {
-//     padding: 0 15px;
-//   }
-//   p.title {
-//     margin-top: 30px;
-//   }
-// }

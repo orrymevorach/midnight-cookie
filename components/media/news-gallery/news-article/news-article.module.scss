@@ -17,11 +17,11 @@
 
 .textContainer {
   margin: 0 20px;
-  font-family: $fontPrimary;
+  @include fontPrimary;
 }
 
 .title {
-  font-family: $fontPrimaryBold;
+  @include fontPrimaryBold;
   font-size: 20px;
   margin: 20px 0;
 }
@@ -50,7 +50,7 @@
   border-radius: 8px;
   text-decoration: none;
   font-size: 14px;
-  font-family: $fontPrimaryBold;
+  @include fontPrimaryBold;
   text-transform: uppercase;
   position: absolute;
   bottom: 30px;

@@ -18,3 +18,13 @@ $fontSecondary: 'Plaak 6';
 $desktop: 1200px;
 $tablet: 1000px;
 $mobile: 850px;
+
+@mixin fontPrimary {
+  font-family: $fontPrimary;
+  letter-spacing: 2px;
+}
+
+@mixin fontPrimaryBold {
+  font-family: $fontPrimary;
+  letter-spacing: 1px;
+}

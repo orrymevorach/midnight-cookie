@@ -1,6 +1,5 @@
 import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
-import Reviews from 'components/home/reviews';
 import Layout from 'components/shared/layout';
 import { COOKIE_GALLERIES, slugMap } from 'utils/constants';
 import { getCookieGallery } from 'lib/api';
@@ -19,13 +18,16 @@ export default function Home(pageProps) {
         <HomeBanner />
 
         <CookieGallery {...featuredFlavoursGallery} />
-        <Button style={{ display: 'block', margin: '50px auto 100px' }}>
+        <Button style={{ display: 'block', margin: '50px auto 150px' }}>
           See All Flavours
         </Button>
         <CookieGalleryV2 {...classicDoughGallery} />
-        <Button style={{ display: 'block', margin: '50px auto 100px' }}>
+        <Button style={{ display: 'block', margin: '50px auto 220px' }}>
           Order Now
         </Button>
+        <NewsBanner />
+        <HoursOfOperation />
+        <Newsletter />
         {/* <iframe
           src="https://snapwidget.com/embed/1041991"
           class="snapwidget-widget"
@@ -39,9 +41,6 @@ export default function Home(pageProps) {
             height: '800px',
           }}
         ></iframe> */}
-        <NewsBanner />
-        <HoursOfOperation />
-        <Newsletter />
       </main>
     </Layout>
   );

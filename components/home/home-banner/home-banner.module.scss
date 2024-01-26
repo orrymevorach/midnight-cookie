@@ -1,7 +1,7 @@
 @import '@variables';
 
 .container {
-  margin-bottom: 300px;
+  margin-bottom: 350px;
   background-image: url('/rebuild/cookies-in-box.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,21 +12,30 @@
 
 .textContainer {
   position: absolute;
-  bottom: -180px;
+  bottom: -200px;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeIn 0.3s linear forwards;
 }
 
 .heading {
-  font-family: $fontPrimaryBold;
+  @include fontPrimaryBold;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 70px;
   text-align: center;
   z-index: 1;
+  letter-spacing: 2px;
 }
 
 .button {
   display: block;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 40px;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
 }

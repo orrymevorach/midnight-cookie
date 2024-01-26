@@ -17,15 +17,13 @@ export default function CookieTile({
           className={styles.image}
         />
       </div>
-      <div className={styles.textContainer}>
-        <div className={styles.title}>
-          {title.split(' ').map((word, index) => (
-            <p key={`${word}-${index}`}>
-              <span>{word}</span>
-              <br />
-            </p>
-          ))}
-        </div>
+      <div>
+        {title.split(' ').map((word, index) => (
+          <p key={`${word}-${index}`} className={styles.title}>
+            <span>{word}</span>
+            <br />
+          </p>
+        ))}
       </div>
     </div>
   );

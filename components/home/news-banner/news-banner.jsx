@@ -6,10 +6,14 @@ import cookiePieceLeft from 'public/rebuild/cookie-piece-2.png';
 import blogTO from '/public/rebuild/blogto-black.png';
 import tasteToronto from '/public/rebuild/taste-toronto.png';
 import torontoStar from 'public/rebuild/star-black.png';
+import { useRef } from 'react';
+import useAnimation from 'components/shared/animation/animation';
 
 export default function NewsBanner() {
+  const ref = useRef();
+  useAnimation({ ref });
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={ref}>
       <Image
         src={cookiePieceLeft}
         className={clsx(styles.cookiePiece, styles.cookieLeft)}

@@ -1,0 +1,15 @@
+.container {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.animate {
+  animation: fadeIn 0.3s linear forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

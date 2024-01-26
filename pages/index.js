@@ -2,27 +2,30 @@ import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
 import Reviews from 'components/home/reviews';
 import Layout from 'components/shared/layout';
-import { slugMap } from 'utils/constants';
+import { COOKIE_GALLERIES, slugMap } from 'utils/constants';
 import { getCookieGallery } from 'lib/api';
 import { getPageLoadData } from 'lib/api';
 import HomeBanner from 'components/home/home-banner';
 import Button from 'components/shared/button/button';
 import HoursOfOperation from 'components/home/hours-of-operation/hours-of-operation';
 import Newsletter from 'components/home/newsletter/newsletter';
+import CookieGalleryV2 from 'components/home/cookie-gallery-v2/cookie-gallery-v2';
 
 export default function Home(pageProps) {
-  const { galleries } = pageProps;
+  const { featuredFlavoursGallery, classicDoughGallery } = pageProps;
   return (
     <Layout {...pageProps}>
       <main>
         <HomeBanner />
-        {galleries.map(({ title, items }) => (
-          <CookieGallery title={title} items={items} />
-        ))}
-        <Button style={{ display: 'block', margin: '50px auto' }}>
+
+        <CookieGallery {...featuredFlavoursGallery} />
+        <Button style={{ display: 'block', margin: '50px auto 100px' }}>
+          See All Flavours
+        </Button>
+        <CookieGalleryV2 {...classicDoughGallery} />
+        <Button style={{ display: 'block', margin: '50px auto 100px' }}>
           Order Now
         </Button>
-
         {/* <iframe
           src="https://snapwidget.com/embed/1041991"
           class="snapwidget-widget"
@@ -50,19 +53,18 @@ export async function getStaticProps({ preview = false }) {
     isPreview: preview,
   });
 
-  const flavoursOfTheWeekGallery = await getCookieGallery({
-    title: 'Flavours of the Week',
+  const featuredFlavoursGallery = await getCookieGallery({
+    title: COOKIE_GALLERIES.FEATURED_FLAVOURS,
   });
 
-  const consistentFlavoursGallery = await getCookieGallery({
-    title: 'Repeating Flavours',
+  const classicDoughGallery = await getCookieGallery({
+    title: COOKIE_GALLERIES.CLASSIC_DOUGH,
   });
-
-  const galleries = [consistentFlavoursGallery, flavoursOfTheWeekGallery];
 
   return {
     props: {
-      galleries,
+      featuredFlavoursGallery,
+      classicDoughGallery,
       ...pageLoadData,
     },
   };

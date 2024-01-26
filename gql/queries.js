@@ -33,11 +33,14 @@ export const GET_COOKIES = `
   query GetCookies ($title: String) {
     cookieGalleryCollection(where: { title: $title }) {
       items {
+        columns
         cookiesCollection(limit: 30) {
           items {
             title
             image {
               url
+              width
+              height
             }
           }
         }

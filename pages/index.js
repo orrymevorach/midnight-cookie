@@ -22,9 +22,14 @@ export default function Home(pageProps) {
           See All Flavours
         </Button>
         <CookieGalleryV2 {...classicDoughGallery} />
-        <Button style={{ display: 'block', margin: '50px auto 220px' }}>
-          Order Now
-        </Button>
+        <div style={{ width: '100%', textAlign: 'center' }}>
+          <Button
+            style={{ display: 'inline-block', margin: '50px auto 220px' }}
+            href="https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog"
+          >
+            Order Now
+          </Button>
+        </div>
         <NewsBanner />
         <HoursOfOperation />
         <Newsletter />

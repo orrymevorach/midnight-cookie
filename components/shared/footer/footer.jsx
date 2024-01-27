@@ -12,13 +12,21 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.topRow}>
         <div className={styles.iconContainer}>
-          <Link href="/" className={styles.icon}>
+          <Link
+            href="https://www.instagram.com/midnightcookie.to/"
+            className={styles.icon}
+            target="_blank"
+          >
             <FontAwesomeIcon
               icon={faInstagram}
               className={clsx(styles.icon, styles.insta)}
             />
           </Link>
-          <Link href="/" className={styles.icon}>
+          <Link
+            href="https://www.facebook.com/midnightcookie.to/"
+            className={styles.icon}
+            target="_blank"
+          >
             <FontAwesomeIcon
               icon={faFacebookF}
               className={clsx(styles.icon, styles.fbook)}
@@ -26,9 +34,9 @@ export default function Footer() {
           </Link>
         </div>
         <div className={styles.links}>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
-          <Link href="/">FAQS</Link>
+          <Link href="/about-us">About</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/about-us#faq">FAQS</Link>
         </div>
       </div>
       <p className={styles.copyrightText}>

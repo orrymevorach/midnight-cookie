@@ -19,14 +19,23 @@
   display: block;
   color: black;
   margin-right: 5px;
+  transition: 0.3s;
+  border-radius: 10px;
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+  }
 }
 
 .insta {
-  width: 30px;
+  width: 35px;
+  padding: 2px 0px 2px 4px;
 }
 
 .fbook {
-  width: 17px;
+  width: 32px;
+  padding: 5px 8px;
 }
 
 .links {

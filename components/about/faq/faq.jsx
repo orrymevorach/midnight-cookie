@@ -70,7 +70,7 @@ const FaqParagraph = ({ question, answer }) => {
 
 export default function FAQ({ faqData }) {
   return (
-    <div className={clsx(styles.faqWrapper)}>
+    <div className={clsx(styles.faqWrapper)} id="faq">
       <h1 className={styles.heading}>FAQ</h1>
       <div className={styles.faqContainer}>
         {faqData.map(faq => {

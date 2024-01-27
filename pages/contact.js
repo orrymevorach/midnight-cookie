@@ -4,15 +4,16 @@ import { getPageLoadData } from 'lib/api';
 import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
 import Contact from 'components/contact';
+import StoreLocations from 'components/contact/store-locations/store-locations';
 
 export default function ContactPage(pageProps) {
   return (
     <Layout {...pageProps}>
       <main>
-        <Banner isSmall heading="Contact" />
         <div className={styles.pageContainer}>
           <Contact />
         </div>
+        <StoreLocations />
       </main>
     </Layout>
   );

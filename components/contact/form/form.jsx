@@ -55,7 +55,7 @@ export default function Form() {
         ></textarea>
       </div>
       <Button type="submit" isDisabled={state.submitting}>
-        Submit
+        Send
       </Button>
     </form>
   );

@@ -1,83 +1,39 @@
-import clsx from 'clsx';
-import Banner from 'components/shared/banner';
 import Button from 'components/shared/button';
 import styles from './home-banner.module.scss';
-import animations from 'mevo-components/animations/animations.module.scss';
-
-const hoursOfOperation = [
-  {
-    day: 'Monday',
-    hours: 'Closed',
-  },
-  {
-    day: 'Tuesday - Thursday',
-    hours: '3:00 PM - 2:00 AM',
-  },
-  {
-    day: 'Friday',
-    hours: '3:00 PM - 3:00 AM',
-  },
-  {
-    day: 'Saturday',
-    hours: '2:00 PM - 3:00 AM',
-  },
-  {
-    day: 'Sunday',
-    hours: '3:00 PM - 12:00 AM',
-  },
-];
-
-const HoursOfOperation = ({ hoursOfOperation }) => {
-  return (
-    <div className={styles.hoursOfOperation}>
-      {hoursOfOperation.map(({ day, hours }) => (
-        <div key={day} className={styles.line}>
-          <p className={styles.day}>{day}</p>
-          <p className={styles.hours}>{hours}</p>
-        </div>
-      ))}
-    </div>
-  );
-};
+import { useEffect, useState } from 'react';
 
 export default function HomeBanner() {
+  const [showHeading, setShowHeading] = useState(false);
+
+  // When user scrolls past height of window, reveal the nav bar and make it stick to top of page
+  useEffect(() => {
+    window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > 200) {
+        setShowHeading(true);
+      } else {
+        setShowHeading(false);
+      }
+    });
+  }, []);
   return (
-    <Banner
-      backgroundImage="/wp-content/uploads/2021/10/MIDNIGHT.jpg"
-      hasOverlay={false}
-    >
-      <div className={styles.container}>
-        <div className={clsx(styles.textContainer, animations.fadeUp)}>
-          <div className={styles.heading}>
-            <h1>
-              Toronto's Only <br />
-              Late Night <br />
-              <span className={styles.pink}>Cookie Delivery</span>
-            </h1>
-          </div>
-          <p className={styles.blue}>Delivered Fresh and Warm!</p>
-          <HoursOfOperation hoursOfOperation={hoursOfOperation} />
+    <div className={styles.container}>
+      {showHeading && (
+        <div className={styles.textContainer}>
+          <h2 className={styles.heading}>
+            Cookies <br />
+            baked fresh
+            <br /> for you
+          </h2>
           <Button
-            classNames={styles.button}
             href="https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog"
-            target="_blank"
+            classNames={styles.button}
           >
             Order Now
           </Button>
         </div>
-        <div className={clsx(styles.imageContainer, animations.fadeUp)}>
-          <img
-            src="/images/cookies/cookie-crumbs.png"
-            alt=""
-            className={styles.crumbsImage}
-          />
-          <img
-            src="/images/cookies/midnight-cookie-main-sprink-pink.png"
-            alt=""
-            className={styles.cookieImage}
-          />
-        </div>
-      </div>
-    </Banner>
+      )}
+    </div>
   );
 }

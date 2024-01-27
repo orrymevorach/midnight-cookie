@@ -8,6 +8,11 @@ const nextConfig = {
         hostname: 'www.midnightcookie.ca',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        port: '',
+      },
     ],
   },
 };

@@ -1,18 +1,57 @@
 @import '@variables';
 
+.container {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 800px;
+  margin: 0 auto;
+  display: block;
+  padding: 50px 80px;
+  position: relative;
+}
+
+.heading {
+  text-align: center;
+  @include fontPrimary;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
 .row {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  img {
-    margin: 20px 50px;
-    width: 300px;
-    height: 100%;
-  }
-  @media (max-width: $mobile) {
-    flex-direction: column;
-    img {
-      margin: 20px 0;
-    }
-  }
+}
+
+.image {
+  height: auto;
+}
+
+.blog {
+  width: 180px;
+}
+
+.taste {
+  width: 300px;
+}
+
+.star {
+  width: 400px;
+  margin: 30px auto 0;
+}
+
+.cookiePiece {
+  position: absolute;
+  height: auto;
+}
+
+.cookieLeft {
+  left: -60px;
+  width: 150px;
+  top: -110px;
+}
+.cookieRight {
+  width: 200px;
+  top: -60px;
+  right: -70px;
 }

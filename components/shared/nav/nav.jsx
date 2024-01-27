@@ -4,7 +4,7 @@ import DesktopNav from './desktop-nav';
 import MobileNav from './mobile-nav';
 import MobileMenu from './mobile-menu';
 
-export default function Nav({ navData }) {
+export default function Nav({ navData, animateNav }) {
   const [isOpen, setIsOpen] = useState(false);
   const [pathname, setPathname] = useState('');
   const { isMobile } = useWindowSize();
@@ -18,7 +18,11 @@ export default function Nav({ navData }) {
   return (
     <>
       {!isMobile ? (
-        <DesktopNav navData={navData} pathname={pathname} />
+        <DesktopNav
+          navData={navData}
+          pathname={pathname}
+          animateNav={animateNav}
+        />
       ) : (
         <>
           <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />

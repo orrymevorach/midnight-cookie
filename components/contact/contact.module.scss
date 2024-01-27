@@ -4,16 +4,22 @@
   display: flex;
 }
 
-.column {
-  width: 50%;
+.left {
+  width: 800px;
+}
+
+.right {
+  position: relative;
+  top: -130px;
+  width: 400px;
+  img {
+    height: auto;
+  }
 }
 
 @media screen and (max-width: $mobile) {
   .container {
     flex-direction: column;
-  }
-  .column {
-    width: 100%;
   }
   .right {
     margin-top: 40px;

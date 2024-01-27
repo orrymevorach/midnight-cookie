@@ -30,3 +30,18 @@ button {
   font-family: 'Gilroy Medium';
   src: url('../asset/gilroy/Gilroy-Medium.woff');
 }
+
+@font-face {
+  font-family: 'Integral CF Heavy';
+  src: url('../asset/Integralcf/Integralcf-heavy.otf');
+}
+
+@font-face {
+  font-family: 'Regave';
+  src: url('../asset/Regave/Regave Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Regave Bold';
+  src: url('../asset/Regave/Regave\ Bold.ttf');
+}

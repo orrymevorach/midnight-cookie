@@ -1,0 +1,15 @@
+@import '@variables';
+
+.cookieTile {
+  padding: 0 20px;
+}
+
+.image {
+  height: auto;
+}
+
+p.title {
+  @include fontPrimaryBold;
+  font-size: 22px;
+  text-align: center;
+}

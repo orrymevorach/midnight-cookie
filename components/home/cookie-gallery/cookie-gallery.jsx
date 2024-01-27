@@ -1,26 +1,22 @@
 import CookieTile from './cookie-tile';
 import styles from './cookie-gallery.module.scss';
-import Heading from 'components/shared/heading';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import animations from 'mevo-components/animations/animations.module.scss';
+import { useRef } from 'react';
+import useAnimation from 'components/shared/animation/animation';
 
-export default function CookieGallery({ cookieData, isPreview = false }) {
-  const Wrapper = ({ children }) => {
-    if (isPreview) return <>{children}</>; // Dont animate on preview mode, if you dont scroll to component it never shows up
-    return (
-      <AnimationOnScroll animateIn={animations.fadeUp}>
-        {children}
-      </AnimationOnScroll>
-    );
-  };
+export default function CookieGallery({ title, cookies, columns }) {
+  const ref = useRef();
+  useAnimation({ ref });
   return (
-    <Wrapper>
-      <Heading text="Available Flavours" />
-      <div className={styles.cookieGallery}>
-        {cookieData.map(cookie => (
+    <div ref={ref}>
+      <p className={styles.heading}>{title}</p>
+      <div
+        className={styles.cookieGallery}
+        style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
+      >
+        {cookies.map(cookie => (
           <CookieTile key={cookie.title} cookieData={cookie} />
         ))}
       </div>
-    </Wrapper>
+    </div>
   );
 }

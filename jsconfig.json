@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "@variables": ["styles/variables.module.scss"],
-      "@global": ["styles/globals.module.scss"]
+      "@global": ["styles/globals.module.scss"],
+      "public": ["public/"],
     }
   }
 }

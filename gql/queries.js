@@ -30,15 +30,17 @@ export const GET_MENU_ITEMS = `
 `;
 
 export const GET_COOKIES = `
-  query GetCookies ($slug: String) {
-    cookieGalleryCollection(where: { slug: $slug }) {
+  query GetCookies ($title: String) {
+    cookieGalleryCollection(where: { title: $title }) {
       items {
+        columns
         cookiesCollection(limit: 30) {
           items {
-            description
             title
             image {
               url
+              width
+              height
             }
           }
         }
@@ -77,6 +79,23 @@ export const GET_IS_PAGE_PUBLISHED = `
     pageCollection(where: { url: $slug }) {
       items {
         title
+      }
+    }
+  }
+`;
+
+export const GET_FAQ_PAGE = `
+  query GetFaqPage {
+    faqPageCollection(where: { title: "FAQ Page" }) {
+      items {
+        frequentlyAskedQuestionsCollection {
+          items {
+            question
+            answer {
+              json
+            }
+          }
+        }
       }
     }
   }

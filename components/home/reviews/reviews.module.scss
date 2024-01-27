@@ -9,7 +9,7 @@
 .reviewsContainer {
   display: flex;
   padding: 0 100px;
-  font-family: $fontPrimary;
+  @include fontPrimary;
   font-size: 15px;
   width: 100%;
   align-items: center;
@@ -20,7 +20,7 @@
   margin-bottom: 20px;
 }
 .name {
-  font-family: $fontPrimaryBold;
+  @include fontPrimaryBold;
   margin-right: 50px;
 }
 

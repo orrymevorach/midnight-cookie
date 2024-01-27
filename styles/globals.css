@@ -37,6 +37,11 @@ button {
 }
 
 @font-face {
-  font-family: 'Plaak 6';
-  src: url('../asset/Plaak 6/Plaak 6 Trial Heavy.woff.ttf');
+  font-family: 'Regave';
+  src: url('../asset/Regave/Regave Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Regave Bold';
+  src: url('../asset/Regave/Regave\ Bold.ttf');
 }

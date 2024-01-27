@@ -9,10 +9,8 @@ $grey: #808080;
 $fontPrimary: 'Integral CF Heavy';
 $fontPrimaryBold: 'Integral CF Heavy';
 $fontPrimaryMedium: 'Integral CF Heavy';
-$fontSecondary: 'Plaak 6';
-// $fontPrimary: 'Gilroy';
-// $fontPrimaryBold: 'Gilroy Bold';
-// $fontPrimaryMedium: 'Gilroy Medium';
+$fontSecondary: 'Regave';
+$fontSecondaryBold: 'Regave Bold';
 
 // Screen Sizes
 $desktop: 1200px;
@@ -27,4 +25,15 @@ $mobile: 850px;
 @mixin fontPrimaryBold {
   font-family: $fontPrimary;
   letter-spacing: 1px;
+}
+
+@mixin fontSecondary {
+  font-family: $fontSecondary;
+  line-height: 1.2;
+}
+
+@mixin fontSecondaryBold {
+  font-family: $fontSecondaryBold;
+  letter-spacing: 0;
+  line-height: 1.2;
 }

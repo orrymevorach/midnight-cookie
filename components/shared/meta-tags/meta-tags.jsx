@@ -16,11 +16,7 @@ export default function MetaTags() {
         href="/wp-content/uploads/2021/10/midnight-cookie-favi-100x100.png"
         sizes="32x32"
       ></link>
-      <link
-        rel="icon"
-        href="/wp-content/uploads/2021/10/midnight-cookie-favi-300x300.png"
-        sizes="192x192"
-      ></link>
+      <link rel="icon" href="/rebuild/logo.png" sizes="192x192"></link>
       <link
         rel="apple-touch-icon"
         href="/wp-content/uploads/2021/10/midnight-cookie-favi-300x300.png"

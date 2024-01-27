@@ -23,7 +23,7 @@ const sortNavLinksToLeftAndRight = ({ navData }) => {
     right,
   };
 };
-export default function DesktopNav({ navData, pathname }) {
+export default function DesktopNav({ navData, pathname, animateNav = false }) {
   const { left, right } = sortNavLinksToLeftAndRight({ navData });
   const [isSticky, setIsSticky] = useState(false);
 
@@ -41,7 +41,13 @@ export default function DesktopNav({ navData, pathname }) {
     });
   }, []);
   return (
-    <nav className={clsx(styles.nav, isSticky && styles.sticky)}>
+    <nav
+      className={clsx(
+        styles.nav,
+        animateNav && styles.animateNav,
+        animateNav && isSticky && styles.sticky
+      )}
+    >
       <Link href="/" className={styles.image}>
         <Image src={logo} alt="" />
       </Link>

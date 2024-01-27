@@ -7,9 +7,9 @@ export default function useAnimation({ ref }) {
     ref?.current?.classList.add(styles.container);
     window.addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;
-      const yPosition = ref.current.offsetTop;
+      const yPosition = ref?.current?.offsetTop;
 
-      if (scrollPosition > yPosition - 300) {
+      if (scrollPosition > yPosition - 400) {
         ref?.current?.classList.add(styles.animate);
       } else {
         ref?.current?.classList.remove(styles.animate);

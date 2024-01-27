@@ -23,7 +23,7 @@
 .input {
   width: 420px;
   padding: 8px 10px;
-  font-family: $fontSecondary;
+  @include fontSecondary;
   height: 45px;
   border: 1px solid black;
   &::placeholder {

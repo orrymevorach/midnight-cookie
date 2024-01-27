@@ -36,7 +36,7 @@ export default function Footer() {
       </p>
       <div className={styles.images}>
         <Image src={logoBlack} className={styles.image} />
-        <Image src={logo} className={styles.image} />
+        <Image src={logo} className={clsx(styles.image, styles.colorImage)} />
         <Image src={logoBlack} className={styles.image} />
         <Image src={logoBlack} className={styles.image} />
         <Image src={logoBlack} className={styles.image} />

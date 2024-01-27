@@ -83,3 +83,20 @@ export const GET_IS_PAGE_PUBLISHED = `
     }
   }
 `;
+
+export const GET_FAQ_PAGE = `
+  query GetFaqPage {
+    faqPageCollection(where: { title: "FAQ Page" }) {
+      items {
+        frequentlyAskedQuestionsCollection {
+          items {
+            question
+            answer {
+              json
+            }
+          }
+        }
+      }
+    }
+  }
+`;

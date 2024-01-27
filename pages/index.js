@@ -13,7 +13,7 @@ import CookieGalleryV2 from 'components/home/cookie-gallery-v2/cookie-gallery-v2
 export default function Home(pageProps) {
   const { featuredFlavoursGallery, classicDoughGallery } = pageProps;
   return (
-    <Layout {...pageProps}>
+    <Layout {...pageProps} animateNav>
       <main>
         <HomeBanner />
 

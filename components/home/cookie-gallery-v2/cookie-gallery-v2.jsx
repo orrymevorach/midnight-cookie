@@ -1,7 +1,7 @@
 import CookieTile from './cookie-tile-v2';
 import styles from './cookie-gallery-v2.module.scss';
 import { useRef } from 'react';
-import useAnimation from 'components/shared/animation/animation';
+import useAnimation from 'components/shared/animation/useAnimation';
 
 export default function CookieGalleryV2({ title, cookies, columns }) {
   const ref = useRef();

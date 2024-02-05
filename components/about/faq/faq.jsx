@@ -1,10 +1,10 @@
 import styles from './faq.module.scss';
 import clsx from 'clsx';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
+import { BLOCKS } from '@contentful/rich-text-types';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import RichText from 'components/rich-text';
 
 const options = {
   renderMarks: {
@@ -49,7 +49,7 @@ const options = {
 const FaqParagraph = ({ question, answer }) => {
   const [showAnswer, setShowAnswer] = useState(false);
   const Answer = () =>
-    answer?.json ? documentToReactComponents(answer.json, options) : '';
+    answer?.json ? <RichText config={options} json={answer.json} /> : '';
   const icon = showAnswer ? faMinus : faPlus;
   return (
     <div className={styles.questionAnswerContainer} key={question}>

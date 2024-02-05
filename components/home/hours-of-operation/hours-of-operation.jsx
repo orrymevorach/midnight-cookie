@@ -1,5 +1,6 @@
 import styles from './hours-of-operation.module.scss';
-const hoursOfOperation = [
+
+export const hoursOfOperation = [
   {
     day: 'Monday',
     hours: 'Closed',

@@ -100,3 +100,29 @@ export const GET_FAQ_PAGE = `
     }
   }
 `;
+
+export const GET_STORE_LOCATIONS = `
+  query {
+    storeLocationsCollection(where: {storeLocations: "Store Locations"} limit: 1) {
+      items {
+        storesCollection(limit: 10) {
+          items {
+            storeName
+            address
+            description {
+              json
+            }
+            launchDate
+            imagesCollection {
+              items {
+                url
+                width
+                height
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

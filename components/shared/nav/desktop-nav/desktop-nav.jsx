@@ -7,15 +7,15 @@ import clsx from 'clsx';
 import logo from 'public/rebuild/logo.png';
 
 const sortNavLinksToLeftAndRight = ({ navData }) => {
-  const leftNavItems = ['Order Now'];
+  const rightNavItems = ['Contact', 'Order Now'];
   let left = [];
   let right = [];
   for (let navItem of navData) {
     const { title } = navItem;
-    if (leftNavItems.includes(title)) {
-      left.push(navItem);
-    } else {
+    if (rightNavItems.includes(title)) {
       right.push(navItem);
+    } else {
+      left.push(navItem);
     }
   }
   return {

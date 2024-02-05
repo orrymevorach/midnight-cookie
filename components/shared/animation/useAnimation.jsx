@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import styles from './animation.module.scss';
-import clsx from 'clsx';
 
 export default function useAnimation({ ref }) {
   useEffect(() => {
@@ -9,7 +8,7 @@ export default function useAnimation({ ref }) {
       const scrollPosition = window.scrollY;
       const yPosition = ref?.current?.offsetTop;
 
-      if (scrollPosition > yPosition - 400) {
+      if (scrollPosition > yPosition - 550) {
         ref?.current?.classList.add(styles.animate);
       } else {
         ref?.current?.classList.remove(styles.animate);

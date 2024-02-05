@@ -1,39 +1,80 @@
 @import '@variables';
 
 .container {
-  margin-bottom: 100px;
+  display: flex;
+  width: 1280px;
+  margin: 80px auto 120px;
+}
+
+.left {
+  width: 300px;
 }
 
 .title {
   @include fontPrimary;
-  font-size: 50px;
-  text-align: center;
-  margin-bottom: 60px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.storeName {
+  @include fontSecondary;
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin: 5px 0;
 }
 
 .locationsContainer {
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  @include fontSecondary;
+  font-size: 18px;
 }
 
-.storeLocationContainer {
-  &:first-of-type {
-    margin-right: 100px;
+.imagesContainer {
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+  .image {
+    height: auto;
+    padding: 0 10px;
+    &:first-of-type {
+      padding-left: 0;
+    }
+    &:last-of-type {
+      padding-right: 0;
+    }
   }
 }
 
+.bottomRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.storeRight {
+  text-align: right;
+}
+
+.launchDate {
+  margin-bottom: 25px;
+}
+
 .locationTitle {
+  margin-bottom: 25px;
   @include fontPrimary;
-  font-size: 32px;
-  text-align: center;
-}
-
-.addressContainer {
-  margin-top: 30px;
-}
-
-.address {
-  text-align: center;
-  @include fontSecondary;
   font-size: 20px;
+}
+
+.hoursOfOperation {
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.description {
+  width: 600px;
 }

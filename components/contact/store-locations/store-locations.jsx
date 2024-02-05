@@ -1,40 +1,68 @@
+import { useState } from 'react';
 import styles from './store-locations.module.scss';
+import Image from 'next/image';
+import { hoursOfOperation } from 'components/home/hours-of-operation/hours-of-operation';
+import RichText from 'components/rich-text/rich-text';
 
-const storeLocations = [
-  {
-    name: 'Bloor',
-    address: ['363 1/2 Clinton St.', 'Toronto, ON M6G 2Z1', '(647)348-9852'],
-  },
-  {
-    name: 'Midtown',
-    address: ['3 Manor Rd.', 'Toronto, ON M4S 1P8'],
-  },
-];
+export default function StoreLocations({ storeLocations }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentStore = storeLocations[currentIndex];
+  const images = currentStore.imagesCollection.items;
 
-const StoreLocation = ({ name, address }) => {
-  return (
-    <div className={styles.storeLocationContainer}>
-      <p className={styles.locationTitle}>Midnight Cookie</p>
-      <p className={styles.locationTitle}>{name}</p>
-      <div className={styles.addressContainer}>
-        {address.map(line => (
-          <p key={line} className={styles.address}>
-            {line}
-          </p>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default function StoreLocations() {
   return (
     <div className={styles.container}>
-      <p className={styles.title}>Store Locations</p>
-      <div className={styles.locationsContainer}>
-        {storeLocations.map(storeLocation => (
-          <StoreLocation {...storeLocation} />
+      <div className={styles.left}>
+        <p className={styles.title}>Toronto</p>
+        {storeLocations.map(({ storeName }, index) => (
+          <div key={storeName}>
+            <button
+              className={styles.storeName}
+              onClick={() => setCurrentIndex(index)}
+            >
+              {storeName}
+            </button>
+          </div>
         ))}
+      </div>
+      <div className={styles.locationsContainer}>
+        <div className={styles.imagesContainer}>
+          {images.map(({ url, width, height }) => (
+            <Image
+              src={url}
+              width={width}
+              height={height}
+              alt=""
+              className={styles.image}
+              style={{ width: `${100 / images.length}%` }}
+            />
+          ))}
+        </div>
+        <div className={styles.bottomRow}>
+          <div className={styles.storeLeft}>
+            <p className={styles.launchDate}>
+              Launched {currentStore.launchDate}
+            </p>
+            <p className={styles.description}>
+              <RichText json={currentStore.description?.json} />
+            </p>
+          </div>
+          <div className={styles.storeRight}>
+            <p className={styles.locationTitle}>{currentStore.storeName}</p>
+            <div className={styles.address}>
+              <p>{currentStore.address}</p>
+              <p>Toronto, ON</p>
+            </div>
+            <div className={styles.hoursOfOperation}>
+              {hoursOfOperation.map(({ day, hours }) => (
+                <div key={day} className={styles.row}>
+                  <p>
+                    {day}: {hours}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

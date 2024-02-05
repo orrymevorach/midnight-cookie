@@ -7,7 +7,7 @@ import blogTO from '/public/rebuild/blogto-black.png';
 import tasteToronto from '/public/rebuild/taste-toronto.png';
 import torontoStar from 'public/rebuild/star-black.png';
 import { useRef } from 'react';
-import useAnimation from 'components/shared/animation/animation';
+import useAnimation from 'components/shared/animation/useAnimation';
 
 export default function NewsBanner() {
   const ref = useRef();

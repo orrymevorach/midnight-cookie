@@ -1,10 +1,8 @@
-import Banner from 'components/shared/banner';
 import styles from './page-container.module.scss';
 import { getPageLoadData } from 'lib/api';
 import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
 import Contact from 'components/contact';
-import StoreLocations from 'components/contact/store-locations/store-locations';
 
 export default function ContactPage(pageProps) {
   return (
@@ -13,7 +11,6 @@ export default function ContactPage(pageProps) {
         <div className={styles.pageContainer}>
           <Contact />
         </div>
-        <StoreLocations />
       </main>
     </Layout>
   );

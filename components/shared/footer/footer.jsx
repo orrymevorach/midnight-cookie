@@ -36,19 +36,23 @@ export default function Footer() {
         <div className={styles.links}>
           <Link href="/about-us">About</Link>
           <Link href="/contact">Contact</Link>
-          <Link href="/about-us#faq">FAQS</Link>
+          <Link href="/faq">FAQ</Link>
         </div>
       </div>
       <p className={styles.copyrightText}>
         Copyright &#9400; 2022 Midnight Cookie. All Rights Reserved
       </p>
       <div className={styles.images}>
-        <Image src={logoBlack} className={styles.image} />
-        <Image src={logo} className={clsx(styles.image, styles.colorImage)} />
-        <Image src={logoBlack} className={styles.image} />
-        <Image src={logoBlack} className={styles.image} />
-        <Image src={logoBlack} className={styles.image} />
-        <Image src={logoBlack} className={styles.image} />
+        <Image src={logoBlack} className={styles.image} alt="" />
+        <Image
+          src={logo}
+          className={clsx(styles.image, styles.colorImage)}
+          alt=""
+        />
+        <Image src={logoBlack} className={styles.image} alt="" />
+        <Image src={logoBlack} className={styles.image} alt="" />
+        <Image src={logoBlack} className={styles.image} alt="" />
+        <Image src={logoBlack} className={styles.image} alt="" />
       </div>
     </footer>
   );

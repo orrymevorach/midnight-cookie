@@ -23,6 +23,7 @@ export const GET_MENU_ITEMS = `
         items {
           title
           url
+          hoverText
         }
       }
     }

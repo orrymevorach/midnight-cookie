@@ -54,10 +54,12 @@
 
 .storeRight {
   text-align: right;
+  @include fontSecondaryBold;
 }
 
 .launchDate {
   margin-bottom: 25px;
+  @include fontSecondaryBold;
 }
 
 .locationTitle {

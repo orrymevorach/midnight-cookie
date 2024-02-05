@@ -34,6 +34,7 @@ export default function StoreLocations({ storeLocations }) {
               alt=""
               className={styles.image}
               style={{ width: `${100 / images.length}%` }}
+              key={url}
             />
           ))}
         </div>
@@ -42,9 +43,9 @@ export default function StoreLocations({ storeLocations }) {
             <p className={styles.launchDate}>
               Launched {currentStore.launchDate}
             </p>
-            <p className={styles.description}>
+            <div className={styles.description}>
               <RichText json={currentStore.description?.json} />
-            </p>
+            </div>
           </div>
           <div className={styles.storeRight}>
             <p className={styles.locationTitle}>{currentStore.storeName}</p>

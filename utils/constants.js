@@ -7,6 +7,7 @@ export const slugMap = {
   CONTACT: '/contact',
   ORDER_NOW: '/order-now',
   STORE_LOCATIONS: '/store-locations',
+  FAQ: '/faq',
 };
 
 export const COOKIE_GALLERIES = {

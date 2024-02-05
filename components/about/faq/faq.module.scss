@@ -3,6 +3,7 @@
 .faqWrapper {
   display: flex;
   padding: 0 100px 30px;
+  margin-top: 80px;
   @media screen and (max-width: $tablet) {
     padding: 0 50px 30px;
   }

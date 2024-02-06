@@ -58,8 +58,8 @@
 
 @media screen and (max-width: $tablet) {
   .container {
-    width: 70%;
-    padding: 30px;
+    width: 80%;
+    padding: 30px 25px;
   }
   .heading {
     font-size: 28px;
@@ -67,7 +67,7 @@
   .image {
     width: 100%;
     margin: 10px 0;
-    padding: 0 10px;
+    padding: 0 5px;
   }
   .row {
     flex-direction: column;

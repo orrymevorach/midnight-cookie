@@ -8,7 +8,7 @@ import Button from 'components/shared/button/button';
 
 export default function CookieGallery({ title, cookies, columns }) {
   const ref = useRef();
-  useAnimation({ ref });
+  useAnimation({ ref, animateOnMobile: false });
   const { isMobile } = useWindowSize();
   return (
     <div ref={ref}>

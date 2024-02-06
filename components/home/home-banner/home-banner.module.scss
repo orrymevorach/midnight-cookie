@@ -40,3 +40,29 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: $mobile) {
+  .heading {
+    font-size: 32px;
+  }
+  .textContainer {
+    position: relative;
+    top: 0;
+    z-index: 1;
+  }
+  .container {
+    min-height: 70vh;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    &:after {
+      content: '';
+      background-color: rgba(255, 255, 255, 0.4);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

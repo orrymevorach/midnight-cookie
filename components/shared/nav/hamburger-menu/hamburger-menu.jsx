@@ -5,7 +5,7 @@ import clsx from 'clsx';
 export default function HamburgerMenu({
   isOpen = false,
   setIsOpen,
-  hamburgerMenuColor = '#2f2f2f',
+  hamburgerMenuColor = 'white',
 }) {
   const backgroundColor = isOpen ? '#2f2f2f' : hamburgerMenuColor;
   return (

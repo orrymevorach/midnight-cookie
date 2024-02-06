@@ -71,3 +71,30 @@
 .colorImage {
   opacity: 1;
 }
+
+@media screen and (max-width: $mobile) {
+  .links a {
+    font-size: 18px;
+  }
+  .insta {
+    width: 30px;
+  }
+  .fbook {
+    width: 30px;
+  }
+  .icon {
+    margin: 0;
+  }
+
+  .copyrightText {
+    font-size: 12px;
+    padding: 0 15px;
+    margin: 70px 0;
+  }
+  .image {
+    padding: 0 5px;
+  }
+  .topRow {
+    padding: 0 15px;
+  }
+}

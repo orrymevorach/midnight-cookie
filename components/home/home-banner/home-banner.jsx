@@ -1,22 +1,31 @@
 import Button from 'components/shared/button';
 import styles from './home-banner.module.scss';
 import { useEffect, useState } from 'react';
+import { useWindowSize } from 'hooks';
 
 export default function HomeBanner() {
+  const { isMobile } = useWindowSize();
   const [showHeading, setShowHeading] = useState(false);
 
   // When user scrolls past height of window, reveal the nav bar and make it stick to top of page
   useEffect(() => {
     window.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition > 200) {
-        setShowHeading(true);
+      if (!isMobile) {
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 200) {
+          setShowHeading(true);
+        } else {
+          setShowHeading(false);
+        }
       } else {
-        setShowHeading(false);
+        setShowHeading(true);
       }
     });
-  }, []);
+    if (isMobile) {
+      setShowHeading(true);
+    }
+  }, [isMobile]);
+
   return (
     <div className={styles.container}>
       {showHeading && (

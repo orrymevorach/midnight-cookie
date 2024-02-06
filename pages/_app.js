@@ -1,6 +1,9 @@
 import MaintenanceMode from 'components/shared/maintenance-mode';
 import '../styles/globals.css';
 import PageNotFound from './404';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 
 export default function App({ Component, pageProps }) {
   const { isMaintenanceMode, isPagePublished, isPreview } = pageProps;

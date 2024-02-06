@@ -18,9 +18,7 @@ export default function Home(pageProps) {
         <HomeBanner />
 
         <CookieGallery {...featuredFlavoursGallery} />
-        <Button style={{ display: 'block', margin: '50px auto 150px' }}>
-          See All Flavours
-        </Button>
+
         <CookieGalleryV2 {...classicDoughGallery} />
         <div style={{ width: '100%', textAlign: 'center' }}>
           <Button

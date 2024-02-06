@@ -55,3 +55,23 @@
   top: -60px;
   right: -70px;
 }
+
+@media screen and (max-width: $tablet) {
+  .container {
+    width: 100%;
+  }
+  .image {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .row {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  // .blog,
+  // .taste,
+  // .star {
+  //   width: 100%;
+  // }
+}

@@ -1,5 +1,7 @@
+import Button from 'components/shared/button/button';
 import styles from './cookie-tile.module.scss';
 import { htmlRegex } from 'utils/utils';
+import { useWindowSize } from 'hooks';
 
 export default function CookieTile({
   cookieData: {
@@ -7,8 +9,9 @@ export default function CookieTile({
     image: { url },
   },
 }) {
+  const { isMobile } = useWindowSize();
   return (
-    <div>
+    <div className={styles.container}>
       <div
         className={styles.cookieTile}
         style={{ backgroundImage: `url(${url})` }}
@@ -20,6 +23,9 @@ export default function CookieTile({
             <br />
           </p>
         ))}
+        {isMobile && (
+          <Button classNames={styles.button}>See All Flavours</Button>
+        )}
       </div>
     </div>
   );

@@ -25,3 +25,28 @@
 .day {
   width: 350px;
 }
+
+@media screen and (max-width: $mobile) {
+  .day {
+    font-size: 16px;
+    width: auto;
+  }
+  .hours {
+    font-size: 16px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .hoursOfOperation {
+    margin: 15px 0 0 0;
+    padding: 0 15px;
+  }
+  .heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .container {
+    margin: 50px 0 0;
+  }
+}

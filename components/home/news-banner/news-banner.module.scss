@@ -58,20 +58,49 @@
 
 @media screen and (max-width: $tablet) {
   .container {
-    width: 100%;
+    width: 70%;
+    padding: 30px;
+  }
+  .heading {
+    font-size: 28px;
   }
   .image {
     width: 100%;
     margin: 10px 0;
+    padding: 0 10px;
   }
   .row {
     flex-direction: column;
     margin: 0;
   }
 
-  // .blog,
-  // .taste,
-  // .star {
-  //   width: 100%;
-  // }
+  .cookieLeft {
+    left: -30px;
+    width: 70px;
+    top: -60px;
+  }
+  .cookieRight {
+    width: 120px;
+    top: -40px;
+    right: -40px;
+  }
+
+  .blogContainer {
+    order: 2;
+    margin: 20px 0;
+  }
+
+  .blog {
+    width: 100px;
+  }
+
+  .taste {
+    width: 180px;
+  }
+
+  .star {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
 }

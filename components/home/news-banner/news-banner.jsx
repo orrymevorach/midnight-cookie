@@ -24,7 +24,10 @@ export default function NewsBanner() {
       />
       <p className={styles.heading}>As seen in</p>
       <div className={styles.row}>
-        <a href="https://www.blogto.com/bakery/midnight-cookie-toronto/">
+        <a
+          href="https://www.blogto.com/bakery/midnight-cookie-toronto/"
+          className={styles.blogContainer}
+        >
           <Image
             src={blogTO}
             alt="BlogTO Logo"

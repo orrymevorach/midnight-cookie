@@ -1,0 +1,35 @@
+@import '@variables';
+
+.imagesContainer {
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+  .image {
+    height: auto;
+    padding: 0 10px;
+    &:first-of-type {
+      padding-left: 0;
+    }
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+
+.image {
+  height: auto;
+  padding: 0 10px;
+  &:first-of-type {
+    padding-left: 0;
+  }
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .imagesContainer {
+    width: 300px;
+    margin: 20px auto;
+  }
+}

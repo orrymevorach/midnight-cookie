@@ -1,0 +1,19 @@
+@import '@variables';
+
+.left {
+  width: 300px;
+}
+
+.title {
+  @include fontPrimary;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.storeName {
+  @include fontSecondary;
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin: 5px 0;
+}

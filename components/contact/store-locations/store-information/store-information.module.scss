@@ -1,0 +1,53 @@
+@import '@variables';
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.storeLeft {
+  width: 650px;
+  padding-right: 50px;
+}
+
+.launchDate {
+  margin-bottom: 25px;
+  @include fontSecondaryBold;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.storeRight {
+  text-align: right;
+  @include fontSecondaryBold;
+}
+
+.locationTitle {
+  margin-bottom: 25px;
+  @include fontPrimary;
+  font-size: 20px;
+}
+
+.hoursOfOperation {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: $tablet) {
+  .container {
+    flex-direction: column;
+  }
+  .description {
+    width: 100%;
+  }
+  .storeRight {
+    text-align: left;
+    margin-top: 30px;
+  }
+  .row {
+    flex-direction: column;
+  }
+}

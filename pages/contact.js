@@ -1,4 +1,3 @@
-import styles from './page-container.module.scss';
 import { getPageLoadData } from 'lib/api';
 import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
@@ -8,9 +7,7 @@ export default function ContactPage(pageProps) {
   return (
     <Layout {...pageProps}>
       <main>
-        <div className={styles.pageContainer}>
-          <Contact />
-        </div>
+        <Contact />
       </main>
     </Layout>
   );

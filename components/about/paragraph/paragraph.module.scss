@@ -6,12 +6,6 @@
   color: $black;
   padding-right: 100px;
   @include fontPrimary;
-  @media screen and (max-width: $tablet) {
-    width: 100%;
-    color: $black;
-    padding: 0;
-    margin-bottom: 50px;
-  }
 }
 
 .title {
@@ -58,6 +52,14 @@
   }
 }
 
+@media screen and (max-width: $tablet) {
+  .textContainer {
+    width: 100%;
+    color: $black;
+    margin-bottom: 50px;
+  }
+}
+
 @media screen and (max-width: $mobile) {
   .titleTop {
     font-size: 24px;
@@ -67,5 +69,8 @@
   }
   .title {
     margin: 25px 0;
+  }
+  .textContainer {
+    margin-top: 70px;
   }
 }

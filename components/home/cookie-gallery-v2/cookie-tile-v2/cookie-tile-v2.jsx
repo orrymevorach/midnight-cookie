@@ -1,22 +1,17 @@
-import Image from 'next/image';
 import styles from './cookie-tile-v2.module.scss';
 
 export default function CookieTile({
   cookieData: {
     title,
-    image: { url, width, height },
+    image: { url },
   },
 }) {
   return (
-    <div>
-      <div className={styles.cookieTile}>
-        <Image
-          src={url}
-          width={width}
-          height={height}
-          className={styles.image}
-        />
-      </div>
+    <div className={styles.container}>
+      <div
+        className={styles.cookieTile}
+        style={{ backgroundImage: `url(${url})` }}
+      ></div>
       <div>
         {title.split(' ').map((word, index) => (
           <p key={`${word}-${index}`} className={styles.title}>

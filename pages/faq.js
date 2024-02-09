@@ -1,12 +1,7 @@
 import Layout from 'components/shared/layout';
 import { getFaqPage, getPageLoadData } from 'lib/api';
 import { slugMap } from 'utils/constants';
-import styles from './page-container.module.scss';
-import Paragraph from 'components/about/paragraph/paragraph';
-import LogoRow from 'components/about/logo-row/logo-row';
 import FAQ from 'components/about/faq/faq';
-import CookiePieces from 'components/about/cookie-pieces/cookie-pieces';
-import CookiePiecesV2 from 'components/about/cookie-pieces-v2/cookie-pieces-v2';
 
 export default function AboutPage(pageProps) {
   const { faqData } = pageProps;

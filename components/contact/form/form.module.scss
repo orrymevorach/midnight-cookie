@@ -75,5 +75,12 @@
 @media screen and (max-width: $mobile) {
   .form {
     padding: 0;
+    margin-top: 0;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .right {
+    width: 100%;
   }
 }

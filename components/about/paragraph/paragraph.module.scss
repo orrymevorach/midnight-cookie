@@ -50,3 +50,22 @@
   display: flex;
   align-items: flex-end;
 }
+
+@media screen and (max-width: 1200px) {
+  .textContainer {
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .titleTop {
+    font-size: 24px;
+  }
+  .titleBig {
+    font-size: 40px;
+  }
+  .title {
+    margin: 25px 0;
+  }
+}

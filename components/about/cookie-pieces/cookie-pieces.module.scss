@@ -1,3 +1,5 @@
+@import '@variables';
+
 .container {
   display: flex;
   position: absolute;
@@ -9,7 +11,6 @@
 
 .image {
   height: auto;
-  width: 250px;
   display: block;
 }
 
@@ -31,4 +32,64 @@
   position: relative;
   top: 290px;
   left: 50px;
+}
+
+@media screen and (max-width: 1300px) {
+  .half {
+    width: calc(230px * 4 / 5);
+    left: calc(-100px * 4 / 5);
+    position: relative;
+  }
+
+  .full {
+    width: calc(350px * 4 / 5);
+    left: calc(50px * 4 / 5);
+    top: calc(100px * 4 / 5);
+    position: relative;
+  }
+
+  .piece {
+    width: calc(170px * 4 / 5);
+    left: calc(50px * 4 / 5);
+    top: calc(290px * 4 / 5);
+    position: relative;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .half {
+    width: calc(230px * 3 / 5);
+    left: calc(-100px * 3 / 5);
+  }
+
+  .full {
+    width: calc(350px * 3 / 5);
+    left: calc(50px * 3 / 5);
+    top: calc(100px * 3 / 5);
+  }
+
+  .piece {
+    width: calc(170px * 3 / 5);
+    left: calc(50px * 3 / 5);
+    top: calc(290px * 3 / 5);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .half {
+    width: calc(230px * 2 / 5);
+    left: calc(-100px * 2 / 5);
+  }
+
+  .full {
+    width: calc(350px * 2 / 5);
+    left: calc(50px * 2 / 5);
+    top: calc(100px * 2 / 5);
+  }
+
+  .piece {
+    width: calc(170px * 2 / 5);
+    left: calc(50px * 2 / 5);
+    top: calc(290px * 2 / 5);
+  }
 }

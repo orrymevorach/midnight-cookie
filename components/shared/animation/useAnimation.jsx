@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import styles from './animation.module.scss';
+import { useWindowSize } from 'hooks';
 
 export default function useAnimation({ ref, animateOnMobile = true }) {
+  const {isMobile} = useWindowSize();
+  const shouldAnimate = !isMobile || (isMobile && animateOnMobile)
   useEffect(() => {
     window.addEventListener('scroll', function () {
-      if (animateOnMobile) {
+      if (shouldAnimate) {
         ref?.current?.classList.add(styles.container);
         const scrollPosition = window.scrollY;
         const yPosition = ref?.current?.offsetTop;

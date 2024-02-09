@@ -20,6 +20,7 @@ export default function Footer() {
             <FontAwesomeIcon
               icon={faInstagram}
               className={clsx(styles.icon, styles.insta)}
+              size='2x'
             />
           </Link>
           <Link
@@ -30,6 +31,7 @@ export default function Footer() {
             <FontAwesomeIcon
               icon={faFacebookF}
               className={clsx(styles.icon, styles.fbook)}
+              size='xl'
             />
           </Link>
         </div>

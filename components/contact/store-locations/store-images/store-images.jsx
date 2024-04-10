@@ -7,7 +7,14 @@ export default function StoreImages({ images }) {
   const { isDesktop } = useWindowSize();
 
   return (
-    <div className={styles.imagesContainer}>
+    <div
+      className={styles.imagesContainer}
+      style={{
+        gridTemplateColumns: isDesktop
+          ? `repeat(${images.length}, 1fr)`
+          : '1fr',
+      }}
+    >
       {!isDesktop ? (
         <MovementSlider data={images}>
           {images.map(({ url, width, height }) => (
@@ -30,7 +37,6 @@ export default function StoreImages({ images }) {
             height={height}
             alt=""
             className={styles.image}
-            style={{ width: `${100 / images.length}%` }}
             key={url}
           />
         ))

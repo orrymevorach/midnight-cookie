@@ -43,6 +43,7 @@ export const GET_COOKIES = `
               width
               height
             }
+            description
           }
         }
       }

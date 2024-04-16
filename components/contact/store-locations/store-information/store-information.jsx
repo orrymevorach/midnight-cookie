@@ -15,6 +15,7 @@ export default function StoreInformation({ currentStore }) {
         <p className={styles.locationTitle}>{currentStore.storeName}</p>
         <div className={styles.address}>
           <p>{currentStore.address}</p>
+          <a className={styles.phoneNumber} href={`tel:${currentStore.phoneNumber}`}>{currentStore.phoneNumber}</a>
           <p>Toronto, ON</p>
         </div>
         <div className={styles.hoursOfOperation}>

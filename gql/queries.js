@@ -111,6 +111,7 @@ export const GET_STORE_LOCATIONS = `
           items {
             storeName
             address
+            phoneNumber
             description {
               json
             }

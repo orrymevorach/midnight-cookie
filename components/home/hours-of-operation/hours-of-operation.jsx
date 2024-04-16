@@ -20,7 +20,7 @@ export const hoursOfOperation = [
   },
   {
     day: 'Sunday',
-    hours: '3:00 PM - 12:00 AM',
+    hours: '2:00 PM - 12:00 AM',
   },
 ];
 
@@ -51,7 +51,7 @@ export const hoursOfOperationMobile = [
   },
   {
     day: 'Sunday',
-    hours: '3:00 PM - 12:00 AM',
+    hours: '2:00 PM - 12:00 AM',
   },
 ];
 

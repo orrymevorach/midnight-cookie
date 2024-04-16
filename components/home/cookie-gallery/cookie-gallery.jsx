@@ -30,7 +30,14 @@ export default function CookieGallery({ title, cookies, columns }) {
         </div>
       )}
       {!isMobile && (
-        <Button classNames={styles.button}>See All Flavours</Button>
+        <div className={styles.buttonContainer}>
+          <Button
+            href="https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog"
+            classNames={styles.button}
+          >
+            Order Now
+          </Button>
+        </div>
       )}
     </div>
   );

@@ -31,7 +31,7 @@ export default function DesktopNav({ navData, pathname, animateNav = false }) {
   useEffect(() => {
     window.addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight / 2;
+      const windowHeight = 20;
 
       if (scrollPosition > windowHeight) {
         setIsSticky(true);

@@ -8,7 +8,7 @@ export const GET_NEWS_ARTICLES = `
           json
         }
         image {
-          url
+          url (transform: {width: 1000})
         }
         url
       }
@@ -39,7 +39,7 @@ export const GET_COOKIES = `
           items {
             title
             image {
-              url
+              url (transform: {width: 1000})
               width
               height
             }
@@ -58,7 +58,7 @@ query GetCookie ($slug: String) {
       description
       title
       image {
-        url
+        url (transform: {width: 300})
       }
     }
   }
@@ -118,7 +118,7 @@ export const GET_STORE_LOCATIONS = `
             launchDate
             imagesCollection {
               items {
-                url (transform: {width: 300})
+                url (transform: {width: 400})
                 width
                 height
               }

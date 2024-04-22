@@ -33,9 +33,6 @@ export default function CookieTile({
             <br />
           </p>
         ))}
-        {isMobile && (
-          <Button classNames={styles.button}>See All Flavours</Button>
-        )}
       </div>
     </div>
   );

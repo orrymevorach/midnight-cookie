@@ -5,7 +5,7 @@ import cookiePieceRight from 'public/rebuild/cookie-piece.png';
 import cookiePieceLeft from 'public/rebuild/cookie-piece-2.png';
 import blogTO from '/public/rebuild/blogto-black.png';
 import tasteToronto from '/public/rebuild/taste-toronto.png';
-import torontoStar from 'public/rebuild/star-black.png';
+import streets from 'public/rebuild/streets-2.png';
 import { useRef } from 'react';
 import useAnimation from 'components/shared/animation/useAnimation';
 
@@ -42,11 +42,11 @@ export default function NewsBanner() {
           />
         </a>
       </div>
-      <a href="#">
+      <a href="https://streetsoftoronto.com/torontos-midnight-cookie-takes-a-bite-out-of-midtown/">
         <Image
-          src={torontoStar}
-          alt="Toronto Star Logo"
-          className={clsx(styles.image, styles.star)}
+          src={streets}
+          alt="Streets of Toronto Logo"
+          className={clsx(styles.image, styles.streets)}
         />
       </a>
     </div>

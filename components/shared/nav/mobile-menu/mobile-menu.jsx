@@ -9,7 +9,7 @@ export default function MobileMenu({ isOpen, setIsOpen }) {
     <div className={styles.mobileMenu}>
       <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />{' '}
       <Link href="/">
-        <Image src={logo} alt="Logo" className={styles.logo} />
+        <Image src={logo} alt="Logo" className={styles.logo} quality={70} />
       </Link>
     </div>
   );

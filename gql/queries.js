@@ -118,7 +118,7 @@ export const GET_STORE_LOCATIONS = `
             launchDate
             imagesCollection {
               items {
-                url
+                url (transform: {width: 300})
                 width
                 height
               }

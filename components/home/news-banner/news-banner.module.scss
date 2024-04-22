@@ -35,9 +35,10 @@
   width: 300px;
 }
 
-.star {
-  width: 400px;
-  margin: 30px auto 0;
+.streets {
+  width: 350px;
+  margin: 50px auto 30px;
+  filter: grayscale(100%);
 }
 
 .cookiePiece {
@@ -98,8 +99,8 @@
     width: 180px;
   }
 
-  .star {
-    width: 200px;
+  .streets {
+    width: 150px;
     display: block;
     margin: 0 auto;
   }

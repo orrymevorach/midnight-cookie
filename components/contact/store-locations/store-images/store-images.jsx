@@ -16,7 +16,7 @@ export default function StoreImages({ images }) {
       }}
     >
       {!isDesktop ? (
-        <MovementSlider data={images}>
+        <MovementSlider data={images} hasDots={false}>
           {images.map(({ url, width, height }) => (
             <Image
               src={url}

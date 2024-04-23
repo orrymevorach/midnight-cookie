@@ -2,7 +2,7 @@
 
 .container {
   color: black;
-  font-family: $fontPrimaryMedium;
+  @include fontPrimary;
   font-size: 20px;
   display: flex;
   flex-direction: column;

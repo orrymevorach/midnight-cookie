@@ -4,7 +4,7 @@
   a {
     color: white;
     text-decoration: none;
-    @include fontPrimaryBold;
+    @include fontPrimary;
     text-transform: uppercase;
   }
   padding: 0 16px;

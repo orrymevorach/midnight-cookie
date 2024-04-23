@@ -15,7 +15,7 @@
 }
 
 p.title {
-  @include fontPrimaryBold;
+  @include fontPrimary;
   font-size: 22px;
   text-align: center;
 }
@@ -40,10 +40,10 @@ p.title {
 @media screen and (max-width: $mobile) {
   .cookieTile {
     width: 100%;
-    height: 500px;
+    height: 350px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 80%;
     padding: 0;
   }
 }

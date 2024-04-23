@@ -42,7 +42,7 @@
   z-index: 1;
   text-align: center;
   color: $black;
-  @include fontPrimaryBold;
+  @include fontPrimary;
   padding: 80px 30px;
   h2 {
     text-transform: uppercase;

@@ -34,7 +34,7 @@ export default function NewsBanner() {
             className={clsx(styles.image, styles.blog)}
           />
         </a>
-        <a href="https://www.tastetoronto.com/news/midnight-cookie-is-set-to-open-first-storefront-in-midtown">
+        <a href="https://www.tastetoronto.com/stories/midnight-cookie-is-set-to-open-first-storefront-in-midtown">
           <Image
             src={tasteToronto}
             alt="Taste Toronto Logo"

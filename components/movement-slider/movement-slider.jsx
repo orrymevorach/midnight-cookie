@@ -13,6 +13,7 @@ export default function Slider({
   hasTimer = false,
   allow360 = true, // 360 means sliding never stops, user can go to the end from the begining, or to the begining from the end
   variantButtons = false,
+  hasWhiteArrows = false,
 }) {
   const {
     state: { index, isAutoSlide },
@@ -54,6 +55,7 @@ export default function Slider({
           isVariant={variantButtons}
           handleClick={LAST_SLIDE}
           direction="left"
+          isWhite={hasWhiteArrows}
         />
       )}
       <div
@@ -70,6 +72,7 @@ export default function Slider({
           isVariant={variantButtons}
           handleClick={NEXT_SLIDE}
           direction="right"
+          isWhite={hasWhiteArrows}
         />
       )}
 

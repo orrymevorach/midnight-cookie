@@ -15,7 +15,7 @@
 }
 
 p.title {
-  @include fontPrimaryBold;
+  @include fontPrimary;
   font-size: 22px;
   text-align: center;
   padding: 0 20px;

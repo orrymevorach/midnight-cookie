@@ -9,55 +9,59 @@
   margin: 150px 0;
 }
 
-.formContainer {
-  display: flex;
-  align-items: center;
-}
+// .formContainer {
+//   display: flex;
+//   align-items: center;
+// }
 
 .label {
   font-size: 32px;
   @include fontPrimary;
   margin-bottom: 20px;
-}
-
-.input {
-  width: 420px;
-  padding: 8px 10px;
-  @include fontSecondary;
-  height: 45px;
-  border: 1px solid black;
-  &::placeholder {
-    @include fontPrimary;
+  text-align: center;
+  a {
     color: black;
   }
 }
 
-.button {
-  background-color: black;
-  color: white;
-  height: 45px;
-  padding-bottom: 5px;
-  width: 150px;
-  border: none;
-  @include fontPrimary;
-  font-size: 20px;
-}
+// .input {
+//   width: 420px;
+//   padding: 8px 10px;
+//   @include fontSecondary;
+//   height: 45px;
+//   border: 1px solid black;
+//   &::placeholder {
+//     @include fontPrimary;
+//     color: black;
+//   }
+// }
+
+// .button {
+//   background-color: black;
+//   color: white;
+//   height: 45px;
+//   padding-bottom: 5px;
+//   width: 150px;
+//   border: none;
+//   @include fontPrimary;
+//   font-size: 20px;
+// }
 
 @media screen and (max-width: $mobile) {
   .label {
     font-size: 16px;
   }
-  .input {
-    width: 100%;
-  }
-  .formContainer {
-    width: 100%;
-    padding: 0 20px;
-  }
+  // .input {
+  //   width: 100%;
+  // }
+  // .formContainer {
+  //   width: 100%;
+  //   padding: 0 20px;
+  // }
   .container {
     margin: 100px 0 70px;
   }
-  .button {
-    font-size: 14px;
-  }
+  // .button {
+  //   font-size: 14px;
+  // }
 }

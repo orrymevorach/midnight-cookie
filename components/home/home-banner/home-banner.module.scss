@@ -31,7 +31,7 @@
 }
 
 .heading {
-  @include fontPrimaryBold;
+  @include fontPrimary;
   text-transform: uppercase;
   font-size: 70px;
   text-align: center;

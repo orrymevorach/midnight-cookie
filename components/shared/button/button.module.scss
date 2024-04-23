@@ -1,7 +1,7 @@
 @import '@variables';
 
 .button {
-  @include fontPrimaryBold;
+  @include fontPrimary;
   background-color: black;
   color: $white;
   font-size: 20px;

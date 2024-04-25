@@ -20,7 +20,7 @@ export default function Footer() {
             <FontAwesomeIcon
               icon={faInstagram}
               className={clsx(styles.icon, styles.insta)}
-              size='2x'
+              size="2x"
             />
           </Link>
           <Link
@@ -31,7 +31,7 @@ export default function Footer() {
             <FontAwesomeIcon
               icon={faFacebookF}
               className={clsx(styles.icon, styles.fbook)}
-              size='xl'
+              size="xl"
             />
           </Link>
         </div>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <p className={styles.copyrightText}>
-        Copyright &#9400; 2022 Midnight Cookie. All Rights Reserved
+        Copyright &#9400; 2024 Midnight Cookie. All Rights Reserved
       </p>
       <div className={styles.images}>
         <Image src={logoBlack} className={styles.image} alt="" />

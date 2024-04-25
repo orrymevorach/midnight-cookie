@@ -11,7 +11,7 @@ export default function Contact() {
         <Form />
       </div>
       <div className={clsx(styles.right)}>
-        <Image src={cookies} />
+        <Image src={cookies} quality={70} />
       </div>
     </div>
   );

@@ -11,11 +11,12 @@ export default function ArrowButton({
   handleClick,
   direction = 'left',
   isWhite = false,
+  classNames = '',
 }) {
   const mapDirectionToProps = {
     left: {
       icon: faChevronLeft,
-      classNames: clsx(
+      classnames: clsx(
         styles.leftButton,
         isVariant && styles.variantLeftButton,
         isWhite && styles.white
@@ -23,17 +24,17 @@ export default function ArrowButton({
     },
     right: {
       icon: faChevronRight,
-      classNames: clsx(
+      classnames: clsx(
         styles.rightButton,
         isVariant && styles.variantRightButton,
         isWhite && styles.white
       ),
     },
   };
-  const { classNames, icon } = mapDirectionToProps[direction];
+  const { classnames, icon } = mapDirectionToProps[direction];
 
   return (
-    <button className={classNames} onClick={handleClick}>
+    <button className={clsx(classnames, classNames)} onClick={handleClick}>
       <FontAwesomeIcon icon={icon} color="#fff" size="lg" />
     </button>
   );

@@ -16,4 +16,18 @@
   .outerContainer {
     padding-bottom: 30px;
   }
+
+  .leftArrow,
+  .rightArrow {
+    height: 100%;
+    border-radius: none;
+    margin: 0;
+    left: 0;
+    top: 0;
+    padding: 0 15px;
+  }
+  .rightArrow {
+    left: auto;
+    right: 0;
+  }
 }

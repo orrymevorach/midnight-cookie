@@ -56,6 +56,7 @@ export default function Slider({
           handleClick={LAST_SLIDE}
           direction="left"
           isWhite={hasWhiteArrows}
+          classNames={styles.leftArrow}
         />
       )}
       <div
@@ -73,6 +74,7 @@ export default function Slider({
           handleClick={NEXT_SLIDE}
           direction="right"
           isWhite={hasWhiteArrows}
+          classNames={styles.rightArrow}
         />
       )}
 

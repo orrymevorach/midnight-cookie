@@ -4,6 +4,7 @@ import ArrowButton from './arrow-button';
 import Dots from './dots';
 import { useRef, useEffect, useCallback } from 'react';
 import useHasChanged from 'hooks/useHasChanged';
+import { useSwipeable } from 'react-swipeable';
 
 export default function Slider({
   data,
@@ -19,6 +20,11 @@ export default function Slider({
     state: { index, isAutoSlide },
     triggers: { NEXT_SLIDE, LAST_SLIDE, SET_SLIDE, START_AUTO_SLIDE },
   } = useSlider({ data });
+
+  const handlers = useSwipeable({
+    onSwipedLeft: NEXT_SLIDE,
+    onSwipedRight: LAST_SLIDE,
+  });
 
   const { timer } = useAutoSlide({
     hasTimer,
@@ -49,7 +55,7 @@ export default function Slider({
   }, [handleSetIndex, hasDataChanged]);
 
   return (
-    <div className={styles.outerContainer}>
+    <div className={styles.outerContainer} {...handlers}>
       {hasArrowButtons && !hideLeftButton && (
         <ArrowButton
           isVariant={variantButtons}

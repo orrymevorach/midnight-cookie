@@ -17,16 +17,18 @@
     padding-bottom: 30px;
   }
 
-  .leftArrow,
-  .rightArrow {
+  button.leftArrow,
+  button.rightArrow {
     height: 100%;
     border-radius: none;
+    padding: 0;
     margin: 0;
-    left: 0;
     top: 0;
+    left: 0;
     padding: 0 15px;
   }
-  .rightArrow {
+
+  button.rightArrow {
     left: auto;
     right: 0;
   }

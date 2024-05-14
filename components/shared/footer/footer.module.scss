@@ -77,10 +77,10 @@
 .orryContainer {
   background-color: black;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   color: white;
   @include fontPrimary;
-  font-size: 18px;
+  font-size: 15px;
   margin-top: 50px;
   a,
   a:active {
@@ -100,8 +100,7 @@
     padding: 0 5px;
   }
   .orryContainer {
-    padding: 10px 0;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 20px;
   }
 }

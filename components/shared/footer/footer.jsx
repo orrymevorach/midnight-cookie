@@ -43,12 +43,6 @@ export default function Footer() {
       </div>
       <div className={styles.subTextContainer}>
         <p>Copyright &#9400; 2024 Midnight Cookie. All Rights Reserved</p>
-        <p>
-          Website Development by{' '}
-          <Link href="https://orrymevorach.com/" target="_blank">
-            Orry Mevorach
-          </Link>
-        </p>
       </div>
       <div className={styles.images}>
         <Image src={logoBlack} className={styles.image} alt="" />
@@ -61,6 +55,14 @@ export default function Footer() {
         <Image src={logoBlack} className={styles.image} alt="" />
         <Image src={logoBlack} className={styles.image} alt="" />
         <Image src={logoBlack} className={styles.image} alt="" />
+      </div>
+      <div className={styles.orryContainer}>
+        <p>
+          Website Development by{' '}
+          <Link href="https://orrymevorach.com/" target="_blank">
+            Orry Mevorach
+          </Link>
+        </p>
       </div>
     </footer>
   );

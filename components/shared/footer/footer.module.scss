@@ -45,11 +45,18 @@
   }
 }
 
-.copyrightText {
+.subTextContainer {
+  margin: 100px 0 150px;
   @include fontPrimary;
   text-align: center;
   font-size: 18px;
-  margin: 100px 0 150px;
+  p {
+    margin: 7px 0;
+  }
+  a,
+  a:active {
+    color: black;
+  }
 }
 
 .images {
@@ -71,7 +78,7 @@
   .links a {
     font-size: 18px;
   }
-  .copyrightText {
+  .subTextContainer {
     font-size: 12px;
     margin: 70px 0;
   }

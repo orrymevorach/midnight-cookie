@@ -41,9 +41,15 @@ export default function Footer() {
           <Link href="/faq">FAQ</Link>
         </div>
       </div>
-      <p className={styles.copyrightText}>
-        Copyright &#9400; 2024 Midnight Cookie. All Rights Reserved
-      </p>
+      <div className={styles.subTextContainer}>
+        <p>Copyright &#9400; 2024 Midnight Cookie. All Rights Reserved</p>
+        <p>
+          Website Development by{' '}
+          <Link href="https://orrymevorach.com/" target="_blank">
+            Orry Mevorach
+          </Link>
+        </p>
+      </div>
       <div className={styles.images}>
         <Image src={logoBlack} className={styles.image} alt="" />
         <Image

@@ -1,10 +1,11 @@
 @import '@variables';
 
 .container {
-  background-image: url('/rebuild/banner-min.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  // background-image: url('/rebuild/banner-min.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  width: 100%;
   min-height: 100vh;
   position: relative;
   display: flex;
@@ -33,7 +34,8 @@
 .heading {
   @include fontPrimary;
   text-transform: uppercase;
-  font-size: 70px;
+  // font-size: 70px;
+  font-size: 50px;
   text-align: center;
   position: relative;
 }
@@ -42,6 +44,54 @@
   display: inline-block;
   margin: 0 auto;
   margin-top: 40px;
+}
+
+// video stuff below
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.lightOverlay {
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 0.5s linear forwards;
+  animation-delay: 2s;
+}
+
+.videoButton {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 40px;
+  opacity: 0;
+  animation: fadeIn 0.5s 3s linear forwards;
 }
 
 @keyframes fadeIn {
@@ -80,5 +130,8 @@
       top: 0;
       left: 0;
     }
+  }
+  .lightOverlay {
+    display: none;
   }
 }

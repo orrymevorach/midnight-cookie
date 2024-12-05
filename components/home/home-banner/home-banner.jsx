@@ -49,15 +49,27 @@ export default function HomeBanner() {
       </div> */}
       <div className={styles.videoContainer}>
         <div className={styles.lightOverlay}></div>
-        <video src={videoSrc} autoPlay muted className={styles.video}></video>
+        <video
+          src={videoSrc}
+          autoPlay
+          muted
+          className={styles.video}
+          playsInline
+        ></video>
 
         <div className={styles.bottomContainer}>
           <h2 className={styles.heading}>
-            <AnimatedText
-              text={`SNACK\u00A0ON\u00A0OUR${
-                isMobile ? '\u2028' : '\u00A0'
-              }NEW\u00A0HOLIDAY\u00A0LINEUP`}
-            />
+            {isMobile ? (
+              <>
+                <AnimatedText text={`SNACK\u00A0ON\u00A0OUR`} />
+                <AnimatedText text={`NEW\u00A0HOLIDAY`} />
+                <AnimatedText text={`LINEUP`} />
+              </>
+            ) : (
+              <AnimatedText
+                text={`SNACK\u00A0ON\u00A0OUR\u00A0NEW\u00A0HOLIDAY\u00A0LINEUP`}
+              />
+            )}
           </h2>
           <Button
             href="https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog"

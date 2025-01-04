@@ -32,7 +32,7 @@ export default function HomeBanner() {
 
   return (
     <div className={styles.container}>
-      {/* <div className={styles.overlay}></div>
+      <div className={styles.overlay}></div>
       <div className={styles.textContainer}>
         <h2 className={styles.heading}>
           Cookies <br />
@@ -46,8 +46,8 @@ export default function HomeBanner() {
         >
           Order Now
         </Button>
-      </div> */}
-      <div className={styles.videoContainer}>
+      </div>
+      {/* <div className={styles.videoContainer}>
         <div className={styles.lightOverlay}></div>
         <video
           src={videoSrc}
@@ -79,7 +79,7 @@ export default function HomeBanner() {
             Shop Holiday
           </Button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

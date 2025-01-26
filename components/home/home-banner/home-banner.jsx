@@ -3,8 +3,17 @@ import styles from './home-banner.module.scss';
 import AnimatedText from './animated-text/animated-text';
 // import { useEffect, useState } from 'react';
 import { useWindowSize } from 'hooks';
+import RichText from 'components/rich-text';
+import clsx from 'clsx';
 
-export default function HomeBanner() {
+export default function HomeBanner({
+  imageUrl,
+  text,
+  buttonText = 'Order Now',
+  buttonHoverText = 'Eat Cookies',
+  buttonLink = 'https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog',
+  shouldAnimate = true,
+}) {
   const { isMobile } = useWindowSize();
   const videoSrc = isMobile
     ? '/rebuild/home-video-mobile.mp4'
@@ -31,20 +40,23 @@ export default function HomeBanner() {
   // }, [isMobile]);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={clsx(styles.container, shouldAnimate && styles.animate)}
+      style={{
+        backgroundImage: `url("${imageUrl}")`,
+      }}
+    >
       <div className={styles.overlay}></div>
       <div className={styles.textContainer}>
         <h2 className={styles.heading}>
-          Cookies <br />
-          baked fresh
-          <br /> for you
+          <RichText json={text.json} />
         </h2>
         <Button
-          href="https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog"
+          href={buttonLink}
           classNames={styles.button}
-          hoverText="Eat Cookies"
+          hoverText={buttonHoverText}
         >
-          Order Now
+          {buttonText}
         </Button>
       </div>
       {/* <div className={styles.videoContainer}>

@@ -1,7 +1,6 @@
 @import '@variables';
 
 .container {
-  background-image: url('/rebuild/banner-min.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -11,8 +10,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.animate {
   opacity: 0;
-  animation: fadeIn 0.5s 0.5s linear forwards;
+  animation: fadeIn 0.5s linear forwards, fadeOut 0.5s 6.6s linear forwards;
 }
 
 .overlay {
@@ -97,6 +99,12 @@
 @keyframes fadeIn {
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
   }
 }
 

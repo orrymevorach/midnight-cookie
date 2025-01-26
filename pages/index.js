@@ -2,20 +2,20 @@ import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
 import Layout from 'components/shared/layout';
 import { COOKIE_GALLERIES, slugMap } from 'utils/constants';
-import { getCookieGallery } from 'lib/api';
+import { getCarouselItems, getCookieGallery, getVideoDuration } from 'lib/api';
 import { getPageLoadData } from 'lib/api';
-import HomeBanner from 'components/home/home-banner';
-import Button from 'components/shared/button/button';
 import HoursOfOperation from 'components/home/hours-of-operation/hours-of-operation';
 import Newsletter from 'components/home/newsletter/newsletter';
 import CookieGalleryV2 from 'components/home/cookie-gallery-v2/cookie-gallery-v2';
+import Carousel from 'components/home/carousel/carousel';
 
 export default function Home(pageProps) {
-  const { featuredFlavoursGallery, classicDoughGallery } = pageProps;
+  const { featuredFlavoursGallery, classicDoughGallery, carouselItems } =
+    pageProps;
   return (
     <Layout {...pageProps} animateNav>
       <main>
-        <HomeBanner />
+        <Carousel media={carouselItems} />
 
         <CookieGallery {...featuredFlavoursGallery} />
 
@@ -56,10 +56,35 @@ export async function getStaticProps({ preview = false }) {
     title: COOKIE_GALLERIES.CLASSIC_DOUGH,
   });
 
+  const carouselItems = await getCarouselItems({
+    title: 'Home Page Carousel',
+  });
+
+  const carouselItemsWithVideoDuration = await Promise.all(
+    carouselItems.items.map(async item => {
+      const video = item.video;
+      if (!video) {
+        return item;
+      }
+
+      const duration = await getVideoDuration(video);
+      const mobileDuration = item.mobileMedia
+        ? await getVideoDuration(item.mobileMedia)
+        : null;
+
+      return {
+        ...item,
+        duration: duration ? parseFloat(duration) : null,
+        mobileDuration: mobileDuration ? parseFloat(mobileDuration) : null,
+      };
+    })
+  );
+
   return {
     props: {
       featuredFlavoursGallery,
       classicDoughGallery,
+      carouselItems: { items: carouselItemsWithVideoDuration },
       ...pageLoadData,
     },
   };

@@ -129,3 +129,41 @@ export const GET_STORE_LOCATIONS = `
     }
   }
 `;
+
+export const GET_CAROUSEL_ITEMS = `
+query {
+  carouselCollection(where: {title: "Home Page Carousel"} limit: 1) {
+    items {
+      title
+      contentCollection(limit: 10) {
+        items {
+          title
+          text {
+            json
+          }
+          buttonText
+          buttonHoverText
+          buttonLink
+          image {
+            url
+            width
+            height
+          }
+          video {
+            url 
+            width
+            height
+          }
+          mobileMedia {
+            url 
+            width
+            height
+          }
+          
+          
+        }
+      }
+    }
+  }
+}
+`;

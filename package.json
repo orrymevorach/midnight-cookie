@@ -21,6 +21,8 @@
     "clsx": "^1.2.1",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.7",
+    "ffprobe": "^1.1.2",
+    "ffprobe-static": "^3.1.0",
     "mevo-components": "^0.3.3",
     "next": "13.0.7",
     "react": "18.2.0",

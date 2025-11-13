@@ -3,12 +3,16 @@
 .imagesContainer {
   width: 100%;
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 0 20px;
   margin-bottom: 50px;
+  height: 300px;
+  overflow: hidden;
 }
 
 .image {
   height: auto;
+  width: 100%;
 }
 
 @media screen and (max-width: $tablet) {

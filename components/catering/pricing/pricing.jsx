@@ -49,13 +49,10 @@ export default function Pricing() {
             <div className={styles.includes}>
               <h3 className={styles.subheading}>Includes:</h3>
               <ul className={styles.list}>
-                <li>Unlimited freshly-made hot mini doughnuts and coffee!</li>
-                <li>
-                  Standard serving: 6 pack + 1 dunk (can be modified upon
-                  request)
-                </li>
+                <li>Unlimited freshly-made warm cookies and coffee!</li>
+                <li>Standard serving: 6 pack</li>
                 <li>2-4 person staff on-site</li>
-                <li>Custom dunk options available upon request</li>
+                <li>Custom flavor options available upon request</li>
               </ul>
               <p className={styles.paragraph}>
                 Note: First hour is all inclusive of set up, tear down and

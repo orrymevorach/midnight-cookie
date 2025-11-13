@@ -9,13 +9,13 @@ export default function Information() {
           Private Affair: <br /> On-Site Catering
         </h1>
         <p className={styles.subheading}>
-          Get hot mini doughnuts made fresh at your next event!
+          Get freshly baked cookiesmade fresh at your next event!
         </p>
         <p className={styles.paragraph}>
           We bring the heat directly to you, with our sleek, seductive setup and
-          team of Sugar Daddy Doughnut Maestros dishing out unlimited doughnuts
-          to your guests for a designated time. Each doughnut is served hot,
-          freshly dressed straight from our signature fryer.{' '}
+          team of cookie artists dishing out unlimited cookies to your guests
+          for a designated time. Each cookie is served hot, freshly dressed
+          straight from our signature oven.
         </p>
         <p className={styles.paragraph}>
           We handle everything, while you enjoy pure indulgence.{' '}

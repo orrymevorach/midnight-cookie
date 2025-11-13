@@ -24,7 +24,7 @@ export default function Pricing() {
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
         viewBox="0 0 1920 120"
-        className={styles.svg}
+        className={styles.topSvg}
       >
         <path
           fill-rule="evenodd"

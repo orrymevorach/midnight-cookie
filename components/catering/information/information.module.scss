@@ -27,3 +27,14 @@
     font-family: variables.$fontSecondaryBold;
   }
 }
+
+@media screen and (max-width: variables.$mobile) {
+  .title {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+  .subheading {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}

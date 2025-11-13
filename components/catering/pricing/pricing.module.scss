@@ -50,7 +50,7 @@
   }
 }
 
-.svg {
+.topSvg {
   position: relative;
   top: 4px;
   fill: rgba(variables.$green, 0.5);
@@ -83,4 +83,37 @@
   fill: white;
   height: 100px;
   overflow: hidden;
+}
+
+@media screen and (max-width: variables.$mobile) {
+  .topSvg {
+    top: 6px;
+  }
+  .grid {
+    width: 100%;
+  }
+  .container {
+    padding: 40px 15px;
+  }
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .row,
+  .price {
+    font-size: 20px;
+  }
+
+  .subheading {
+    font-size: 24px;
+  }
+  .list {
+    li {
+      font-size: 18px;
+      margin-left: 20px;
+    }
+  }
+  .bottomSvg {
+    height: 40px;
+  }
 }

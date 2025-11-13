@@ -41,6 +41,13 @@ button.link {
 
 @media screen and (max-width: variables.$mobile) {
   .container {
-    padding: 40px 15px;
+    padding: 40px 15px 80px;
+  }
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .description {
+    font-size: 18px;
   }
 }

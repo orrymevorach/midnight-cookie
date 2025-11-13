@@ -48,9 +48,9 @@ export default function HomeBanner({
     >
       <div className={styles.overlay}></div>
       <div className={styles.textContainer}>
-        <h2 className={styles.heading}>
+        <h1 className={styles.heading}>
           <RichText json={text.json} />
-        </h2>
+        </h1>
         <Button
           href={buttonLink}
           classNames={styles.button}

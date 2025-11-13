@@ -1,6 +1,7 @@
 import styles from './pricing.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCookie } from '@fortawesome/free-solid-svg-icons';
+import CookiePieces from 'components/about/cookie-pieces';
 
 const pricing = [
   {
@@ -19,7 +20,7 @@ const pricing = [
 
 export default function Pricing() {
   return (
-    <>
+    <div id="pricing" className={styles.outerContainer}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
@@ -31,41 +32,42 @@ export default function Pricing() {
           d="M0,0 C320,60 640,90 960,90 C1280,90 1600,60 1920,0 L1920,120 L0,120 L0,0 Z"
         ></path>
       </svg>
-      <div className={styles.bottomContainer}>
-        <div className={styles.container}>
-          <div className={styles.pricing}>
-            <h2 className={styles.title}>Pricing</h2>
-            <div className={styles.grid}>
-              {pricing.map((option, index) => (
-                <div key={`pricing-${option.time}`} className={styles.row}>
-                  <div className={styles.left}>
-                    <FontAwesomeIcon icon={faCookie} className={styles.icon} />
-                    <p className={styles.time}>{option.time}</p>
-                  </div>
-                  <p className={styles.price}>{option.price}</p>
+
+      <CookiePieces classNames={styles.cookies} />
+      <div className={styles.container}>
+        <div className={styles.pricing}>
+          <h2 className={styles.title}>Pricing</h2>
+          <div className={styles.grid}>
+            {pricing.map((option, index) => (
+              <div key={`pricing-${option.time}`} className={styles.row}>
+                <div className={styles.left}>
+                  <FontAwesomeIcon icon={faCookie} className={styles.icon} />
+                  <p className={styles.time}>{option.time}</p>
                 </div>
-              ))}
-            </div>
-            <div className={styles.includes}>
-              <h3 className={styles.subheading}>Includes:</h3>
-              <ul className={styles.list}>
-                <li>Unlimited freshly-made warm cookies and coffee!</li>
-                <li>Standard serving: 6 pack</li>
-                <li>2-4 person staff on-site</li>
-                <li>Custom flavor options available upon request</li>
-              </ul>
-              <p className={styles.paragraph}>
-                Note: First hour is all inclusive of set up, tear down and
-                delivery (no hidden fees). For events outside of GTA, there is a
-                3-hour minimum service.{' '}
-              </p>
-              <p className={styles.paragraph}>
-                * Ask about custom machine wraps to match your theme!
-              </p>
-            </div>
+                <p className={styles.price}>{option.price}</p>
+              </div>
+            ))}
+          </div>
+          <div className={styles.includes}>
+            <h3 className={styles.subheading}>Includes:</h3>
+            <ul className={styles.list}>
+              <li>Unlimited freshly-made warm cookies and coffee!</li>
+              <li>Standard serving: 6 pack</li>
+              <li>2-4 person staff on-site</li>
+              <li>Custom flavor options available upon request</li>
+            </ul>
+            <p className={styles.paragraph}>
+              Note: First hour is all inclusive of set up, tear down and
+              delivery (no hidden fees). For events outside of GTA, there is a
+              3-hour minimum service.{' '}
+            </p>
+            <p className={styles.paragraph}>
+              * Ask about custom machine wraps to match your theme!
+            </p>
           </div>
         </div>
       </div>
+
       <div className={styles.bottomSvg}>
         <svg
           preserveAspectRatio="none"
@@ -85,6 +87,6 @@ export default function Pricing() {
           </g>
         </svg>
       </div>
-    </>
+    </div>
   );
 }

@@ -12,6 +12,8 @@ export default function Button({
   target = null,
   style = {},
   hoverText = '',
+  isSecondary = false,
+  isSmall = false,
 }) {
   const [text, setText] = useState(hoverText || children);
   const handleMouseOver = () => {
@@ -21,10 +23,16 @@ export default function Button({
   const handleMouseLeave = () => {
     setText(children);
   };
+  const className = clsx(
+    styles.button,
+    isSecondary && styles.secondary,
+    isSmall && styles.small,
+    classNames
+  );
   return href ? (
     <Link
       href={href}
-      className={clsx(styles.button, classNames)}
+      className={className}
       target={target}
       style={style}
       onMouseOver={handleMouseOver}
@@ -36,7 +44,7 @@ export default function Button({
     <button
       type={type}
       disabled={isDisabled}
-      className={clsx(styles.button, classNames)}
+      className={className}
       style={style}
     >
       {text}

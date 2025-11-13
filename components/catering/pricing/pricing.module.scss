@@ -1,9 +1,15 @@
 @use '@variables' as variables;
 
+.outerContainer {
+  position: relative;
+  background-color: rgba(variables.$green, 0.5);
+  margin-top: 100px;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 300px 20px 80px;
 }
 
 .title {
@@ -11,10 +17,6 @@
   font-size: 36px;
   text-align: center;
   margin-bottom: 40px;
-}
-
-.bottomContainer {
-  background-color: rgba(variables.$green, 0.5);
 }
 
 .grid {
@@ -52,8 +54,8 @@
 
 .topSvg {
   position: relative;
-  top: 4px;
   fill: rgba(variables.$green, 0.5);
+  background-color: white;
 }
 
 .subheading {
@@ -79,16 +81,22 @@
 }
 
 .bottomSvg {
-  background-color: rgba(variables.$green, 0.5);
   fill: white;
   height: 100px;
   overflow: hidden;
 }
 
-@media screen and (max-width: variables.$mobile) {
-  .topSvg {
-    top: 6px;
+.cookies {
+  top: -120px !important;
+}
+
+@media screen and (max-width: variables.$tablet) {
+  .container {
+    padding: 120px 15px 80px;
   }
+}
+
+@media screen and (max-width: variables.$mobile) {
   .grid {
     width: 100%;
   }

@@ -1,15 +1,19 @@
 import clsx from 'clsx';
 import styles from './information.module.scss';
+import Image from 'next/image';
+import foodTruck from 'public/rebuild/food-truck-1.jpg';
+import Button from 'components/shared/button';
+import { slugMap } from 'utils/constants';
 
 export default function Information() {
   return (
     <div className={styles.container}>
-      <div className={styles.about}>
+      <div className={styles.left}>
         <h1 className={styles.title}>
           Private Affair: <br /> On-Site Catering
         </h1>
         <p className={styles.subheading}>
-          Get freshly baked cookiesmade fresh at your next event!
+          Get freshly baked cookies made fresh at your next event!
         </p>
         <p className={styles.paragraph}>
           We bring the heat directly to you, with our sleek, seductive setup and
@@ -23,6 +27,22 @@ export default function Information() {
         <p className={clsx(styles.paragraph, styles.bold)}>
           Ready for indoor or outdoor setups!
         </p>
+        <div className={styles.buttonsContainer}>
+          <Button
+            isSmall
+            isSecondary
+            classNames={styles.pricingButton}
+            href={`${slugMap.CATERING}#pricing`}
+          >
+            View Pricing
+          </Button>
+          <Button isSmall href={`${slugMap.CATERING}#form`}>
+            Reserve Now
+          </Button>
+        </div>
+      </div>
+      <div className={styles.right}>
+        <Image src={foodTruck} alt="Food Truck" />
       </div>
     </div>
   );

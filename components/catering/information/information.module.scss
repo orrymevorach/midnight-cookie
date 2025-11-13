@@ -4,6 +4,20 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 80px 20px 50px;
+  display: flex;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+  margin-left: 80px;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .title {
@@ -22,10 +36,21 @@
 .paragraph {
   font-family: variables.$fontSecondary;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.2;
   &.bold {
     font-family: variables.$fontSecondaryBold;
+    margin-top: 15px;
+    font-size: 22px;
   }
+}
+
+.buttonsContainer {
+  margin-top: 30px;
+}
+
+.pricingButton {
+  margin-right: 12px;
 }
 
 @media screen and (max-width: variables.$mobile) {
@@ -36,5 +61,18 @@
   .subheading {
     font-size: 22px;
     margin-bottom: 20px;
+  }
+  .container {
+    flex-direction: column;
+    padding: 40px 15px 30px;
+  }
+  .left,
+  .right {
+    width: 100%;
+    margin: 0;
+  }
+
+  .left {
+    margin-bottom: 50px;
   }
 }

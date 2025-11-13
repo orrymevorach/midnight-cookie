@@ -45,3 +45,7 @@ button {
   font-family: 'Regave Bold';
   src: url('../asset/Regave/Regave\ Bold.ttf');
 }
+
+html {
+  scroll-behavior: smooth;
+}

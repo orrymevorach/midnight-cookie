@@ -74,15 +74,6 @@ export default function Form() {
   if (stage === stages.CONFIRMATION) {
     return (
       <div className={styles.successText}>
-        <Link href="/">
-          <img
-            src="/wp-content/uploads/2021/10/Midnight-Cookie-Logo-sde1.png"
-            width={100}
-            height={100}
-            alt=""
-            priority
-          />
-        </Link>
         <p>Thank you! We will get back to you shortly.</p>
       </div>
     );

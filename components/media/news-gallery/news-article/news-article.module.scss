@@ -1,4 +1,6 @@
+@use '@mixins' as mixins;
 @import '@variables';
+
 .tile {
   width: 90%;
   margin: 20px 0;

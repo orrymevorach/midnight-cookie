@@ -1,0 +1,29 @@
+@use '@variables' as variables;
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px 50px;
+}
+
+.title {
+  font-family: variables.$fontPrimary;
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 50px;
+}
+
+.subheading {
+  font-family: variables.$fontSecondaryBold;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.paragraph {
+  font-family: variables.$fontSecondary;
+  margin-top: 10px;
+  font-size: 18px;
+  &.bold {
+    font-family: variables.$fontSecondaryBold;
+  }
+}

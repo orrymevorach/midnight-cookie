@@ -1,0 +1,99 @@
+@use '@variables' as variables;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdown {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  > .formFieldContainer {
+    flex: 1; // each grows equally
+    max-width: 48%; // ensure no child gets bigger than half
+  }
+}
+
+.input,
+.textarea,
+label.inputLabel {
+  font-family: variables.$fontSecondary;
+  color: black;
+  margin-bottom: 7px;
+  text-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  border-color: #c0baab;
+  font-size: 16px;
+  width: 100% !important;
+}
+
+.textarea {
+  padding: 8.5px 14px; // to match default MUI input padding
+  background-color: white;
+}
+.wordCount {
+  font-size: 14px;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+}
+
+.input {
+  input {
+    text-align: left !important;
+    padding: 13px !important;
+  }
+}
+
+.submitButton {
+  margin-top: 0px;
+}
+
+.formFieldContainer {
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.requiredText {
+  margin: 20px 0 50px 220px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: variables.$fontSecondary;
+  .asterisk {
+    color: red;
+  }
+}
+
+@media screen and (max-width: variables.$mobile) {
+  .container {
+    width: 100%;
+  }
+  .input,
+  .textarea,
+  label.inputLabel {
+    font-size: 18px;
+    width: 100%;
+    text-wrap: wrap;
+    white-space: normal;
+  }
+  .requiredText {
+    margin: 20px 0 50px 0px;
+  }
+  .formFieldContainer {
+    margin-bottom: 20px;
+  }
+  .submitButton {
+    width: 100%;
+  }
+}

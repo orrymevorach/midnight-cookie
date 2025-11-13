@@ -8,10 +8,12 @@
   padding: 10px 35px 14px;
   border-radius: 50px;
   transition: 0.3s;
+  border: 2px solid white;
   &:hover {
     background-color: white;
     color: black;
     transition: 0.3s;
+    border: 2px solid black;
   }
 }
 

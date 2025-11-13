@@ -6,6 +6,24 @@ import { useWindowSize } from 'hooks';
 import RichText from 'components/rich-text';
 import clsx from 'clsx';
 
+import { BLOCKS } from '@contentful/rich-text-types';
+
+const customConfig = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <>
+        <span>{children}</span>
+        <br />
+      </>
+    ),
+    renderText: text => {
+      return text.split('\n').reduce((children, textSegment, index) => {
+        return [...children, index > 0 && <br key={index} />, textSegment];
+      }, []);
+    },
+  },
+};
+
 export default function HomeBanner({
   imageUrl,
   text,
@@ -49,7 +67,7 @@ export default function HomeBanner({
       <div className={styles.overlay}></div>
       <div className={styles.textContainer}>
         <h1 className={styles.heading}>
-          <RichText json={text.json} />
+          <RichText json={text.json} config={customConfig} />
         </h1>
         <Button
           href={buttonLink}

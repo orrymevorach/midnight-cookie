@@ -1,8 +1,9 @@
+@use '@mixins' as mixins;
 @import '@variables';
 
 .container {
   color: black;
-  @include fontPrimary;
+  @include mixins.fontPrimary;
   font-size: 20px;
   display: flex;
   flex-direction: column;

@@ -3,8 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@variables": ["styles/variables.module.scss"],
+      "@mixins": ["styles/mixins.module.scss"],
       "@global": ["styles/globals.module.scss"],
-      "public": ["public/"],
+      "public": ["public/"]
     }
   }
 }

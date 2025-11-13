@@ -1,3 +1,4 @@
+@use '@mixins' as mixins;
 @use '@variables' as variables;
 
 .container {
@@ -22,21 +23,42 @@
 }
 
 .title {
-  font-family: variables.$fontPrimary;
+  @include mixins.fontPrimary;
   font-size: 36px;
   margin-bottom: 20px;
 }
 
 .description {
-  font-family: variables.$fontSecondary;
+  @include mixins.fontSecondary;
   font-size: 20px;
 }
 
 button.link {
   font-style: normal;
-  font-family: variables.$fontSecondary;
+  @include mixins.fontSecondary;
   font-size: 18px;
   padding-left: 0;
+}
+
+.loaderContainer {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirmation {
+  text-align: center;
+  margin-top: 30px;
+  h2 {
+    @include mixins.fontPrimary;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  p {
+    @include mixins.fontSecondary;
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: variables.$mobile) {

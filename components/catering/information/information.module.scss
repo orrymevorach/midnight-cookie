@@ -1,3 +1,4 @@
+@use '@mixins' as mixins;
 @use '@variables' as variables;
 
 .container {
@@ -21,25 +22,25 @@
 }
 
 .title {
-  font-family: variables.$fontPrimary;
+  @include mixins.fontPrimary;
   font-size: 48px;
   line-height: 1;
   margin-bottom: 50px;
 }
 
 .subheading {
-  font-family: variables.$fontSecondaryBold;
+  @include mixins.fontSecondaryBold;
   font-size: 24px;
   margin-bottom: 30px;
 }
 
 .paragraph {
-  font-family: variables.$fontSecondary;
+  @include mixins.fontSecondary;
   margin-top: 10px;
   font-size: 20px;
   line-height: 1.2;
   &.bold {
-    font-family: variables.$fontSecondaryBold;
+    @include mixins.fontSecondaryBold;
     margin-top: 15px;
     font-size: 22px;
   }

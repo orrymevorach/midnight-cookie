@@ -1,5 +1,5 @@
 import Layout from 'components/shared/layout';
-import { getPageLoadData } from 'lib/api';
+import { getPageLoadData } from 'lib/contentful';
 import { slugMap } from 'utils/constants';
 import Paragraph from 'components/about/paragraph/paragraph';
 import LogoRow from 'components/about/logo-row/logo-row';

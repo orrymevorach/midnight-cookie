@@ -1,4 +1,4 @@
-import { fetchGraphQL, filterNullFields } from 'lib/api';
+import { fetchGraphQL, filterNullFields } from 'lib/contentful';
 import { GET_NEWS_ARTICLES } from 'gql/queries';
 import NewsArticle from 'components/media/news-gallery/news-article';
 

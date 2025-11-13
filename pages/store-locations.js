@@ -1,7 +1,7 @@
 import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
-import { getStoreLocations } from 'lib/api';
-import { getPageLoadData } from 'lib/api';
+import { getStoreLocations } from 'lib/contentful';
+import { getPageLoadData } from 'lib/contentful';
 import StoreLocations from 'components/contact/store-locations/store-locations';
 
 export default function Home(pageProps) {

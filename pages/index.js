@@ -2,8 +2,12 @@ import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
 import Layout from 'components/shared/layout';
 import { COOKIE_GALLERIES, slugMap } from 'utils/constants';
-import { getCarouselItems, getCookieGallery, getVideoDuration } from 'lib/api';
-import { getPageLoadData } from 'lib/api';
+import {
+  getCarouselItems,
+  getCookieGallery,
+  getVideoDuration,
+} from 'lib/contentful';
+import { getPageLoadData } from 'lib/contentful';
 import HoursOfOperation from 'components/home/hours-of-operation/hours-of-operation';
 import Newsletter from 'components/home/newsletter/newsletter';
 import CookieGalleryV2 from 'components/home/cookie-gallery-v2/cookie-gallery-v2';

@@ -1,3 +1,4 @@
+@use '@mixins' as mixins;
 @import '@variables';
 
 .container {
@@ -16,7 +17,7 @@
 
 .label {
   font-size: 32px;
-  @include fontPrimary;
+  @include mixins.fontPrimary;
   margin-bottom: 20px;
   text-align: center;
   a {
@@ -31,7 +32,7 @@
 //   height: 45px;
 //   border: 1px solid black;
 //   &::placeholder {
-//     @include fontPrimary;
+//     @include mixins.fontPrimary;
 //     color: black;
 //   }
 // }
@@ -43,7 +44,7 @@
 //   padding-bottom: 5px;
 //   width: 150px;
 //   border: none;
-//   @include fontPrimary;
+//   @include mixins.fontPrimary;
 //   font-size: 20px;
 // }
 

@@ -1,3 +1,4 @@
+@use '@mixins' as mixins;
 @import '@variables';
 
 .container {
@@ -13,7 +14,7 @@
 
 .launchDate {
   margin-bottom: 25px;
-  @include fontSecondaryBold;
+  @include mixins.fontSecondaryBold;
 }
 
 .row {
@@ -23,12 +24,12 @@
 
 .storeRight {
   text-align: right;
-  @include fontSecondaryBold;
+  @include mixins.fontSecondaryBold;
 }
 
 .locationTitle {
   margin-bottom: 25px;
-  @include fontPrimary;
+  @include mixins.fontPrimary;
   font-size: 20px;
 }
 

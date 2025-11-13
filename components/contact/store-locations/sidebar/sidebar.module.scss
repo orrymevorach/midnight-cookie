@@ -1,3 +1,4 @@
+@use '@mixins' as mixins;
 @import '@variables';
 
 .left {
@@ -5,13 +6,13 @@
 }
 
 .title {
-  @include fontPrimary;
+  @include mixins.fontPrimary;
   font-size: 20px;
   margin-bottom: 30px;
 }
 
 .storeName {
-  @include fontSecondary;
+  @include mixins.fontSecondary;
   background: none;
   border: none;
   font-size: 18px;

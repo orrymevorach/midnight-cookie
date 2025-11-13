@@ -1,6 +1,6 @@
 import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
-import { getPageLoadData } from 'lib/api';
+import { getPageLoadData } from 'lib/contentful';
 import Catering from 'components/catering/catering';
 
 export default function Home(pageProps) {

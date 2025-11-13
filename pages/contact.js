@@ -1,4 +1,4 @@
-import { getPageLoadData } from 'lib/api';
+import { getPageLoadData } from 'lib/contentful';
 import Layout from 'components/shared/layout';
 import { slugMap } from 'utils/constants';
 import Contact from 'components/contact';

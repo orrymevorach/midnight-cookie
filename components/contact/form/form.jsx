@@ -1,14 +1,77 @@
-import { useForm } from '@formspree/react';
 import styles from './form.module.scss';
-import clsx from 'clsx';
-import Image from 'next/image';
 import Link from 'next/link';
 import Loader from 'components/shared/loader';
-import Button from 'components/shared/button/button';
+import { useState } from 'react';
+import useContactFormReducer from 'components/shared/submission-form/useContactForm';
+import { sendContactFormSubmission } from 'lib/mailgun';
+import SubmissionForm from 'components/shared/submission-form/submission-form';
 
 export default function Form() {
-  const [state, handleSubmit] = useForm('mqkozgoo');
-  if (state.succeeded) {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const initialState = {
+    name: '',
+    email: '',
+    message: '',
+  };
+  const { dispatch, stages, state, actions } = useContactFormReducer({
+    initialState,
+  });
+  const { stage } = state;
+
+  const handleSubmit = async () => {
+    setIsLoading(true);
+    const fields = {
+      Name: state.name,
+      Email: state.email,
+      Message: state.message,
+    };
+    await sendContactFormSubmission({ fields });
+    dispatch({ type: actions.SET_STAGE, stage: stages.CONFIRMATION });
+    setIsLoading(false);
+  };
+
+  const formConfig = [
+    {
+      type: 'text',
+      label: 'Name',
+      id: 'name',
+      value: state.name,
+      handleChange: value =>
+        dispatch({ type: actions.SET_FIELD, field: 'name', value }),
+      required: true,
+    },
+    {
+      type: 'text',
+      label: 'Email',
+      id: 'email',
+      value: state.email,
+      handleChange: value =>
+        dispatch({ type: actions.SET_FIELD, field: 'email', value }),
+      required: true,
+    },
+    {
+      type: 'textarea',
+      label: 'Message',
+      id: 'message',
+      value: state.message,
+      minRows: 7,
+      handleChange: value =>
+        dispatch({ type: actions.SET_FIELD, field: 'message', value }),
+
+      required: true,
+      maxWordCount: 250,
+    },
+  ];
+  if (isLoading) {
+    return (
+      <div className={styles.loaderContainer}>
+        <Loader />
+      </div>
+    );
+  }
+
+  if (stage === stages.CONFIRMATION) {
     return (
       <div className={styles.successText}>
         <Link href="/">
@@ -24,39 +87,18 @@ export default function Form() {
       </div>
     );
   }
-  if (state.submitting) {
-    return (
-      <div className={styles.loaderContainer}>
-        <Loader />
-      </div>
-    );
-  }
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <div className={styles.form}>
       <p className={styles.title}>
         Contact us if you have any questions or general inquiries
       </p>
-      <div className={clsx(styles.inputContainer, styles.responsiveInput)}>
-        <label htmlFor="name">Name</label>
-        <input id="name" type="text" name="name" required />
-      </div>
-      <div className={clsx(styles.inputContainer, styles.responsiveInput)}>
-        <label htmlFor="email">Email</label>
-        <input id="email" type="email" name="email" required />
-      </div>
-      <div className={clsx(styles.inputContainer)}>
-        <label htmlFor="message">Message</label>
-        <textarea
-          name="message"
-          id="message"
-          cols="30"
-          rows="10"
-          required
-        ></textarea>
-      </div>
-      <Button type="submit" isDisabled={state.submitting}>
-        Send
-      </Button>
-    </form>
+      <SubmissionForm
+        formConfig={formConfig}
+        handleSubmit={handleSubmit}
+        isLoading={isLoading}
+        inputClassNames={styles.input}
+        labelClassNames={styles.label}
+      />
+    </div>
   );
 }

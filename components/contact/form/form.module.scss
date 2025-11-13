@@ -1,11 +1,12 @@
-@import '@variables';
+@use '@mixins' as mixins;
+@use '@variables' as variables;
 
 .form {
   padding: 50px;
   padding-top: 0;
   width: 100%;
-  @include fontPrimary;
-  color: $black;
+  @include mixins.fontPrimary;
+  color: variables.$black;
 }
 
 .successText,
@@ -15,30 +16,21 @@
 
 .title {
   font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.inputContainer {
+.label {
+  font-size: 16px !important;
+  font-family: variables.$fontPrimary !important;
   display: flex;
   flex-direction: column;
-  margin: 20px 0;
-  input,
-  textarea {
-    padding: 10px;
-    font-size: 16px;
-    @include fontPrimary;
-  }
-  label {
-    margin-bottom: 7px;
-  }
-}
-
-.responsiveInput {
-  width: 50%;
+  color: variables.$black;
+  letter-spacing: 2px;
 }
 
 .successText {
-  @include fontPrimary;
-  color: $black;
+  @include mixins.fontPrimary;
+  color: variables.$black;
   font-size: 36px;
 
   p {
@@ -57,7 +49,7 @@
   width: 50%;
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: variables.$tablet) {
   .form {
     width: 100%;
     margin-top: 30px;
@@ -72,7 +64,7 @@
   }
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: variables.$mobile) {
   .form {
     padding: 0;
     margin-top: 0;

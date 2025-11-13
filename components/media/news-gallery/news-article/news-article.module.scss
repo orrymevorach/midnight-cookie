@@ -17,11 +17,11 @@
 
 .textContainer {
   margin: 0 20px;
-  @include fontPrimary;
+  @include mixins.fontPrimary;
 }
 
 .title {
-  @include fontPrimary;
+  @include mixins.fontPrimary;
   font-size: 20px;
   margin: 20px 0;
 }
@@ -50,7 +50,7 @@
   border-radius: 8px;
   text-decoration: none;
   font-size: 14px;
-  @include fontPrimary;
+  @include mixins.fontPrimary;
   text-transform: uppercase;
   position: absolute;
   bottom: 30px;

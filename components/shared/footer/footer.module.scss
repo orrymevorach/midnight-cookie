@@ -1,3 +1,4 @@
+@use '@mixins' as mixins;
 @import '@variables';
 
 .footer {
@@ -38,7 +39,7 @@
   flex-direction: column;
   text-align: right;
   a {
-    @include fontPrimary;
+    @include mixins.fontPrimary;
     text-decoration: none;
     color: black;
     font-size: 32px;
@@ -47,7 +48,7 @@
 
 .subTextContainer {
   margin: 100px 0 150px;
-  @include fontPrimary;
+  @include mixins.fontPrimary;
   text-align: center;
   font-size: 18px;
   p {
@@ -79,7 +80,7 @@
   text-align: center;
   padding: 10px 0;
   color: white;
-  @include fontPrimary;
+  @include mixins.fontPrimary;
   font-size: 15px;
   margin-top: 50px;
   a,

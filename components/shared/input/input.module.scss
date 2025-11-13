@@ -1,7 +1,8 @@
+@use '@mixins' as mixins;
 @use '@variables' as variables;
 
 .inputContainer {
-  font-family: variables.$fontSecondary;
+  @include mixins.fontSecondary;
   text-align: center;
 }
 
@@ -27,7 +28,7 @@
   color: red;
   font-size: 16px;
   margin-bottom: 10px;
-  font-family: variables.$fontSecondary;
+  @include mixins.fontSecondary;
 }
 
 @media screen and (max-width: variables.$mobile) {

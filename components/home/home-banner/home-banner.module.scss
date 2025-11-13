@@ -1,3 +1,4 @@
+@use '@mixins' as mixins;
 @import '@variables';
 
 .container {
@@ -34,7 +35,7 @@
 }
 
 .heading {
-  @include fontPrimary;
+  @include mixins.fontPrimary;
   text-transform: uppercase;
   font-size: 70px;
   // font-size: 50px;

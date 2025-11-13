@@ -2,7 +2,6 @@ import Button from 'components/shared/button/button';
 import GetFormElement from './form-elements';
 import styles from './submission-form.module.scss';
 import clsx from 'clsx';
-import { useWindowSize } from 'hooks';
 
 export default function SubmissionForm({
   formConfig,
@@ -14,8 +13,6 @@ export default function SubmissionForm({
   inputContainerClassNames = '',
   buttonClassNames = '',
 }) {
-  const { isMobile } = useWindowSize();
-
   const handleSubmitForm = e => {
     e.preventDefault();
     handleSubmit();
@@ -42,7 +39,7 @@ export default function SubmissionForm({
       <Button
         classNames={clsx(styles.submitButton, buttonClassNames)}
         isLoading={isLoading}
-        isDark={isMobile}
+        type="submit"
       >
         Submit
       </Button>

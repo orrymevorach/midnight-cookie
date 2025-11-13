@@ -3,6 +3,8 @@ import SubmissionForm from 'components/shared/submission-form/submission-form';
 import styles from './form.module.scss';
 import useContactFormReducer from 'components/shared/submission-form/useContactForm';
 import { useState } from 'react';
+import { sendContactFormSubmission } from 'lib/mailgun';
+import Loader from 'components/shared/loader';
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +29,11 @@ export default function ContactForm() {
       City: state.city,
       Message: state.message,
     };
-    // await sendContactFormSubmission({ fields });
+    await sendContactFormSubmission({
+      fields,
+      subject: 'Catering Inquiry',
+      title: 'New Catering Inquiry for Midnight Cookie',
+    });
     dispatch({ type: actions.SET_STAGE, stage: stages.CONFIRMATION });
     setIsLoading(false);
   };
@@ -92,6 +98,14 @@ export default function ContactForm() {
       maxWordCount: 250,
     },
   ];
+
+  if (isLoading) {
+    return (
+      <div className={styles.loaderContainer}>
+        <Loader />
+      </div>
+    );
+  }
   return (
     <div className={styles.container} id="form">
       <div className={styles.innerContainer}>
@@ -116,8 +130,9 @@ export default function ContactForm() {
           </div>
         )}
         {stage === stages.CONFIRMATION && (
-          <div>
-            <h2 className={styles.thankYou}>Thank you for your submission!</h2>
+          <div className={styles.confirmation}>
+            <h2 className={styles.thankYou}>Thank you for your enquiry!</h2>
+            <p>We will be in touch shortly.</p>
           </div>
         )}
       </div>

@@ -1,0 +1,17 @@
+@use '@variables' as variables;
+
+@mixin fontPrimary {
+  font-family: variables.$fontPrimary;
+  letter-spacing: 2px;
+}
+
+@mixin fontSecondary {
+  font-family: variables.$fontSecondary;
+  line-height: 1.2;
+}
+
+@mixin fontSecondaryBold {
+  font-family: variables.$fontSecondaryBold;
+  letter-spacing: 0;
+  line-height: 1.2;
+}

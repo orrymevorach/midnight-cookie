@@ -1,5 +1,5 @@
 import Layout from 'components/shared/layout';
-import { getFaqPage, getPageLoadData } from 'lib/api';
+import { getFaqPage, getPageLoadData } from 'lib/contentful';
 import { slugMap } from 'utils/constants';
 import FAQ from 'components/about/faq/faq';
 

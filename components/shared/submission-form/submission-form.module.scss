@@ -1,3 +1,4 @@
+@use '@mixins' as mixins;
 @use '@variables' as variables;
 
 .container {
@@ -26,7 +27,7 @@
 .input,
 .textarea,
 label.inputLabel {
-  font-family: variables.$fontSecondary;
+  @include mixins.fontSecondary;
   color: black;
   margin-bottom: 7px;
   text-wrap: wrap;
@@ -69,7 +70,7 @@ label.inputLabel {
   margin: 20px 0 50px 220px;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
-  font-family: variables.$fontSecondary;
+  @include mixins.fontSecondary;
   .asterisk {
     color: red;
   }

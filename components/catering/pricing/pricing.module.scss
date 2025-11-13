@@ -1,3 +1,4 @@
+@use '@mixins' as mixins;
 @use '@variables' as variables;
 
 .outerContainer {
@@ -13,7 +14,7 @@
 }
 
 .title {
-  font-family: variables.$fontPrimary;
+  @include mixins.fontPrimary;
   font-size: 36px;
   text-align: center;
   margin-bottom: 40px;
@@ -30,7 +31,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: variables.$fontSecondary;
+  @include mixins.fontSecondary;
   padding: 10px;
   border-bottom: 1px solid black;
   font-size: 24px;
@@ -40,7 +41,7 @@
 }
 
 .price {
-  font-family: variables.$fontSecondaryBold;
+  @include mixins.fontSecondaryBold;
   font-size: 24px;
 }
 
@@ -59,7 +60,7 @@
 }
 
 .subheading {
-  font-family: variables.$fontPrimary;
+  @include mixins.fontPrimary;
   font-size: 28px;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -67,14 +68,14 @@
 
 .list {
   li {
-    font-family: variables.$fontSecondary;
+    @include mixins.fontSecondary;
     font-size: 20px;
     margin-bottom: 10px;
   }
 }
 
 .paragraph {
-  font-family: variables.$fontSecondary;
+  @include mixins.fontSecondary;
   font-size: 18px;
   margin-top: 20px;
   margin-bottom: 0;

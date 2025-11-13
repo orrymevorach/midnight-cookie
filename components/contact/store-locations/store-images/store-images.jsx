@@ -30,7 +30,7 @@ export default function StoreImages({ images, storeName }) {
           ))}
         </MovementSlider>
       ) : (
-        images.map(({ url, width, height }) => (
+        images.map(({ url, width, height }, index) => (
           <Image
             src={url}
             width={width}

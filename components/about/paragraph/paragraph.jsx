@@ -6,13 +6,13 @@ import logo from '/public/rebuild/cursive-midnight.png';
 export default function Paragraph() {
   return (
     <div className={clsx(styles.textContainer)}>
-      <h2 className={styles.title}>
+      <h1 className={styles.title}>
         <span className={styles.titleTop}>Welcome to</span>
         <br />
         <span className={styles.titleBig}>Midnight</span>
         <br />
         <span className={styles.titleBig}>Cookie</span>
-      </h2>
+      </h1>
       <p className={styles.text}>
         The story of Midnight Cookie begins in the cold winter months of 2021.
         The pandemic changed a lot for us. Almost everything! We moved

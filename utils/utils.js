@@ -22,3 +22,7 @@ export const formatDate = ({ date }) => {
 };
 
 export const removeTime = stamp => stamp.split('T')[0];
+
+export const getCurrentYear = () => {
+  return new Date().getFullYear();
+};

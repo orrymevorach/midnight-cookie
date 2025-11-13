@@ -3,7 +3,9 @@ import styles from './sidebar.module.scss';
 export default function Sidebar({ storeLocations, setCurrentIndex }) {
   return (
     <div className={styles.left}>
-      <p className={styles.title}>Toronto</p>
+      <h1 className={styles.title}>
+        Toronto <br /> Store <br /> Locations
+      </h1>
       {storeLocations.map(({ storeName }, index) => (
         <div key={storeName}>
           <button

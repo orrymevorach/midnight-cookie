@@ -80,9 +80,9 @@ export default function Form() {
   }
   return (
     <div className={styles.form}>
-      <p className={styles.title}>
+      <h1 className={styles.title}>
         Contact us if you have any questions or general inquiries
-      </p>
+      </h1>
       <SubmissionForm
         formConfig={formConfig}
         handleSubmit={handleSubmit}

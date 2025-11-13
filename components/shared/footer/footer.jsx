@@ -6,8 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { getCurrentYear } from 'utils/utils';
 
 export default function Footer() {
+  const year = getCurrentYear();
   return (
     <footer className={styles.footer}>
       <div className={styles.topRow}>
@@ -42,7 +44,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.subTextContainer}>
-        <p>Copyright &#9400; 2024 Midnight Cookie. All Rights Reserved</p>
+        <p>Copyright &#9400; {year} Midnight Cookie. All Rights Reserved</p>
       </div>
       <div className={styles.images}>
         <Image

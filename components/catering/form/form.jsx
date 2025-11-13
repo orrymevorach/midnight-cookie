@@ -112,7 +112,7 @@ export default function ContactForm() {
         {stage === stages.FILL_OUT_FORM && (
           <div className={styles.formContainer}>
             <div className={styles.textContainer}>
-              <h3 className={styles.title}>Interested in Catering?</h3>
+              <h2 className={styles.title}>Interested in Catering?</h2>
               <p className={styles.description}>
                 Tell us about your event! Reach out to our team at or by filling
                 out the form below, and someone will get back to you within 1-3

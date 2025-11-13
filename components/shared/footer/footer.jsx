@@ -45,16 +45,36 @@ export default function Footer() {
         <p>Copyright &#9400; 2024 Midnight Cookie. All Rights Reserved</p>
       </div>
       <div className={styles.images}>
-        <Image src={logoBlack} className={styles.image} alt="" />
+        <Image
+          src={logoBlack}
+          className={styles.image}
+          alt="Midnight Cookie Logo"
+        />
         <Image
           src={logo}
           className={clsx(styles.image, styles.colorImage)}
-          alt=""
+          alt="Midnight Cookie Logo"
         />
-        <Image src={logoBlack} className={styles.image} alt="" />
-        <Image src={logoBlack} className={styles.image} alt="" />
-        <Image src={logoBlack} className={styles.image} alt="" />
-        <Image src={logoBlack} className={styles.image} alt="" />
+        <Image
+          src={logoBlack}
+          className={styles.image}
+          alt="Midnight Cookie Logo"
+        />
+        <Image
+          src={logoBlack}
+          className={styles.image}
+          alt="Midnight Cookie Logo"
+        />
+        <Image
+          src={logoBlack}
+          className={styles.image}
+          alt="Midnight Cookie Logo"
+        />
+        <Image
+          src={logoBlack}
+          className={styles.image}
+          alt="Midnight Cookie Logo"
+        />
       </div>
       <div className={styles.orryContainer}>
         <p>

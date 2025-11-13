@@ -49,7 +49,7 @@ export default function DesktopNav({ navData, pathname, animateNav = false }) {
       )}
     >
       <Link href="/" className={styles.image}>
-        <Image src={logo} alt="" quality={70} />
+        <Image src={logo} alt="Midnight Cookie Logo" quality={70} />
       </Link>
       <ul>
         <div className={styles.row}>

@@ -5,7 +5,7 @@ export default function PageNotFound() {
     <div className={styles.maintenanceContainer}>
       <img
         src="/wp-content/uploads/2021/10/Midnight-Cookie-Logo-sde1.png"
-        alt=""
+        alt="Midnight Cookie Logo"
         className={styles.logo}
       />
       <h2 className={styles.heading}>404: Page Not Found</h2>

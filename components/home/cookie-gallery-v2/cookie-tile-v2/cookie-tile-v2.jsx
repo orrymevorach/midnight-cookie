@@ -12,7 +12,6 @@ export default function CookieTile({
 }) {
   const { isMobile } = useWindowSize();
   const [showDescription, setShowDescription] = useState(false);
-  const style = isMobile ? { backgroundImage: `url(${url})` } : {};
   return (
     <div
       className={styles.container}
@@ -22,16 +21,15 @@ export default function CookieTile({
       {description && showDescription && (
         <div className={styles.description}>{description}</div>
       )}
-      <div className={styles.cookieTile} style={style}>
-        {!isMobile && (
-          <Image
-            src={url}
-            width={width}
-            height={height}
-            className={styles.image}
-            alt=""
-          />
-        )}
+      <div className={styles.cookieTile}>
+        <Image
+          src={url}
+          className={styles.image}
+          alt={`${title} cookie`}
+          width={!isMobile && width}
+          height={!isMobile && height}
+          fill={isMobile}
+        />
       </div>
       <div>
         {title.split(' ').map((word, index) => (

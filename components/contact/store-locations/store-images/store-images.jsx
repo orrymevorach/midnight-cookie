@@ -3,7 +3,7 @@ import styles from './store-images.module.scss';
 import { useWindowSize } from 'hooks';
 import MovementSlider from 'components/movement-slider';
 
-export default function StoreImages({ images }) {
+export default function StoreImages({ images, storeName }) {
   const { isDesktop } = useWindowSize();
 
   return (
@@ -17,12 +17,12 @@ export default function StoreImages({ images }) {
     >
       {!isDesktop ? (
         <MovementSlider data={images} hasDots={false} hasWhiteArrows>
-          {images.map(({ url, width, height }) => (
+          {images.map(({ url, width, height }, index) => (
             <Image
               src={url}
               width={width}
               height={height}
-              alt=""
+              alt={`Image ${index + 1} of ${storeName}`}
               className={styles.image}
               style={{ width: `${100 / images.length}%` }}
               key={url}
@@ -35,7 +35,7 @@ export default function StoreImages({ images }) {
             src={url}
             width={width}
             height={height}
-            alt=""
+            alt={`Image ${index + 1} of ${storeName}`}
             className={styles.image}
             key={url}
           />

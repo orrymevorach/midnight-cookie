@@ -8,6 +8,7 @@ export default function StoreLocations({ storeLocations }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentStore = storeLocations[currentIndex];
   const images = currentStore.imagesCollection.items;
+  console.log('currentStore', currentStore);
 
   return (
     <div className={styles.container}>
@@ -16,7 +17,7 @@ export default function StoreLocations({ storeLocations }) {
         storeLocations={storeLocations}
       />
       <div className={styles.rightContainer}>
-        <StoreImages images={images} />
+        <StoreImages images={images} storeName={currentStore.storeName} />
         <StoreInformation currentStore={currentStore} />
       </div>
     </div>

@@ -13,7 +13,7 @@ export default function Article({
   return (
     <div className={styles.tile} key={title}>
       <a href={url} target="_blank">
-        <img src={image.url} alt="" />
+        <img src={image.url} alt={title.replace(htmlRegex, '')} />
       </a>
       <div className={styles.textContainer}>
         <p className={styles.date}>{formattedDate}</p>

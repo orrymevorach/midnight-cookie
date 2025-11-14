@@ -17,10 +17,12 @@ export default function NewsBanner() {
       <Image
         src={cookiePieceLeft}
         className={clsx(styles.cookiePiece, styles.cookieLeft)}
+        alt="Cookie piece left"
       />
       <Image
         src={cookiePieceRight}
         className={clsx(styles.cookiePiece, styles.cookieRight)}
+        alt="Cookie piece right"
       />
       <p className={styles.heading}>As seen in</p>
       <div className={styles.row}>

@@ -21,7 +21,7 @@ export default function GiftCards() {
         <div className={styles.giftCardImage}>
           <Image src={giftCard} alt="Gift Card" />
         </div>
-        <Button>Buy Now</Button>
+        <Button href="https://midnightcookie.securetree.com/">Buy Now</Button>
       </div>
     </div>
   );

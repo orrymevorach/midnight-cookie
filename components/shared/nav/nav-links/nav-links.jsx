@@ -7,7 +7,7 @@ import useSetElementMinWidth from './useSetElementWidth';
 export default function NavLinks({ navData, pathname, isMobile = false }) {
   return (
     <>
-      {navData.map(({ title, url, hoverText }) => {
+      {navData.map(({ title, url, hoverText, openInNewTab }) => {
         const [isHovering, setIsHovering] = useState(false);
         const linkRef = useRef(null);
         const minWidth = useSetElementMinWidth({ linkRef, title, hoverText });
@@ -31,6 +31,8 @@ export default function NavLinks({ navData, pathname, isMobile = false }) {
               href={url}
               ref={linkRef}
               style={{ minWidth: minWidth > 0 ? `${minWidth}px` : 'auto' }}
+              target={openInNewTab ? '_blank' : '_self'}
+              rel={openInNewTab ? 'noopener noreferrer' : ''}
             >
               {isHovering && hoverText ? hoverText : title}
             </Link>

@@ -24,6 +24,7 @@ export const GET_MENU_ITEMS = `
           title
           url
           hoverText
+          openInNewTab
         }
       }
     }

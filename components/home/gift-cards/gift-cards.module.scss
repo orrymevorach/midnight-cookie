@@ -6,6 +6,7 @@
   height: 600px;
   overflow: hidden;
   margin-bottom: 120px;
+  background-color: #f796b7;
 }
 
 .left,
@@ -22,9 +23,11 @@
 
 .title {
   @include mixins.fontPrimary;
-  font-size: 35px;
-  width: 400px;
+  font-size: 40px;
+  width: 500px;
   text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .giftCardImage {
@@ -40,6 +43,7 @@
 
 .imageContainer {
   width: 100%;
+  position: relative;
   img {
     width: 100%;
     height: auto;

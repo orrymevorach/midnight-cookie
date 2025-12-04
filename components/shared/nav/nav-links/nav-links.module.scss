@@ -7,6 +7,8 @@
     text-decoration: none;
     @include mixins.fontPrimary;
     text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
   }
   padding: 0 16px;
   &:first-of-type {

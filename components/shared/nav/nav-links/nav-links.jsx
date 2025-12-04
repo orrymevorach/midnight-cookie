@@ -1,16 +1,21 @@
 import clsx from 'clsx';
 import styles from './nav-links.module.scss';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import useSetElementMinWidth from './useSetElementWidth';
 
 export default function NavLinks({ navData, pathname, isMobile = false }) {
   return (
     <>
       {navData.map(({ title, url, hoverText }) => {
         const [isHovering, setIsHovering] = useState(false);
+        const linkRef = useRef(null);
+        const minWidth = useSetElementMinWidth({ linkRef, title, hoverText });
+
         const removeSlashes = ({ url }) => url.replace(/\//g, '');
         const isActive =
           removeSlashes({ url }) === removeSlashes({ url: pathname });
+
         return (
           <li
             key={title}
@@ -22,7 +27,11 @@ export default function NavLinks({ navData, pathname, isMobile = false }) {
             onMouseOver={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            <Link href={url}>
+            <Link
+              href={url}
+              ref={linkRef}
+              style={{ minWidth: minWidth > 0 ? `${minWidth}px` : 'auto' }}
+            >
               {isHovering && hoverText ? hoverText : title}
             </Link>
           </li>

@@ -12,6 +12,7 @@ import HoursOfOperation from 'components/home/hours-of-operation/hours-of-operat
 import Newsletter from 'components/home/newsletter/newsletter';
 import CookieGalleryV2 from 'components/home/cookie-gallery-v2/cookie-gallery-v2';
 import Carousel from 'components/home/carousel/carousel';
+import GiftCards from 'components/home/gift-cards/gift-cards';
 
 export default function Home(pageProps) {
   const { featuredFlavoursGallery, classicDoughGallery, carouselItems } =
@@ -24,6 +25,7 @@ export default function Home(pageProps) {
         <CookieGallery {...featuredFlavoursGallery} />
 
         <CookieGalleryV2 {...classicDoughGallery} />
+        <GiftCards />
 
         <NewsBanner />
         <HoursOfOperation />

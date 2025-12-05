@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './gift-cards.module.scss';
-import giftCardBanner from 'public/rebuild/gift-card-banner.png';
+import giftCardBanner from 'public/rebuild/gift-card-banner-2.png';
 import giftCard from 'public/rebuild/gift-card.png';
 import Button from 'components/shared/button';
 import { useRef } from 'react';

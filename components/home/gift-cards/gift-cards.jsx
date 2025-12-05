@@ -21,6 +21,9 @@ export default function GiftCards() {
         <div className={styles.giftCardImage}>
           <Image src={giftCard} alt="Gift Card" />
         </div>
+        <p className={styles.description}>
+          *Physical gifts cards available in store
+        </p>
         <Button href="https://midnightcookie.securetree.com/">Buy Now</Button>
       </div>
     </div>

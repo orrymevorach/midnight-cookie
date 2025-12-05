@@ -67,16 +67,11 @@
   .right {
     width: 100%;
     height: auto;
-    padding: 20px 0;
+    padding: 0;
   }
   .right {
     order: -1;
-  }
-  .imageContainer {
-    height: 500px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    padding: 40px 0;
   }
   .title {
     width: 100%;

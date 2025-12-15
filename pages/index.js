@@ -23,7 +23,6 @@ export default function Home(pageProps) {
     carouselItems,
     shopGallery,
   } = pageProps;
-  console.log('shopGallery', shopGallery);
   return (
     <Layout {...pageProps} animateNav>
       <main>

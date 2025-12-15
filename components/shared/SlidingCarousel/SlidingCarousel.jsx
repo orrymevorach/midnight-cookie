@@ -6,7 +6,7 @@ import Button from 'components/shared/Button/Button';
 import { slugMap } from 'utils/constants';
 import Link from 'next/link';
 import { getMedia } from 'lib/contentful';
-import Heading from '../Heading/Heading';
+import Heading from 'components/shared/Heading/Heading';
 
 const Tile = ({ product }) => {
   const [isHovering, setIsHovering] = useState(false);

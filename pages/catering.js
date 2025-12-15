@@ -1,16 +1,8 @@
 import { slugMap } from 'utils/constants';
 import { getPageLoadData } from 'lib/contentful';
-import Catering from 'components/Catering/Catering';
-import Layout from 'components/shared/Layout/Layout';
 
 export default function Home(pageProps) {
-  return (
-    <Layout {...pageProps}>
-      <main>
-        <Catering />
-      </main>
-    </Layout>
-  );
+  return <main></main>;
 }
 
 export async function getStaticProps({ preview = false }) {

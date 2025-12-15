@@ -2,7 +2,6 @@
 import styles from './SlidingCarousel.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Button from '../../shared/Button/Button';
 import { slugMap } from 'utils/constants';
 import Link from 'next/link';
 import { getMedia } from 'lib/contentful';
@@ -23,9 +22,9 @@ const Tile = ({ product }) => {
         <div className={styles.overlay}>
           <p className={styles.imageText}>{product.name}</p>
           <p className={styles.description}>{product.description}</p>
-          <Button isSmall isGold classNames={styles.button} href={slugMap.SHOP}>
-            Shop Now
-          </Button>
+          {/* <Button isSmall isGold classNames={styles.button} href={slugMap.SHOP}> */}
+          Shop Now
+          {/* </Button> */}
         </div>
       )}
       {/* </Link> */}

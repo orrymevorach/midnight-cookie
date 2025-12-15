@@ -2,11 +2,11 @@
 import styles from './SlidingCarousel.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Button from 'components/shared/Button/Button';
+import Button from '../../shared/Button/Button';
 import { slugMap } from 'utils/constants';
 import Link from 'next/link';
 import { getMedia } from 'lib/contentful';
-import Heading from 'components/shared/Heading/Heading';
+import Heading from '../..//Heading/Heading';
 
 const Tile = ({ product }) => {
   const [isHovering, setIsHovering] = useState(false);

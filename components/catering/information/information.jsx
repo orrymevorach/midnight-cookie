@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import styles from './information.module.scss';
 import Image from 'next/image';
 import foodTruck from 'public/rebuild/food-truck-1.jpg';
-import Button from 'components/shared/button';
+import Button from 'components/shared/Button/Button';
 import { slugMap } from 'utils/constants';
 
 export default function Information() {

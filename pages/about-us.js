@@ -1,4 +1,4 @@
-import Layout from 'components/shared/layout';
+import Layout from 'components/shared/Layout/Layout';
 import { getPageLoadData } from 'lib/contentful';
 import { slugMap } from 'utils/constants';
 import Paragraph from 'components/about/paragraph/paragraph';

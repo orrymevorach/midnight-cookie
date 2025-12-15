@@ -1,10 +1,9 @@
-import styles from './form.module.scss';
-import Link from 'next/link';
-import Loader from 'components/shared/loader';
+import styles from './Form.module.scss';
+import Loader from 'components/shared/Loader/Loader';
 import { useState } from 'react';
-import useContactFormReducer from 'components/shared/submission-form/useContactForm';
+import useContactFormReducer from 'components/shared/SubmissionForm/useContactForm';
 import { sendContactFormSubmission } from 'lib/mailgun';
-import SubmissionForm from 'components/shared/submission-form/submission-form';
+import SubmissionForm from 'components/shared/SubmissionForm/SubmissionForm';
 
 export default function Form() {
   const [isLoading, setIsLoading] = useState(false);

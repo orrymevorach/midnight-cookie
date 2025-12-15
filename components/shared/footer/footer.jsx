@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import styles from './footer.module.scss';
-import logoBlack from '/public/rebuild/footer.png';
-import logo from '/public/rebuild/footer-color.png';
+import styles from './Footer.module.scss';
+import logoBlack from 'public/rebuild/footer.png';
+import logo from 'public/rebuild/footer-color.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';

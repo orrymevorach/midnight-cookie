@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from './animation.module.scss';
+import styles from './Animation.module.scss';
 import { useWindowSize } from 'hooks';
 
 export default function useAnimation({ ref, animateOnMobile = true }) {

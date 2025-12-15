@@ -1,7 +1,7 @@
 import styles from './paragraph.module.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
-import logo from '/public/rebuild/cursive-midnight.png';
+import logo from 'public/rebuild/cursive-midnight.png';
 
 export default function Paragraph() {
   return (

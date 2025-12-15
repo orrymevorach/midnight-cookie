@@ -1,7 +1,7 @@
 import { getPageLoadData } from 'lib/contentful';
-import Layout from 'components/shared/layout';
+import Layout from 'components/shared/Layout/Layout';
 import { slugMap } from 'utils/constants';
-import Contact from 'components/contact';
+import Contact from 'components/Contact/Contact';
 
 export default function ContactPage(pageProps) {
   return (

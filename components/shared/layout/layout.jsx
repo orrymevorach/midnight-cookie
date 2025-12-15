@@ -1,6 +1,6 @@
-import MetaTags from 'components/shared/meta-tags/meta-tags';
-import Nav from 'components/shared/nav';
-import Footer from 'components/shared/footer';
+import MetaTags from 'components/shared/MetaTags/MetaTags';
+import Nav from 'components/shared/Nav/Nav';
+import Footer from 'components/shared/Footer/Footer';
 
 export default function Layout({ children, navData, animateNav }) {
   return (

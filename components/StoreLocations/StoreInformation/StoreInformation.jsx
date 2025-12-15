@@ -1,5 +1,5 @@
-import RichText from 'components/rich-text/rich-text';
-import styles from './store-information.module.scss';
+import RichText from 'components/shared/rich-text/rich-text';
+import styles from './StoreInformation.module.scss';
 import { hoursOfOperation } from 'components/home/hours-of-operation/hours-of-operation';
 
 export default function StoreInformation({ currentStore }) {

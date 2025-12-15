@@ -1,9 +1,9 @@
-import Button from 'components/shared/button';
+import Button from 'components/shared/Button/Button';
 import styles from './home-banner.module.scss';
 import AnimatedText from './animated-text/animated-text';
 // import { useEffect, useState } from 'react';
 import { useWindowSize } from 'hooks';
-import RichText from 'components/rich-text';
+import RichText from 'components/shared/rich-text';
 import clsx from 'clsx';
 
 import { BLOCKS } from '@contentful/rich-text-types';

@@ -1,4 +1,4 @@
-import Button from 'components/shared/button/button';
+import Button from 'components/shared/Button/Button';
 import styles from './cookie-tile.module.scss';
 import { useWindowSize } from 'hooks';
 import { useState } from 'react';

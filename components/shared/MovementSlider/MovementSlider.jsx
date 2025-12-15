@@ -1,8 +1,8 @@
-import styles from './movement-slider.module.scss';
+import styles from './MovementSlider.module.scss';
 import { useSlider, useAutoSlide } from './hooks';
 import ArrowButton from './arrow-button';
 import Dots from './dots';
-import { useRef, useEffect, useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 import useHasChanged from 'hooks/useHasChanged';
 import { useSwipeable } from 'react-swipeable';
 

@@ -1,6 +1,6 @@
 import styles from './logo-row.module.scss';
 import Image from 'next/image';
-import logoBlack from '/public/rebuild/footer.png';
+import logoBlack from 'public/rebuild/footer.png';
 
 export default function LogoRow() {
   return (

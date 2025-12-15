@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Link from 'next/link';
-import styles from './button.module.scss';
+import styles from './Button.module.scss';
 import { useState } from 'react';
 
 export default function Button({

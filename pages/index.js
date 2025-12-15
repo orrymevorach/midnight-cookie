@@ -1,6 +1,6 @@
 import CookieGallery from 'components/home/cookie-gallery';
 import NewsBanner from 'components/home/news-banner';
-import Layout from 'components/shared/layout';
+import Layout from 'components/shared/Layout/Layout';
 import { COOKIE_GALLERIES, slugMap } from 'utils/constants';
 import {
   getCarouselItems,
@@ -8,11 +8,11 @@ import {
   getVideoDuration,
 } from 'lib/contentful';
 import { getPageLoadData } from 'lib/contentful';
-import HoursOfOperation from 'components/home/hours-of-operation/hours-of-operation';
-import Newsletter from 'components/home/newsletter/newsletter';
-import CookieGalleryV2 from 'components/home/cookie-gallery-v2/cookie-gallery-v2';
-import Carousel from 'components/home/carousel/carousel';
-import GiftCards from 'components/home/gift-cards/gift-cards';
+import HoursOfOperation from 'components/Home/hours-of-operation/hours-of-operation';
+import Newsletter from 'components/Home/Newsletter/Newsletter';
+import CookieGalleryV2 from 'components/Home/cookie-gallery-v2/cookie-gallery-v2';
+import Carousel from 'components/Home/Carousel/Carousel';
+import GiftCards from 'components/Home/gift-cards/gift-cards';
 
 export default function Home(pageProps) {
   const { featuredFlavoursGallery, classicDoughGallery, carouselItems } =

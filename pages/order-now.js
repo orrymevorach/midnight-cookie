@@ -1,5 +1,5 @@
 import { getPageLoadData } from 'lib/contentful';
-import Layout from 'components/shared/layout/layout';
+import Layout from 'components/shared/Layout/Layout';
 import { slugMap } from 'utils/constants';
 import OrderIframe from 'components/order-now/order-iframe';
 

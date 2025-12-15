@@ -1,4 +1,4 @@
-import styles from './sidebar.module.scss';
+import styles from './Sidebar.module.scss';
 
 export default function Sidebar({ storeLocations, setCurrentIndex }) {
   return (

@@ -1,4 +1,4 @@
-import styles from 'components/shared/maintenance-mode/maintenance-mode.module.scss';
+import styles from 'components/shared/404/404.module.scss';
 
 export default function PageNotFound() {
   return (

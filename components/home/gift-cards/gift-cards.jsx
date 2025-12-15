@@ -2,9 +2,9 @@ import Image from 'next/image';
 import styles from './gift-cards.module.scss';
 import giftCardBanner from 'public/rebuild/gift-card-banner-2.png';
 import giftCard from 'public/rebuild/gift-card.png';
-import Button from 'components/shared/button';
+import Button from 'components/shared/Button/Button';
 import { useRef } from 'react';
-import useAnimation from 'components/shared/animation';
+import useAnimation from 'components/shared/Animation/Index';
 
 export default function GiftCards() {
   const ref = useRef();

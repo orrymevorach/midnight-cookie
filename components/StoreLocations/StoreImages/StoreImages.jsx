@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import styles from './store-images.module.scss';
+import styles from './StoreImages.module.scss';
 import { useWindowSize } from 'hooks';
-import MovementSlider from 'components/movement-slider';
+import MovementSlider from 'components/shared/MovementSlider/MovementSlider';
 
 export default function StoreImages({ images, storeName }) {
   const { isDesktop } = useWindowSize();

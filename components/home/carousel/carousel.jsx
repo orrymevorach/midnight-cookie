@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Dots from './Dots/Dots';
-import styles from './carousel.module.scss';
+import styles from './Carousel.module.scss';
 import MediaItem from './MediaItem/MediaItem';
 import { useWindowSize } from 'hooks';
 

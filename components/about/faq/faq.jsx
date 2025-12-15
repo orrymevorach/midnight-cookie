@@ -4,7 +4,7 @@ import { BLOCKS } from '@contentful/rich-text-types';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
-import RichText from 'components/rich-text';
+import RichText from 'components/shared/rich-text';
 
 const options = {
   renderMarks: {

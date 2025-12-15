@@ -1,5 +1,5 @@
-import Form from './form';
-import styles from './contact.module.scss';
+import Form from './Form/Form';
+import styles from './Contact.module.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
 import cookies from 'public/rebuild/three-cookies.png';

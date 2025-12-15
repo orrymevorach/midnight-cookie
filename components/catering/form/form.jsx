@@ -1,10 +1,10 @@
 'use client';
-import SubmissionForm from 'components/shared/submission-form/submission-form';
+import SubmissionForm from 'components/shared/SubmissionForm/SubmissionForm';
 import styles from './form.module.scss';
-import useContactFormReducer from 'components/shared/submission-form/useContactForm';
+import useContactFormReducer from 'components/shared/SubmissionForm/useContactForm';
 import { useState } from 'react';
 import { sendContactFormSubmission } from 'lib/mailgun';
-import Loader from 'components/shared/loader';
+import Loader from 'components/shared/Loader/Index';
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);

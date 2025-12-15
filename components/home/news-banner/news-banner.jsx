@@ -3,11 +3,11 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import cookiePieceRight from 'public/rebuild/cookie-piece.png';
 import cookiePieceLeft from 'public/rebuild/cookie-piece-2.png';
-import blogTO from '/public/rebuild/blogto-black.png';
-import tasteToronto from '/public/rebuild/taste-toronto.png';
+import blogTO from 'public/rebuild/blogto-black.png';
+import tasteToronto from 'public/rebuild/taste-toronto.png';
 import streets from 'public/rebuild/streets-2.png';
 import { useRef } from 'react';
-import useAnimation from 'components/shared/animation/useAnimation';
+import useAnimation from 'components/shared/Animation/useAnimation';
 
 export default function NewsBanner() {
   const ref = useRef();

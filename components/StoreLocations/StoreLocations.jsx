@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import styles from './store-locations.module.scss';
-import StoreImages from './store-images/store-images';
-import Sidebar from './sidebar/sidebar';
-import StoreInformation from './store-information/store-information';
+import styles from './StoreLocations.module.scss';
+import StoreImages from './StoreImages/StoreImages';
+import Sidebar from './Sidebar/Sidebar';
+import StoreInformation from './StoreInformation/StoreInformation';
 
 export default function StoreLocations({ storeLocations }) {
   const [currentIndex, setCurrentIndex] = useState(0);

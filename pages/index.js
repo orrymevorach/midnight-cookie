@@ -1,5 +1,5 @@
-import CookieGallery from 'components/home/cookie-gallery';
-import NewsBanner from 'components/home/news-banner';
+import CookieGallery from 'components/Home/cookie-gallery/cookie-gallery';
+import NewsBanner from 'components/Home/news-banner/news-banner';
 import Layout from 'components/shared/Layout/Layout';
 import { COOKIE_GALLERIES, slugMap } from 'utils/constants';
 import {

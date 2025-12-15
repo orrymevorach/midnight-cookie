@@ -1,4 +1,4 @@
-import CookieGallery from 'components/Home/cookie-gallery/cookie-gallery';
+import CookieGallery from 'components/Home/CookieGallery/CookieGallery';
 import NewsBanner from 'components/Home/news-banner/news-banner';
 import Layout from 'components/shared/Layout/Layout';
 import { COOKIE_GALLERIES, slugMap } from 'utils/constants';
@@ -6,7 +6,6 @@ import {
   getCarouselItems,
   getCookieGallery,
   getShopGallery,
-  getVideoDuration,
 } from 'lib/contentful';
 import { getPageLoadData } from 'lib/contentful';
 import HoursOfOperation from 'components/Home/hours-of-operation/hours-of-operation';

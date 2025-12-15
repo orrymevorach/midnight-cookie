@@ -1,4 +1,4 @@
-import Layout from 'components/shared/Layout/Layout';
+// import Layout from 'components/shared/Layout/Layout';
 import { getFaqPage, getPageLoadData } from 'lib/contentful';
 import { slugMap } from 'utils/constants';
 import FAQ from 'components/About/Faq/Faq';
@@ -6,11 +6,13 @@ import FAQ from 'components/About/Faq/Faq';
 export default function AboutPage(pageProps) {
   const { faqData } = pageProps;
   return (
-    <Layout {...pageProps}>
+    // <Layout {...pageProps}>
+    <>
       <main>
         <FAQ faqData={faqData} />
       </main>
-    </Layout>
+      {/* </Layout> */}
+    </>
   );
 }
 

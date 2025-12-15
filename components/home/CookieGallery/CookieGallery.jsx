@@ -1,5 +1,5 @@
 import CookieTile from './cookie-tile';
-import styles from './cookie-gallery.module.scss';
+import styles from './CookieGallery.module.scss';
 import { useRef } from 'react';
 import useAnimation from 'components/shared/Animation/useAnimation';
 import { useWindowSize } from 'hooks';

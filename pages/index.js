@@ -14,7 +14,7 @@ import Newsletter from 'components/Home/Newsletter/Newsletter';
 import CookieGalleryV2 from 'components/Home/cookie-gallery-v2/cookie-gallery-v2';
 import Carousel from 'components/Home/Carousel/Carousel';
 import GiftCards from 'components/Home/gift-cards/gift-cards';
-// import SlidingCarousel from 'components/shared/SlidingCarousel/SlidingCarousel';
+import SlidingCarousel from 'components/shared/SlidingCarousel/SlidingCarousel';
 
 export default function Home(pageProps) {
   const {
@@ -23,6 +23,7 @@ export default function Home(pageProps) {
     carouselItems,
     shopGallery,
   } = pageProps;
+  console.log('shopGallery', shopGallery);
   return (
     <Layout {...pageProps} animateNav>
       <main>
@@ -31,7 +32,7 @@ export default function Home(pageProps) {
         <CookieGallery {...featuredFlavoursGallery} />
 
         <CookieGalleryV2 {...classicDoughGallery} />
-        {/* <SlidingCarousel products={shopGallery} /> */}
+        <SlidingCarousel products={shopGallery} />
         <GiftCards />
 
         <NewsBanner />

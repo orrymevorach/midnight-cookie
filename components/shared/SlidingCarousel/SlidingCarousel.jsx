@@ -5,18 +5,21 @@ import Image from 'next/image';
 import Button from 'components/shared/Button/Button';
 import { slugMap } from 'utils/constants';
 import Link from 'next/link';
+import { getMedia } from 'lib/contentful';
+import Heading from '../Heading/Heading';
 
 const Tile = ({ product }) => {
   const [isHovering, setIsHovering] = useState(false);
-  const firstImage = product.images[0].thumbnails.large;
+  const imageData = getMedia(product.image);
   return (
-    <Link
-      href={slugMap.SHOP}
+    <div
+      // <Link
+      // href={'/'}
       className={styles.image}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
+      // onMouseEnter={() => setIsHovering(true)}
+      // onMouseLeave={() => setIsHovering(false)}
     >
-      <Image src={firstImage.url} alt={product.alt} fill />
+      <Image src={imageData.src} alt={imageData.alt} fill />
       {isHovering && (
         <div className={styles.overlay}>
           <p className={styles.imageText}>{product.name}</p>
@@ -26,7 +29,8 @@ const Tile = ({ product }) => {
           </Button>
         </div>
       )}
-    </Link>
+      {/* </Link> */}
+    </div>
   );
 };
 
@@ -99,7 +103,7 @@ export default function SlidingCarousel({ products }) {
 
   return (
     <div className={styles.container} id="shop">
-      {/* <SectionHeading isBlue>Shop 2025 Merch</SectionHeading> */}
+      <Heading isBlue>Shop Our Merch</Heading>
       <div className={styles.outerScrollContainer}>
         <div
           className={styles.innerScrollContainer}

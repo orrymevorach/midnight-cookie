@@ -1,10 +1,13 @@
-import styles from './heading.module.scss';
+import styles from './Heading.module.scss';
 import clsx from 'clsx';
 
 export default function Heading({
   text = '',
   Element = 'h3',
   classNames = '',
+  children,
 }) {
-  return <Element className={clsx(styles.heading, classNames)}>{text}</Element>;
+  return (
+    <Element className={clsx(styles.heading, classNames)}>{children}</Element>
+  );
 }

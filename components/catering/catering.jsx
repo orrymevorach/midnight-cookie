@@ -1,6 +1,6 @@
-import Pricing from './pricing/pricing';
-import Information from './information/information';
-import Form from './form/form';
+import Pricing from './Pricing/Pricing';
+import Information from './Information/Information';
+import Form from './Form/Form';
 
 export default function Catering() {
   return (

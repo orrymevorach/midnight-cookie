@@ -4,7 +4,7 @@ import styles from './form.module.scss';
 import useContactFormReducer from 'components/shared/SubmissionForm/useContactForm';
 import { useState } from 'react';
 import { sendContactFormSubmission } from 'lib/mailgun';
-import Loader from 'components/shared/Loader/Index';
+import Loader from 'components/shared/Loader/Loader';
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);

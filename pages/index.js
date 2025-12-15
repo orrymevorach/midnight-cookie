@@ -5,6 +5,7 @@ import { COOKIE_GALLERIES, slugMap } from 'utils/constants';
 import {
   getCarouselItems,
   getCookieGallery,
+  getShopGallery,
   getVideoDuration,
 } from 'lib/contentful';
 import { getPageLoadData } from 'lib/contentful';
@@ -16,8 +17,12 @@ import GiftCards from 'components/Home/gift-cards/gift-cards';
 // import SlidingCarousel from 'components/shared/SlidingCarousel/SlidingCarousel';
 
 export default function Home(pageProps) {
-  const { featuredFlavoursGallery, classicDoughGallery, carouselItems } =
-    pageProps;
+  const {
+    featuredFlavoursGallery,
+    classicDoughGallery,
+    carouselItems,
+    shopGallery,
+  } = pageProps;
   return (
     <Layout {...pageProps} animateNav>
       <main>
@@ -26,7 +31,7 @@ export default function Home(pageProps) {
         <CookieGallery {...featuredFlavoursGallery} />
 
         <CookieGalleryV2 {...classicDoughGallery} />
-        {/* <SlidingCarousel products={[]} /> */}
+        {/* <SlidingCarousel products={shopGallery} /> */}
         <GiftCards />
 
         <NewsBanner />
@@ -88,11 +93,14 @@ export async function getStaticProps({ preview = false }) {
     })
   );
 
+  const shopGallery = await getShopGallery();
+
   return {
     props: {
       featuredFlavoursGallery,
       classicDoughGallery,
       carouselItems: { items: carouselItemsWithVideoDuration },
+      shopGallery,
       ...pageLoadData,
     },
   };

@@ -1,5 +1,5 @@
 import { getNewsArticles } from 'lib/contentful';
-import NewsArticle from 'components/media/news-gallery/news-article';
+import NewsArticle from 'components/Media/news-gallery/news-article';
 
 export default function CookiePage({ articleData }) {
   return (

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { slugMap } from 'utils/constants';
 import Link from 'next/link';
 import { getMedia } from 'lib/contentful';
+import Heading from '../Heading/Heading';
 
 const Tile = ({ product }) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -101,7 +102,7 @@ export default function SlidingCarousel({ products }) {
 
   return (
     <div className={styles.container} id="shop">
-      {/* <Heading isBlue>Shop Our Merch</Heading> */}
+      <Heading>Shop Our Merch</Heading>
       <div className={styles.outerScrollContainer}>
         <div
           className={styles.innerScrollContainer}

@@ -15,7 +15,7 @@ export default function Button({
   isSecondary = false,
   isSmall = false,
 }) {
-  const [text, setText] = useState(hoverText || children);
+  const [text, setText] = useState(children);
   const handleMouseOver = () => {
     const textToShow = hoverText || children;
     setText(textToShow);

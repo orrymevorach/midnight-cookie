@@ -1,7 +1,7 @@
 import Layout from 'components/shared/Layout/Layout';
 import { getFaqPage, getPageLoadData } from 'lib/contentful';
 import { slugMap } from 'utils/constants';
-import FAQ from 'components/about/faq/faq';
+import FAQ from 'components/About/Faq/Faq';
 
 export default function AboutPage(pageProps) {
   const { faqData } = pageProps;

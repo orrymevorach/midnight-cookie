@@ -2,16 +2,14 @@ import { useWindowSize } from 'hooks';
 import styles from './cookie-tile-v2.module.scss';
 import Image from 'next/image';
 import { useState } from 'react';
+import { getMedia } from 'lib/contentful';
 
 export default function CookieTile({
-  cookieData: {
-    title,
-    image: { url, width, height },
-    description,
-  },
+  cookieData: { title, image, description },
 }) {
   const { isMobile } = useWindowSize();
   const [showDescription, setShowDescription] = useState(false);
+  const imageData = getMedia(image);
   return (
     <div
       className={styles.container}
@@ -23,11 +21,11 @@ export default function CookieTile({
       )}
       <div className={styles.cookieTile}>
         <Image
-          src={url}
+          src={imageData.src}
           className={styles.image}
           alt={`${title} cookie`}
-          width={!isMobile && width}
-          height={!isMobile && height}
+          width={!isMobile && imageData.width}
+          height={!isMobile && imageData.height}
           fill={isMobile}
         />
       </div>

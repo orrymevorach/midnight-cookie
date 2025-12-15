@@ -13,6 +13,7 @@ import Newsletter from 'components/Home/Newsletter/Newsletter';
 import CookieGalleryV2 from 'components/Home/cookie-gallery-v2/cookie-gallery-v2';
 import Carousel from 'components/Home/Carousel/Carousel';
 import GiftCards from 'components/Home/gift-cards/gift-cards';
+// import SlidingCarousel from 'components/shared/SlidingCarousel/SlidingCarousel';
 
 export default function Home(pageProps) {
   const { featuredFlavoursGallery, classicDoughGallery, carouselItems } =
@@ -25,6 +26,7 @@ export default function Home(pageProps) {
         <CookieGallery {...featuredFlavoursGallery} />
 
         <CookieGalleryV2 {...classicDoughGallery} />
+        {/* <SlidingCarousel products={[]} /> */}
         <GiftCards />
 
         <NewsBanner />
@@ -67,22 +69,22 @@ export async function getStaticProps({ preview = false }) {
   });
 
   const carouselItemsWithVideoDuration = await Promise.all(
-    carouselItems.items.map(async item => {
+    carouselItems.map(async item => {
       const video = item.video;
       if (!video) {
         return item;
       }
 
-      const duration = await getVideoDuration(video);
-      const mobileDuration = item.mobileMedia
-        ? await getVideoDuration(item.mobileMedia)
-        : null;
+      // const duration = await getVideoDuration(video);
+      // const mobileDuration = item.mobileMedia
+      //   ? await getVideoDuration(item.mobileMedia)
+      //   : null;
 
-      return {
-        ...item,
-        duration: duration ? parseFloat(duration) : null,
-        mobileDuration: mobileDuration ? parseFloat(mobileDuration) : null,
-      };
+      // return {
+      //   ...item,
+      //   duration: duration ? parseFloat(duration) : null,
+      //   mobileDuration: mobileDuration ? parseFloat(mobileDuration) : null,
+      // };
     })
   );
 

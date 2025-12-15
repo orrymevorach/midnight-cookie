@@ -1,17 +1,14 @@
-import Button from 'components/shared/Button/Button';
 import styles from './cookie-tile.module.scss';
 import { useWindowSize } from 'hooks';
 import { useState } from 'react';
+import { getMedia } from 'lib/contentful';
 
 export default function CookieTile({
-  cookieData: {
-    title,
-    image: { url },
-    description,
-  },
+  cookieData: { title, image, description },
 }) {
-  const { isMobile } = useWindowSize();
   const [showDescription, setShowDescription] = useState(false);
+  const imageData = getMedia(image);
+
   return (
     <div
       className={styles.container}
@@ -20,7 +17,7 @@ export default function CookieTile({
     >
       <div
         className={styles.cookieTile}
-        style={{ backgroundImage: `url(${url})` }}
+        style={{ backgroundImage: `url(${imageData.src})` }}
       >
         {description && showDescription && (
           <div className={styles.description}>{description}</div>

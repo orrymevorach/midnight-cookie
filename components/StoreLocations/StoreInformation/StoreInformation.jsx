@@ -8,7 +8,7 @@ export default function StoreInformation({ currentStore }) {
       <div className={styles.storeLeft}>
         <p className={styles.launchDate}>Launched {currentStore.launchDate}</p>
         <div className={styles.description}>
-          <RichText json={currentStore.description?.json} />
+          <RichText json={currentStore.description} />
         </div>
       </div>
       <div className={styles.storeRight}>

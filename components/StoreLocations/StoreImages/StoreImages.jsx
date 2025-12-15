@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './StoreImages.module.scss';
 import { useWindowSize } from 'hooks';
 import MovementSlider from 'components/shared/MovementSlider/MovementSlider';
+import { getMedia } from 'lib/contentful';
 
 export default function StoreImages({ images, storeName }) {
   const { isDesktop } = useWindowSize();
@@ -17,29 +18,35 @@ export default function StoreImages({ images, storeName }) {
     >
       {!isDesktop ? (
         <MovementSlider data={images} hasDots={false} hasWhiteArrows>
-          {images.map(({ url, width, height }, index) => (
-            <Image
-              src={url}
-              width={width}
-              height={height}
-              alt={`Image ${index + 1} of ${storeName}`}
-              className={styles.image}
-              style={{ width: `${100 / images.length}%` }}
-              key={url}
-            />
-          ))}
+          {images.map((image, index) => {
+            const imageData = getMedia(image);
+            return (
+              <Image
+                src={imageData.src}
+                width={imageData.width}
+                height={imageData.height}
+                alt={`Image ${index + 1} of ${storeName}`}
+                className={styles.image}
+                style={{ width: `${100 / images.length}%` }}
+                key={imageData.src}
+              />
+            );
+          })}
         </MovementSlider>
       ) : (
-        images.map(({ url, width, height }, index) => (
-          <Image
-            src={url}
-            width={width}
-            height={height}
-            alt={`Image ${index + 1} of ${storeName}`}
-            className={styles.image}
-            key={url}
-          />
-        ))
+        images.map((image, index) => {
+          const imageData = getMedia(image);
+          return (
+            <Image
+              src={imageData.src}
+              width={imageData.width}
+              height={imageData.height}
+              alt={`Image ${index + 1} of ${storeName}`}
+              className={styles.image}
+              key={imageData.src}
+            />
+          );
+        })
       )}
     </div>
   );

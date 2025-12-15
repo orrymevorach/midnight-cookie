@@ -7,7 +7,7 @@ import StoreInformation from './StoreInformation/StoreInformation';
 export default function StoreLocations({ storeLocations }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentStore = storeLocations[currentIndex];
-  const images = currentStore.imagesCollection.items;
+  const images = currentStore.images;
 
   return (
     <div className={styles.container}>

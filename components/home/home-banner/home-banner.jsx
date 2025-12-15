@@ -1,8 +1,5 @@
 import Button from 'components/shared/Button/Button';
 import styles from './home-banner.module.scss';
-import AnimatedText from './animated-text/animated-text';
-// import { useEffect, useState } from 'react';
-import { useWindowSize } from 'hooks';
 import RichText from 'components/shared/rich-text';
 import clsx from 'clsx';
 
@@ -32,31 +29,6 @@ export default function HomeBanner({
   buttonLink = 'https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog',
   shouldAnimate = true,
 }) {
-  const { isMobile } = useWindowSize();
-  const videoSrc = isMobile
-    ? '/rebuild/home-video-mobile.mp4'
-    : '/rebuild/home-video.mp4';
-  // const [showHeading, setShowHeading] = useState(true);
-
-  // When user scrolls past height of window, reveal the nav bar and make it stick to top of page
-  // useEffect(() => {
-  //   window.addEventListener('scroll', function () {
-  //     if (!isMobile) {
-  //       const scrollPosition = window.scrollY;
-  //       if (scrollPosition > 200) {
-  //         setShowHeading(true);
-  //       } else {
-  //         setShowHeading(false);
-  //       }
-  //     } else {
-  //       setShowHeading(true);
-  //     }
-  //   });
-  //   if (isMobile) {
-  //     setShowHeading(true);
-  //   }
-  // }, [isMobile]);
-
   return (
     <div
       className={clsx(styles.container, shouldAnimate && styles.animate)}
@@ -67,7 +39,7 @@ export default function HomeBanner({
       <div className={styles.overlay}></div>
       <div className={styles.textContainer}>
         <h1 className={styles.heading}>
-          <RichText json={text.json} config={customConfig} />
+          <RichText json={text} config={customConfig} />
         </h1>
         <Button
           href={buttonLink}

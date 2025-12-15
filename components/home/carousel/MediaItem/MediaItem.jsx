@@ -2,15 +2,7 @@ import clsx from 'clsx';
 import styles from './MediaItem.module.scss';
 import { useWindowSize } from 'hooks';
 import HomeBanner from 'components/home/home-banner';
-
-export function getMedia(media) {
-  return {
-    src: media.url,
-    alt: media.alt,
-    width: media?.width || null,
-    height: media?.height || null,
-  };
-}
+import { getMedia } from 'lib/contentful';
 
 const MediaComponent = ({ item, items }) => {
   const { isMobile } = useWindowSize();

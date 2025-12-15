@@ -1,5 +1,4 @@
-import { fetchGraphQL, filterNullFields } from 'lib/contentful';
-import { GET_NEWS_ARTICLES } from 'gql/queries';
+import { getNewsArticles } from 'lib/contentful';
 import NewsArticle from 'components/media/news-gallery/news-article';
 
 export default function CookiePage({ articleData }) {
@@ -16,12 +15,11 @@ export async function getStaticProps({ preview = false, params }) {
     return {
       props: { cookieData: [] },
     };
-  const articleResponse = await fetchGraphQL({
-    query: GET_NEWS_ARTICLES,
-    variables: { slug: params.slug },
-  });
+  const newsArticles = await getNewsArticles();
 
-  const articleData = articleResponse.data.newsPostCollection.items[0];
+  const articleData = newsArticles.find(
+    article => article.slug === params.slug
+  );
 
   return {
     props: {
@@ -32,12 +30,7 @@ export async function getStaticProps({ preview = false, params }) {
 }
 
 export async function getStaticPaths() {
-  const articlesResponse = await fetchGraphQL({
-    query: GET_NEWS_ARTICLES,
-  });
-  const newsArticles = filterNullFields(
-    articlesResponse.data.newsPostCollection.items
-  );
+  const newsArticles = await getNewsArticles();
 
   return {
     paths: newsArticles.map(({ slug }) => `/media/${slug}`),

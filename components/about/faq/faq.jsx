@@ -49,7 +49,7 @@ const options = {
 const FaqParagraph = ({ question, answer }) => {
   const [showAnswer, setShowAnswer] = useState(false);
   const Answer = () =>
-    answer?.json ? <RichText config={options} json={answer.json} /> : '';
+    answer ? <RichText config={options} json={answer} /> : '';
   const icon = showAnswer ? faMinus : faPlus;
   return (
     <div className={styles.questionAnswerContainer} key={question}>

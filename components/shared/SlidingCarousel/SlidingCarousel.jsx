@@ -1,10 +1,9 @@
 'use client';
-import SectionHeading from 'components/shared/SectionHeading/SectionHeading';
 import styles from './SlidingCarousel.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Button from 'components/shared/Button/Button';
-import { PAGE_SLUGS } from 'utils/constants';
+import { slugMap } from 'utils/constants';
 import Link from 'next/link';
 
 const Tile = ({ product }) => {
@@ -12,7 +11,7 @@ const Tile = ({ product }) => {
   const firstImage = product.images[0].thumbnails.large;
   return (
     <Link
-      href={PAGE_SLUGS.SHOP}
+      href={slugMap.SHOP}
       className={styles.image}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
@@ -22,12 +21,7 @@ const Tile = ({ product }) => {
         <div className={styles.overlay}>
           <p className={styles.imageText}>{product.name}</p>
           <p className={styles.description}>{product.description}</p>
-          <Button
-            isSmall
-            isGold
-            classNames={styles.button}
-            href={PAGE_SLUGS.SHOP}
-          >
+          <Button isSmall isGold classNames={styles.button} href={slugMap.SHOP}>
             Shop Now
           </Button>
         </div>
@@ -105,7 +99,7 @@ export default function SlidingCarousel({ products }) {
 
   return (
     <div className={styles.container} id="shop">
-      <SectionHeading isBlue>Shop 2025 Merch</SectionHeading>
+      {/* <SectionHeading isBlue>Shop 2025 Merch</SectionHeading> */}
       <div className={styles.outerScrollContainer}>
         <div
           className={styles.innerScrollContainer}

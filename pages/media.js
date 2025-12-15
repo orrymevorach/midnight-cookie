@@ -1,11 +1,6 @@
-import { GET_NEWS_ARTICLES } from 'gql/queries';
 import Banner from 'components/shared/Banner/Index';
 import NewsGallery from 'components/media/news-gallery/news-gallery';
-import {
-  fetchGraphQL,
-  filterNullFields,
-  getPageLoadData,
-} from 'lib/contentful';
+import { getNewsArticles, getPageLoadData } from 'lib/contentful';
 import Layout from 'components/shared/Layout/Layout';
 import { slugMap } from 'utils/constants';
 
@@ -26,13 +21,11 @@ export async function getStaticProps({ preview = false }) {
     slug: slugMap.MEDIA,
     isPreview: preview,
   });
-  const newsArticlesResponse = await fetchGraphQL({ query: GET_NEWS_ARTICLES });
+  const newsArticles = await getNewsArticles();
 
   return {
     props: {
-      newsArticles:
-        filterNullFields(newsArticlesResponse.data.newsPostCollection.items) ||
-        [],
+      newsArticles: newsArticles,
       ...pageLoadData,
     },
   };

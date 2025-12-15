@@ -1,4 +1,4 @@
-import Banner from 'components/shared/Banner/Index';
+import Banner from 'components/shared/Banner/Banner';
 import NewsGallery from 'components/media/news-gallery/news-gallery';
 import { getNewsArticles, getPageLoadData } from 'lib/contentful';
 import Layout from 'components/shared/Layout/Layout';

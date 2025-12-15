@@ -1,6 +1,6 @@
 'use client';
 import SubmissionForm from 'components/shared/SubmissionForm/SubmissionForm';
-import styles from './form.module.scss';
+import styles from './Form.module.scss';
 import useContactFormReducer from 'components/shared/SubmissionForm/useContactForm';
 import { useState } from 'react';
 import { sendContactFormSubmission } from 'lib/mailgun';

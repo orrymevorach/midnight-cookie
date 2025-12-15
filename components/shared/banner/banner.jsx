@@ -1,6 +1,5 @@
-import styles from './banner.module.scss';
+import styles from './Banner.module.scss';
 import clsx from 'clsx';
-import animations from 'mevo-components/animations/animations.module.scss';
 
 export default function Banner({
   children,
@@ -13,9 +12,7 @@ export default function Banner({
   return (
     <div className={clsx(styles.banner, isSmall ? styles.isSmall : '')}>
       {heading && (
-        <div
-          className={clsx(styles.textContainer, hasFade && animations.fadeUp)}
-        >
+        <div className={clsx(styles.textContainer)}>
           <h2>{heading}</h2>
         </div>
       )}

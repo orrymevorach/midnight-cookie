@@ -1,4 +1,4 @@
-import styles from './pricing.module.scss';
+import styles from './Pricing.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCookie } from '@fortawesome/free-solid-svg-icons';
 import CookiePieces from 'components/about/cookie-pieces';

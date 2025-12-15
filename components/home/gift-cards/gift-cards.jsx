@@ -4,7 +4,7 @@ import giftCardBanner from 'public/rebuild/gift-card-banner-2.png';
 import giftCard from 'public/rebuild/gift-card.png';
 import Button from 'components/shared/Button/Button';
 import { useRef } from 'react';
-import useAnimation from 'components/shared/Animation/Index';
+import useAnimation from 'components/shared/Animation/useAnimation';
 
 export default function GiftCards() {
   const ref = useRef();

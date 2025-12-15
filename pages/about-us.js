@@ -1,4 +1,4 @@
-// import Layout from 'components/shared/Layout/Layout';
+import Layout from 'components/shared/Layout/Layout';
 import { getPageLoadData } from 'lib/contentful';
 import { slugMap } from 'utils/constants';
 import Paragraph from 'components/about/paragraph/paragraph';
@@ -10,8 +10,7 @@ import { useWindowSize } from 'hooks';
 export default function AboutPage(pageProps) {
   const { isMobile } = useWindowSize();
   return (
-    // <Layout {...pageProps}>
-    <>
+    <Layout {...pageProps}>
       <LogoRow />
       <LogoRow />
       {isMobile && <LogoRow />}
@@ -20,8 +19,7 @@ export default function AboutPage(pageProps) {
         <Paragraph />
         <CookiePiecesV2 />
       </main>
-      {/* </Layout> */}
-    </>
+    </Layout>
   );
 }
 

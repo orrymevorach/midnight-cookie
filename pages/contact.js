@@ -1,12 +1,15 @@
 import { getPageLoadData } from 'lib/contentful';
+import Layout from 'components/shared/Layout/Layout';
 import { slugMap } from 'utils/constants';
 import Contact from 'components/Contact/Contact';
 
 export default function ContactPage(pageProps) {
   return (
-    <main>
-      <Contact />
-    </main>
+    <Layout {...pageProps}>
+      <main>
+        <Contact />
+      </main>
+    </Layout>
   );
 }
 

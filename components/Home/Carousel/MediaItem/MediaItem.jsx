@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import styles from './MediaItem.module.scss';
 import { useWindowSize } from 'hooks';
-import HomeBanner from 'components/home/home-banner';
+import HomeBanner from 'components/Home/home-banner/home-banner';
 import { getMedia } from 'lib/contentful';
 
 const MediaComponent = ({ item, items }) => {

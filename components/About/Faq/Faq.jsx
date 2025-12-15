@@ -1,4 +1,4 @@
-import styles from './faq.module.scss';
+import styles from './Faq.module.scss';
 import clsx from 'clsx';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { useState } from 'react';

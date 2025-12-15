@@ -6,6 +6,7 @@ import { slugMap } from 'utils/constants';
 import Link from 'next/link';
 import { getMedia } from 'lib/contentful';
 import Heading from '../Heading/Heading';
+import useAnimation from '../Animation/useAnimation';
 
 const Tile = ({ product }) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -35,7 +36,9 @@ const Tile = ({ product }) => {
 
 export default function SlidingCarousel({ products }) {
   const containerRef = useRef(null);
+  const outerContainerRef = useRef(null);
   const [offset, setOffset] = useState(0);
+  useAnimation({ ref: outerContainerRef, animateOnMobile: false });
 
   // touch state
   const touchStartX = useRef(0);
@@ -101,7 +104,7 @@ export default function SlidingCarousel({ products }) {
   };
 
   return (
-    <div className={styles.container} id="shop">
+    <div className={styles.container} id="shop" ref={outerContainerRef}>
       <Heading>Shop Our Merch</Heading>
       <div className={styles.outerScrollContainer}>
         <div

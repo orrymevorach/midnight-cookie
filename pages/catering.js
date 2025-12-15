@@ -1,7 +1,7 @@
 import Layout from 'components/shared/Layout/Layout';
 import { slugMap } from 'utils/constants';
 import { getPageLoadData } from 'lib/contentful';
-import Catering from 'components/catering/catering';
+import Catering from 'components/Catering/Catering';
 
 export default function Home(pageProps) {
   return (

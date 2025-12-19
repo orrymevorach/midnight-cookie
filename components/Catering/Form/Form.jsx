@@ -14,6 +14,7 @@ export default function ContactForm() {
     contactEmail: '',
     date: '',
     city: '',
+    cookieService: '',
     message: '',
   };
   const { dispatch, stages, state, actions } = useContactFormReducer({
@@ -27,6 +28,7 @@ export default function ContactForm() {
       'Contact Name': state.contactName,
       'Contact Email': state.contactEmail,
       City: state.city,
+      'Cookie Service': state.cookieService,
       Message: state.message,
     };
     await sendContactFormSubmission({
@@ -84,6 +86,19 @@ export default function ContactForm() {
           required: true,
         },
       ],
+    },
+    {
+      type: 'dropdown',
+      label: 'What is the occasion',
+      dropdownItems: ['Food Truck', 'Wrapped Cookies', 'Bake On Site'],
+      id: 'message',
+      value: state.cookieService,
+      minRows: 7,
+      handleChange: value =>
+        dispatch({ type: actions.SET_FIELD, field: 'cookieService', value }),
+
+      required: true,
+      maxWordCount: 250,
     },
     {
       type: 'textarea',

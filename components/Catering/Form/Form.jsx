@@ -88,18 +88,49 @@ export default function ContactForm() {
       ],
     },
     {
-      type: 'dropdown',
-      label: 'What is the occasion',
-      dropdownItems: ['Food Truck', 'Wrapped Cookies', 'Bake On Site'],
-      id: 'message',
-      value: state.cookieService,
-      minRows: 7,
-      handleChange: value =>
-        dispatch({ type: actions.SET_FIELD, field: 'cookieService', value }),
+      type: 'row',
+      items: [
+        {
+          type: 'dropdown',
+          label: 'Catering options',
+          dropdownItems: [
+            'Large Catering (Corporate)',
+            'Events - Bake On Site',
+            'Food Truck',
+          ],
+          id: 'message',
+          value: state.cookieService,
+          minRows: 7,
+          handleChange: value =>
+            dispatch({
+              type: actions.SET_FIELD,
+              field: 'cookieService',
+              value,
+            }),
 
-      required: true,
-      maxWordCount: 250,
+          required: true,
+          maxWordCount: 250,
+        },
+        {
+          type: 'dropdown',
+          label: 'Party favors',
+          dropdownItems: [''],
+          id: 'message',
+          value: state.cookieService,
+          minRows: 7,
+          handleChange: value =>
+            dispatch({
+              type: actions.SET_FIELD,
+              field: 'cookieService',
+              value,
+            }),
+
+          required: true,
+          maxWordCount: 250,
+        },
+      ],
     },
+
     {
       type: 'textarea',
       label: 'What is the occasion',

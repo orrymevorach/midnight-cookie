@@ -2,23 +2,9 @@ import styles from './Pricing.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCookie } from '@fortawesome/free-solid-svg-icons';
 import CookiePieces from 'components/About/cookie-pieces/cookie-pieces';
+import { toDollars } from 'utils/utils';
 
-const pricing = [
-  {
-    time: '1 Hour (minimum)',
-    price: '$1,800',
-  },
-  {
-    time: '2 Hours',
-    price: '$3,000',
-  },
-  {
-    time: '3 hours',
-    price: '$4,000',
-  },
-];
-
-export default function Pricing() {
+export default function Pricing({ options }) {
   return (
     <div id="pricing" className={styles.outerContainer}>
       <svg
@@ -38,15 +24,18 @@ export default function Pricing() {
         <div className={styles.pricing}>
           <h2 className={styles.title}>Pricing</h2>
           <div className={styles.grid}>
-            {pricing.map((option, index) => (
-              <div key={`pricing-${option.time}`} className={styles.row}>
-                <div className={styles.left}>
-                  <FontAwesomeIcon icon={faCookie} className={styles.icon} />
-                  <p className={styles.time}>{option.time}</p>
+            {options.map((option, index) => {
+              const price = toDollars(option.price);
+              return (
+                <div key={`pricing-${option.title}`} className={styles.row}>
+                  <div className={styles.left}>
+                    <FontAwesomeIcon icon={faCookie} className={styles.icon} />
+                    <p className={styles.time}>{option.title}</p>
+                  </div>
+                  <p className={styles.price}>{price}</p>
                 </div>
-                <p className={styles.price}>{option.price}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div className={styles.includes}>
             <h3 className={styles.subheading}>Includes:</h3>

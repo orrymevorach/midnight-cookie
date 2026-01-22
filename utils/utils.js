@@ -26,3 +26,12 @@ export const removeTime = stamp => stamp.split('T')[0];
 export const getCurrentYear = () => {
   return new Date().getFullYear();
 };
+
+export function toDollars(amount) {
+  return amount.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'CAD',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+}

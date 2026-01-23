@@ -3,8 +3,56 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCookie } from '@fortawesome/free-solid-svg-icons';
 import CookiePieces from 'components/About/cookie-pieces/cookie-pieces';
 import { toDollars } from 'utils/utils';
+import RichText from 'components/shared/rich-text';
+import { BLOCKS } from '@contentful/rich-text-types';
 
-export default function Pricing({ options }) {
+const config = {
+  renderMarks: {
+    // [MARKS.BOLD]: text => '',
+    // [MARKS.ITALIC]: text => '',
+    // [MARKS.UNDERLINE]: text => '',
+    // [MARKS.CODE]: text => '',
+  },
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p className={styles.paragraph}>{children}</p>
+    ),
+    // [BLOCKS.DOCUMENT]: (node, children) => '',
+    // [BLOCKS.HEADING_1]: (node, children) => '',
+    // [BLOCKS.HEADING_2]: (node, children) => '',
+    [BLOCKS.HEADING_2]: (node, children) => (
+      <h3 className={styles.subheading}>{children}</h3>
+    ),
+    // [BLOCKS.HEADING_4]: (node, children) => '',
+    // [BLOCKS.HEADING_5]: (node, children) => '',
+    // [BLOCKS.HEADING_6]: (node, children) => '',
+    [BLOCKS.UL_LIST]: (node, children) => (
+      <ul className={styles.list}>{children}</ul>
+    ),
+    // [BLOCKS.OL_LIST]: (node, children) => '',
+    [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
+    // [BLOCKS.QUOTE]: (node, children) => '',
+    // [BLOCKS.HR]: (node, children) => '',
+    // [BLOCKS.EMBEDDED_ENTRY]: (node, children) => '',
+    // [BLOCKS.EMBEDDED_ASSET]: (node, children) => '',
+    // [INLINES.EMBEDDED_ENTRY]: (node, children) => '',
+    // [INLINES.HYPERLINK]: (node, children) => '',
+
+    // [INLINES.ENTRY_HYPERLINK]: (node, children) => '',
+    // [INLINES.ASSET_HYPERLINK]: (node, children) => '',
+    // renderText: text => text.replace('!', '?'),
+    // Add space between paragraphs
+    renderText: text => {
+      return text.split('\n').reduce((children, textSegment, index) => {
+        return [...children, index > 0 && <br key={index} />, textSegment];
+      }, []);
+    },
+  },
+};
+
+export default function Pricing({ cateringPricingOptionsData }) {
+  if (!cateringPricingOptionsData) return;
+  const { options, description } = cateringPricingOptionsData;
   return (
     <div id="pricing" className={styles.outerContainer}>
       <svg
@@ -38,21 +86,7 @@ export default function Pricing({ options }) {
             })}
           </div>
           <div className={styles.includes}>
-            <h3 className={styles.subheading}>Includes:</h3>
-            <ul className={styles.list}>
-              <li>Unlimited freshly-made warm cookies and coffee!</li>
-              <li>Standard serving: 6 pack</li>
-              <li>2-4 person staff on-site</li>
-              <li>Custom flavor options available upon request</li>
-            </ul>
-            <p className={styles.paragraph}>
-              Note: First hour is all inclusive of set up, tear down and
-              delivery (no hidden fees). For events outside of GTA, there is a
-              3-hour minimum service.{' '}
-            </p>
-            <p className={styles.paragraph}>
-              * Ask about custom machine wraps to match your theme!
-            </p>
+            <RichText json={description} config={config} />
           </div>
         </div>
       </div>

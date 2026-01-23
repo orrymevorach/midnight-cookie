@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { getMedia } from 'lib/contentful';
 import Heading from '../Heading/Heading';
 import useAnimation from '../Animation/useAnimation';
+import Button from '../Button/Button';
 
 const Tile = ({ product }) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -120,6 +121,13 @@ export default function SlidingCarousel({ products }) {
           ))}
         </div>
       </div>
+      <Button
+        href="https://order.tapmango.com/merchant/dfb63169-3067-4b49-89f3-09deeb3eba9b/order/catalog?mlId=9721"
+        target="_blank"
+        classNames={styles.button}
+      >
+        Shop Now
+      </Button>
     </div>
   );
 }

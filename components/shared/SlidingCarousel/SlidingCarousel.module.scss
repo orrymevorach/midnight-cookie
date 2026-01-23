@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
+  align-items: center;
+  overflow: hidden;
 }
 
 .outerScrollContainer {
@@ -58,6 +60,10 @@
   font-family: variables.$fontSecondary;
   font-size: 14px;
   margin: 20px 0;
+}
+
+.button {
+  width: 250px;
 }
 
 @keyframes fadeIn {

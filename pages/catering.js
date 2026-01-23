@@ -1,24 +1,20 @@
 import { slugMap } from 'utils/constants';
 import {
   getCateringOptions,
-  getCateringPricingOptions,
+  getCateringPricingOptionsData,
   getPageLoadData,
 } from 'lib/contentful';
 import Catering from 'components/Catering/Catering';
 import Layout from 'components/shared/Layout/Layout';
 
 export default function Home(pageProps) {
-  const { cateringOptions, cateringPricingOptions } = pageProps;
-  const formattedOptions = cateringOptions.map(option => ({
-    ...option,
-    name: option.cateringOption,
-  }));
+  const { cateringOptions, cateringPricingOptionsData } = pageProps;
   return (
     <Layout {...pageProps}>
       <main>
         <Catering
-          cateringOptions={formattedOptions}
-          cateringPricingOptions={cateringPricingOptions}
+          cateringOptions={cateringOptions}
+          cateringPricingOptionsData={cateringPricingOptionsData}
         />
       </main>
     </Layout>
@@ -32,13 +28,13 @@ export async function getStaticProps({ preview = false }) {
   });
 
   const cateringOptions = await getCateringOptions();
-  const cateringPricingOptions = await getCateringPricingOptions();
+  const cateringPricingOptionsData = await getCateringPricingOptionsData();
 
   return {
     props: {
       ...pageLoadData,
       cateringOptions,
-      cateringPricingOptions,
+      cateringPricingOptionsData,
     },
   };
 }

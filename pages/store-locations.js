@@ -2,14 +2,23 @@ import Layout from 'components/shared/Layout/Layout';
 import { slugMap } from 'utils/constants';
 import { getStoreLocations } from 'lib/contentful';
 import { getPageLoadData } from 'lib/contentful';
-import StoreLocations from 'components/StoreLocations/StoreLocations';
+import ImageGridWithNavigation from 'components/shared/ImageGridWithNavigation/ImageGridWithNavigation';
+import { hoursOfOperation } from 'components/Home/hours-of-operation/hours-of-operation';
 
 export default function Home(pageProps) {
   const { storeLocations } = pageProps;
+  const formattedLocations = storeLocations.map(location => ({
+    ...location,
+    name: location.storeName,
+  }));
+
   return (
     <Layout {...pageProps}>
       <main>
-        <StoreLocations storeLocations={storeLocations} />
+        <ImageGridWithNavigation
+          data={formattedLocations}
+          hoursOfOperation={hoursOfOperation}
+        />
       </main>
     </Layout>
   );

@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import styles from './StoreImages.module.scss';
+import styles from './Images.module.scss';
 import { useWindowSize } from 'hooks';
 import MovementSlider from 'components/shared/MovementSlider/MovementSlider';
 import { getMedia } from 'lib/contentful';
 
-export default function StoreImages({ images, storeName }) {
+export default function StoreImages({ images, currentItemName }) {
   const { isDesktop } = useWindowSize();
 
   return (
@@ -25,7 +25,7 @@ export default function StoreImages({ images, storeName }) {
                 src={imageData.src}
                 width={imageData.width}
                 height={imageData.height}
-                alt={`Image ${index + 1} of ${storeName}`}
+                alt={`Image ${index + 1} of ${currentItemName}`}
                 className={styles.image}
                 style={{ width: `${100 / images.length}%` }}
                 key={imageData.src}
@@ -41,7 +41,7 @@ export default function StoreImages({ images, storeName }) {
               src={imageData.src}
               width={imageData.width}
               height={imageData.height}
-              alt={`Image ${index + 1} of ${storeName}`}
+              alt={`Image ${index + 1} of ${currentItemName}`}
               className={styles.image}
               key={imageData.src}
             />

@@ -13,6 +13,9 @@ export default function ImageGridWithNavigation({
   const currentItem = data[currentIndex];
   const images = currentItem.images;
 
+  console.log('data', data);
+  console.log('title', title);
+
   return (
     <div className={styles.container}>
       <Sidebar setCurrentIndex={setCurrentIndex} data={data} title={title} />

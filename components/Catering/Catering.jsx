@@ -1,7 +1,7 @@
 import Pricing from './Pricing/Pricing';
 import Information from './Information/Information';
 import Form from './Form/Form';
-// import ImageGridWithNavigation from 'components/shared/ImageGridWithNavigation/ImageGridWithNavigation';
+import ImageGridWithNavigation from 'components/shared/ImageGridWithNavigation/ImageGridWithNavigation';
 
 export default function Catering({
   cateringOptions,
@@ -10,10 +10,10 @@ export default function Catering({
   return (
     <>
       <Information />
-      {/* <ImageGridWithNavigation
+      <ImageGridWithNavigation
         data={cateringOptions}
         title="Catering Options"
-      /> */}
+      />
       <Pricing cateringPricingOptionsData={cateringPricingOptionsData} />
       <Form />
     </>

@@ -9,11 +9,15 @@ import Layout from 'components/shared/Layout/Layout';
 
 export default function Home(pageProps) {
   const { cateringOptions, cateringPricingOptionsData } = pageProps;
+  const formattedLocations = cateringOptions.map(location => ({
+    ...location,
+    name: location.cateringOption,
+  }));
   return (
     <Layout {...pageProps}>
       <main>
         <Catering
-          cateringOptions={cateringOptions}
+          cateringOptions={formattedLocations}
           cateringPricingOptionsData={cateringPricingOptionsData}
         />
       </main>

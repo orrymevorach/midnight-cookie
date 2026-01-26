@@ -12,8 +12,11 @@ import HoursOfOperation from 'components/Home/hours-of-operation/hours-of-operat
 import Newsletter from 'components/Home/Newsletter/Newsletter';
 import CookieGalleryV2 from 'components/Home/cookie-gallery-v2/cookie-gallery-v2';
 import Carousel from 'components/Home/Carousel/Carousel';
-import GiftCards from 'components/Home/gift-cards/gift-cards';
+import ImageTextTile from 'components/Home/ImageTextTile/ImageTextTile';
 import SlidingCarousel from 'components/shared/SlidingCarousel/SlidingCarousel';
+import giftCard from 'public/rebuild/gift-card.png';
+import giftCardBanner from 'public/rebuild/gift-card-banner-2.png';
+import foodTruck from 'public/rebuild/food-truck-1.jpg';
 
 export default function Home(pageProps) {
   const {
@@ -30,8 +33,23 @@ export default function Home(pageProps) {
         <CookieGallery {...featuredFlavoursGallery} />
 
         <CookieGalleryV2 {...classicDoughGallery} />
+        <ImageTextTile
+          isBlue
+          title="Bring Me To Your Next Event"
+          imageSrc={foodTruck}
+          description="Bring smiles to you and your next event! Click below to find out more information about our catering services."
+          buttonText="Learn More"
+          buttonLink={slugMap.CATERING}
+        />
         <SlidingCarousel products={shopGallery} />
-        <GiftCards />
+        <ImageTextTile
+          title="Midnight Cookie E-Gift Card"
+          imageSrc={giftCardBanner}
+          description="*Physical gifts cards available in store"
+          buttonText="Buy Now"
+          buttonLink="https://midnightcookie.securetree.com/"
+          imageInCard={giftCard}
+        />
 
         <NewsBanner />
         <HoursOfOperation />
@@ -89,7 +107,7 @@ export async function getStaticProps({ preview = false }) {
       //   duration: duration ? parseFloat(duration) : null,
       //   mobileDuration: mobileDuration ? parseFloat(mobileDuration) : null,
       // };
-    })
+    }),
   );
 
   const shopGallery = await getShopGallery();

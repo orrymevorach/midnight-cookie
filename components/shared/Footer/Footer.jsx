@@ -41,6 +41,7 @@ export default function Footer() {
           <Link href="/about-us">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/catering">Catering</Link>
+          <Link href="https://midnightcookie.securetree.com/">Gift Cards</Link>
           <Link href="/faq">FAQ</Link>
         </div>
       </div>

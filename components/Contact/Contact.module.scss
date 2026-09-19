@@ -14,7 +14,7 @@
 .right {
   position: relative;
   top: -80px;
-  width: 400px;
+  width: min(400px, 100%);
   img {
     height: auto;
   }
@@ -38,5 +38,6 @@
   }
   .right {
     margin: 150px auto 0;
+    width: 100%;
   }
 }

@@ -74,7 +74,7 @@ p.title {
     position: absolute;
     bottom: -90px;
     display: block;
-    width: 310px;
+    width: min(310px, calc(100vw - 30px));
     left: 50%;
     transform: translateX(-50%);
   }

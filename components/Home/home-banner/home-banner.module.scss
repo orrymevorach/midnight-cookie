@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100svh;
 }
 
 .animate {
@@ -55,6 +56,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,6 +129,7 @@
   }
   .container {
     min-height: 70vh;
+    min-height: 70svh;
     margin-bottom: 0;
     display: flex;
     align-items: center;
@@ -145,6 +148,7 @@
   }
   .videoContainer {
     height: 70vh;
+    height: 70svh;
   }
   .bottomContainer {
     margin-top: 200px;

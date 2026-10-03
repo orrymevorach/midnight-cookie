@@ -33,6 +33,7 @@ export default function ContactForm() {
     };
     await sendContactFormSubmission({
       fields,
+      emailTo: 'catering@mignightcookie.ca',
       subject: 'Catering Inquiry',
       title: 'New Catering Inquiry for Midnight Cookie',
     });
@@ -153,7 +154,7 @@ export default function ContactForm() {
     );
   }
   return (
-    <div className={styles.container} id="form">
+    <div className={styles.container} id='form'>
       <div className={styles.innerContainer}>
         {stage === stages.FILL_OUT_FORM && (
           <div className={styles.formContainer}>

@@ -51,7 +51,12 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { fields, subject, title } = req.body;
+    const {
+      fields,
+      subject,
+      title,
+      emailTo = 'info@midnightcookie.ca',
+    } = req.body;
 
     if (!fields || typeof fields !== 'object') {
       res.status(400).json({ error: 'Invalid or missing fields' });
@@ -64,7 +69,7 @@ export default async function handler(req, res) {
           <div style="margin: 10px 0;">
             <p style="color:#2f2f2f;text-transform:lowercase;font-size:14px;margin:0;">${key}</p>
             <p style="font-size:16px;margin:0;">${value}</p>
-          </div>`
+          </div>`,
       )
       .join('');
 
@@ -84,7 +89,7 @@ export default async function handler(req, res) {
 
     const info = await transporter.sendMail({
       from: 'Midnight Cookie <noreply@midnightcookie.ca>',
-      to: 'support@midnightcookie.ca',
+      to: emailTo,
       subject: subject || 'Contact Form Submission',
       html: htmlBody,
     });

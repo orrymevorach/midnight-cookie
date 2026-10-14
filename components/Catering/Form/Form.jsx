@@ -33,7 +33,7 @@ export default function ContactForm() {
     };
     await sendContactFormSubmission({
       fields,
-      emailTo: 'catering@mignightcookie.ca',
+      emailTo: 'catering@midnightcookie.ca',
       subject: 'Catering Inquiry',
       title: 'New Catering Inquiry for Midnight Cookie',
     });
